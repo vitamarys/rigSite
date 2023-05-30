@@ -171,7 +171,7 @@
     }
   }
 }
-.prp-services {
+.prp-magment-service {
     padding-bottom: 120px;
   .container {
     padding: 40px 60px 60px 60px;
@@ -389,8 +389,10 @@
     }
 }
 .app{
+    padding-bottom: 120px;
    .container{
     padding: 40px;
+    padding-bottom: 0;
     background-color: $blue-background;
     border-radius: 40px;
     background-image: url('../assets/imgs/app-bg.png');
@@ -418,10 +420,60 @@
         text-align: center;
         margin-bottom: 30px;
     }
+    .phone{
+        height: 420px;
+     
+        margin: 0 auto;
+    }
     .app-link{
         position: absolute;
         bottom: 40px;
         right: 40px;
     }
    } 
+}
+.prp-services{
+    padding-bottom: 60px;
+    .container{
+        display: flex;
+        align-items: center;
+        .contant-section{
+            width: 50%;
+            .title{
+                margin-bottom: 15px;
+
+            }
+            .descr{
+                @include fontSetings();
+                max-width: 390px;
+                color: $grey;
+            }
+            .services-list{
+                display: flex;
+                flex-wrap: wrap;
+                gap: 5px;
+               
+                &__item{
+                    @include fontSetings($s:12px, $lh:18px);
+                    color: #979797;
+                    padding: 3px 7px;
+                    border: 1px solid #979797;
+                    border-radius: 30px;
+                }
+            }
+        }
+    }
+}
+.managers{
+    padding-bottom: 120px;
+    .container{
+        .content-item{
+            .manager-contact{
+                .name{
+                    color: $black;
+                }
+            }
+           
+        }
+    }
 }

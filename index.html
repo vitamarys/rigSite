@@ -25,7 +25,7 @@
       <div class="header__top">
         <div class="container">
           <a href="#" class="logo"
-            ><img src="./assets/imgs/logo.svg" alt="logo"
+            ><img src="./assets/imgs/new_logo.svg" alt="logo"
           /></a>
           <div class="btns-group">
             <div class="lang-select">
@@ -125,19 +125,32 @@
 
           <nav class="nav">
             <ul class="nav__list">
-              <li class="nav__list__item">
+              <li class="nav__list__item drop">
                 <a href="#"
                   ><img
                     src="./assets/imgs/menu/menu-aria.svg"
                     alt=""
                     class="nav__list__item__img"
-                  />Buy</a
+                  />Buy <span class="arr">></span></a
                 >
+                <div class="dropdown">
+                  <a href="#">Secondary property</a>
+                  <a href="#">Off-plan property</a>
+                </div>
               </li>
               <li class="nav__list__item">
                 <a href="#"
                   ><img
                     src="./assets/imgs/menu/menu-sell.svg"
+                    alt=""
+                    class="nav__list__item__img"
+                  />Rent</a
+                >
+              </li>
+              <li class="nav__list__item">
+                <a href="#">
+                  <img
+                    src="./assets/imgs/menu/menu-rent.svg"
                     alt=""
                     class="nav__list__item__img"
                   />Sell</a
@@ -149,7 +162,7 @@
                     src="./assets/imgs/menu/menu-rent.svg"
                     alt=""
                     class="nav__list__item__img"
-                  />Rent</a
+                  />Sell</a
                 >
               </li>
               <li class="nav__list__item">
@@ -176,7 +189,7 @@
                     src="./assets/imgs/menu/menu-news.svg"
                     alt=""
                     class="nav__list__item__img"
-                  />News</a
+                  />News <span class="stiker">10</span></a
                 >
               </li>
               <li class="nav__list__item">
@@ -479,7 +492,7 @@
                   <img src="./assets/imgs/ap.jpeg" alt="apart" />
                 </div>
                 <div class="small-card__text-section">
-                  <h4 class="small-card__title">AHS One Crescent</h4>
+                  <h4 class="small-card__title">AHS One Crescent </h4>
                   <p class="small-card__rigion">Palm Jumeirah</p>
                   <div class="small-card__info">
                     <div class="small-card__info__item">
@@ -1199,12 +1212,16 @@
         <div class="container">
           <h3 class="title">Blog & News</h3>
           <div class="news__controls">
-            <a href="#" class="news__controls__link">All News</a>
-            <a href="#" class="news__controls__link">Blog</a>
+            <div class="block">
+              <a href="#" class="news__controls__link">All News</a>
+              <a href="#" class="news__controls__link">Blog</a>
+            </div>
+            <div class="block" >
             <button type="button" class="prev-slide prev-news"></button>
             <button type="button" class="next-slide next-news"></button>
           </div>
-          <div class="content">
+          </div>
+          <di   v class="content">
             <div class="slider slider-news">
               <div class="swiper-wrapper">
                 <div class="big-news slide" id="big-news">
@@ -1229,13 +1246,13 @@
                     >
                   </div>
                   <div class="text-content">
-                    <h4 class="small-card__title">Ramadan in the UAE</h4>
-                    <p class="small-card__descr">
+                    <h4 class="slide__title">Ramadan in the UAE</h4>
+                    <p class="slide__info">
                       Discover how the Dubai real estate market changes during
                       Ramadan, and get tips on buying, selling, or renting a
                       property during this holy month in the UAE.
                     </p>
-                    <a href="#" class="small-card__read-more">Read Article </a>
+                    <a href="#" class="slide__read-more">Read Article </a>
                   </div>
                 </div>
                 <div class="slide small-card">
@@ -1246,13 +1263,13 @@
                     >
                   </div>
                   <div class="text-content">
-                    <h4 class="small-card__title">Ramadan in the UAE</h4>
-                    <p class="small-card__descr">
+                    <h4 class="slide__title">Ramadan in the UAE</h4>
+                    <p class="slide__info">
                       Discover how the Dubai real estate market changes during
                       Ramadan, and get tips on buying, selling, or renting a
                       property during this holy month in the UAE.
                     </p>
-                    <a href="#" class="small-card__read-more">Read Article </a>
+                    <a href="#" class="slide__read-more">Read Article </a>
                   </div>
                 </div>
                 <div class="slide small-card">
@@ -1263,18 +1280,18 @@
                     >
                   </div>
                   <div class="text-content">
-                    <h4 class="small-card__title">Ramadan in the UAE</h4>
-                    <p class="small-card__descr">
+                    <h4 class="slide__title">Ramadan in the UAE</h4>
+                    <p class="slide__info">
                       Discover how the Dubai real estate market changes during
                       Ramadan, and get tips on buying, selling, or renting a
                       property during this holy month in the UAE.
                     </p>
-                    <a href="#" class="small-card__read-more">Read Article </a>
+                    <a href="#" class="slide__read-more">Read Article </a>
                   </div>
                 </div>
               </div>
             </div>
-          </div>
+          </di>
         </div>
       </section>
       <section class="popular">
@@ -1394,12 +1411,13 @@
         <div class="top">
           <div class="top__item">
             <a href="#" class="home"
-              ><img src="./assets/imgs/logo.svg" alt=""
+              ><img src="./assets/imgs/new_logo.svg" alt=""
             /></a>
-            <a href="#" class="contact-btn">Contact us</a>
             <p class="address">
               Office 1913, Al Manara Tower, Business Bay, Dubai, UAE
             </p>
+            <a href="#" class="contact-btn">Contact us</a>
+
             <div class="social">
               <a href="#" class="social__link">
                 <img src="./assets/imgs/fb.svg" alt=""

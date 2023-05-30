@@ -502,12 +502,7 @@ section:not(.lift, .listing-about){
     margin-bottom: 5px;
     position: relative;
     white-space: nowrap;
-    background: linear-gradient(
-      90deg,
-      #1c1c1c 0%,
-      #1c1c1c 55.95%,
-      rgba(28, 28, 28, 0) 96.83%
-    );
+    background: linear-gradient(90deg, #1c1c1c 0%, #1c1c1c 87.95%, rgba(28, 28, 28, 0) 96.83%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -543,6 +538,10 @@ section:not(.lift, .listing-about){
     &__item {
       &__value {
         @include fontSetings($s: 18px, $w: 400, $lh: 25px);
+        @include adaptive(phoneLandscape, phonePortrait) {
+          @include fontSetings($s: 16px, $w: 400, $lh: 25px);
+ 
+        }
       }
       &__name {
         @include fontSetings($s: 12px, $w: 400, $lh: 18px);

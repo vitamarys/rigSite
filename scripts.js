@@ -28,8 +28,10 @@ document.addEventListener("DOMContentLoaded", () => {
      shareBtns = document.querySelectorAll('.share-btn'),
      socialMenus = document.querySelectorAll('.social-menu'),
      infoBlock = document.querySelector('.media-links'),
+     dropdownItem = document.querySelector('.drop'),
+     dropdownList = document.querySelector('.dropdown'),
     (headerBot = document.querySelector(".header__bot"));
-    
+  
   window.addEventListener("click", (e) => {
     const target = e.target;
     if (!target.closest(".lang-select")) {
@@ -201,7 +203,7 @@ document.addEventListener("DOMContentLoaded", () => {
   smallCards.forEach(card =>{
     const cardTextSection = card.querySelector('.small-card__text-section')
     const cardTitle = card.querySelector('.small-card__title');
-    if(cardTextSection.clientWidth < cardTitle.scrollWidth){
+    if(cardTextSection && cardTextSection.clientWidth < cardTitle.scrollWidth){
       card.classList.add('run-text')
    
     }
@@ -317,6 +319,15 @@ document.addEventListener("DOMContentLoaded", () => {
     }
    
   }
- 
-  
+ dropdownItem.addEventListener('click',()=>{
+  dropdownItem.classList.toggle('open')
+  dropdownList.classList.toggle('show')
+ })
+ dropdownItem.addEventListener('mouseleave',(e)=>{
+  const target = e.target;
+  if (target !== dropdownItem || target !== dropdownList){
+    dropdownItem.classList.remove('open')
+  dropdownList.classList.remove('show')
+  }
+ })
 });
