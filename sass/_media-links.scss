@@ -1,0 +1,270 @@
+.media-links {
+  position: absolute;
+  z-index: 2;
+  width: 100%;
+  padding: 70px 15px 15px 15px;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  gap: 5px;
+  @include adaptive(phoneLandscape, phonePortrait) {
+    display: none;
+  }
+
+  &__item {
+    background-color: $white;
+    border-radius: 20px;
+    padding: 0 15px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    width: fit-content;
+    width: 25%;
+    &.share {
+      width: 50%;
+    }
+  }
+  .star-rating {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    .stars {
+      display: flex;
+      align-items: center;
+      gap: 2px;
+      .star {
+        width: 15px;
+        height: 15px;
+        background-size: cover;
+        background-repeat: no-repeat;
+        cursor: pointer;
+        &.def {
+          background-image: url("../assets/imgs/def-star-blue.svg") !important;
+          cursor: not-allowed;
+        }
+        &.check {
+          background-image: url("../assets/imgs/check-star-blue.svg") !important;
+          cursor: not-allowed;
+        }
+      }
+    }
+    .rating {
+      @include fontSetings($s: 12px, $lh: 13px);
+      color: $grey;
+      text-align: center;
+    }
+  }
+  .share {
+    gap: 5px;
+    cursor: pointer;
+    position: relative;
+    z-index: 4;
+    .url {
+      display: block;
+      white-space: nowrap;
+      overflow: hidden;
+      padding: 0 5px;
+      @include fontSetings();
+      border-left: 1px solid #bfbfbf;
+      border-right: 1px solid #bfbfbf;
+      background: linear-gradient(
+        90.32deg,
+        #6d6d6d 68.57%,
+        rgba(109, 109, 109, 0) 103.2%
+      );
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      text-fill-color: transparent;
+    }
+    .btn {
+      border: none;
+      outline: none;
+      @include fontSetings();
+      background-color: transparent;
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      cursor: pointer;
+      &.share {
+        color: $grey;
+
+        &.active {
+          color: $blue;
+
+          svg {
+            path {
+              fill: $blue;
+            }
+          }
+        }
+      }
+      &.copy {
+        color: $blue;
+        &::before {
+          content: url("../assets/imgs/copy.svg");
+        }
+      }
+    }
+  }
+  .social {
+    gap: 6px;
+    align-items: center;
+    @include fontSetings();
+    color: $grey;
+    position: absolute;
+    bottom: 0;
+    left: calc(25% + 11px);
+    width: fit-content;
+    z-index: 3;
+    visibility: hidden;
+    opacity: 1;
+    a {
+      width: 23px;
+      height: 23px;
+      svg {
+        &:hover {
+          path {
+            transition: 0.3s;
+            fill: $blue;
+          }
+        }
+      }
+    }
+    &::after {
+      content: url("../assets/imgs/tringle.svg");
+      position: absolute;
+      bottom: -11px;
+      left: 25px;
+    }
+    &.show {
+      transition: 0.3s;
+      top: 20px;
+      visibility: visible;
+      opacity: 1;
+    }
+  }
+}
+.media-mob {
+  width: 100%;
+  padding: 15px 0 15px 0;
+  bottom: 0;
+  left: 0;
+  display: none;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 5px;
+  @include adaptive(phoneLandscape, phonePortrait) {
+    display: flex;
+  }
+
+  &__item {
+    background-color: transparent;
+    border-radius: 20px;
+    padding: 0 15px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    &.share {
+      border: 1px solid $grey;
+    }
+  }
+  .star-rating {
+    padding: 0;
+    display: flex;
+    align-items: flex-end;
+    gap: 10px;
+    background-color: transparent;
+    width: 100%;
+    margin-bottom: 15px;
+    .stars {
+      display: flex;
+      gap: 10px;
+      align-items: center;
+      .star {
+        width: 24px;
+        height: 25px;
+        background-size: cover;
+        background-repeat: no-repeat;
+        &.def {
+          background-image: url("../assets/imgs/def-star-blue.svg") !important;
+        }
+        &.check {
+          background-image: url("../assets/imgs/check-star-blue.svg") !important;
+        }
+      }
+    }
+
+    .rating {
+      @include fontSetings($s: 12px, $lh: 13px);
+      color: $grey;
+      text-align: center;
+    }
+  }
+  .share {
+    gap: 5px;
+    cursor: pointer;
+    .url {
+      display: block;
+      white-space: nowrap;
+      overflow: hidden;
+      padding: 0 5px;
+      @include fontSetings();
+      border-left: 1px solid #bfbfbf;
+      border-right: 1px solid #bfbfbf;
+      background: linear-gradient(
+        90.32deg,
+        #6d6d6d 68.57%,
+        rgba(109, 109, 109, 0) 103.2%
+      );
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      text-fill-color: transparent;
+    }
+    .btn {
+      border: none;
+      outline: none;
+      @include fontSetings();
+      background-color: transparent;
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      cursor: pointer;
+      &.share {
+        color: $grey;
+        &.active {
+          color: $blue;
+
+          svg {
+            path {
+              fill: $blue;
+            }
+          }
+        }
+      }
+      &.copy {
+        color: $blue;
+        &::before {
+          content: url("../assets/imgs/copy.svg");
+        }
+      }
+    }
+  }
+  .social {
+    gap: 6px;
+    align-items: center;
+    @include fontSetings();
+    color: $grey;
+    position: absolute;
+    left: -100%;
+
+    &.show {
+      position: relative;
+      transition: 0.3s;
+      left: 0%;
+    }
+  }
+}

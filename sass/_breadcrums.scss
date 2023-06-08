@@ -1,0 +1,33 @@
+.bread-crums {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    gap: 5px;
+    @include adaptive(tabletLandscape, tabletPortrait) {
+      margin-bottom: 35px;
+    }
+    @include adaptive(phoneLandscape, phonePortrait) {
+      margin-bottom: 30px;
+    }
+    &__item {
+      padding: 5px 15px;
+      background: $white;
+      border-radius: 30px;
+      color: $black;
+      @include fontSetings($s: 12px, $w: 600, $lh: 18px);
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
+      &.home {
+        &::before {
+          margin-right: 8px;
+          content: url("../assets/imgs/home.svg");
+          height: 16px;
+          width: 12px;
+        }
+      }
+    }
+  }

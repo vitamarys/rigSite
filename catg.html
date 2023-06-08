@@ -19,7 +19,7 @@
     <title>Categories</title>
   </head>
   <body>
-    <header class="header rev">
+    <header class="header">
       <div class="header__top">
         <div class="container">
           <a href="#" class="logo"
@@ -123,13 +123,27 @@
 
           <nav class="nav">
             <ul class="nav__list">
-              <li class="nav__list__item">
+            
+              <li class="nav__list__item drop">
                 <a href="#"
                   ><img
+                    src="./assets/imgs/menu/menu-buy.svg"
+                    alt=""
+                    class="nav__list__item__img"
+                  />Buy <span class="arr">></span></a
+                >
+                <div class="dropdown">
+                  <a href="#">Secondary property</a>
+                  <a href="#">Off-plan property</a>
+                </div>
+              </li>
+              <li class="nav__list__item">
+                <a href="#">
+                  <img
                     src="./assets/imgs/menu/menu-aria.svg"
                     alt=""
                     class="nav__list__item__img"
-                  />Buy</a
+                  />Area Guide</a
                 >
               </li>
               <li class="nav__list__item">
@@ -138,7 +152,7 @@
                     src="./assets/imgs/menu/menu-sell.svg"
                     alt=""
                     class="nav__list__item__img"
-                  />Sell</a
+                  />Rent</a
                 >
               </li>
               <li class="nav__list__item">
@@ -147,9 +161,10 @@
                     src="./assets/imgs/menu/menu-rent.svg"
                     alt=""
                     class="nav__list__item__img"
-                  />Rent</a
+                  />Sell</a
                 >
               </li>
+              
               <li class="nav__list__item">
                 <a href="#">
                   <img
@@ -174,7 +189,7 @@
                     src="./assets/imgs/menu/menu-news.svg"
                     alt=""
                     class="nav__list__item__img"
-                  />News</a
+                  />News <span class="stiker">10</span></a
                 >
               </li>
               <li class="nav__list__item">
@@ -359,15 +374,15 @@
         "
       >
         <div class="container">
-          <div class="info">
-            <div class="info__item">
+          <div class="info-hero">
+            <div class="info-hero__item">
               <div class="bread-crums">
                 <a href="#" class="bread-crums__item home">Home</a>
                 <a href="#" class="bread-crums__item">Buy property</a>
               </div>
               <h1 class="title">Property on Palm Jumeirah</h1>
             </div>
-            <div class="info__item">
+            <div class="info-hero__item">
               <h4 class="sub-titile">
                 Professional help in buying luxurious property
               </h4>
@@ -688,16 +703,7 @@
             </div>
            
             <div class="list-item last" style="background-image: url('./assets/imgs/form-vecor.png');">
-              <!-- <div class="last__item white">
-                <span class="last__item__type">All properties</span>
-                <h4 class="last__item__title">View all properties for buy on Palm Jumeirah</h4>
-                <a href="#" class="last__item__link">Get a free consultation ></a>
-              </div>
-              <div class="last__item" style="background-image: url('./assets/imgs/form-vecor.png');">
-                <span class="last__item__type">Consultation</span>
-                <h4 class="last__item__title">Professional help in buying luxurious property</h4>
-                <a href="#" class="last__item__link">View all properties ></a>
-              </div> -->
+      
               
               <h3 class="last__title">Get a free consultation</h3>
               <p class="last__deskr">Our highly experienced agents will help you to choose the most suitable property that will meet your budget and goals in the area.</p>
@@ -841,171 +847,177 @@
         </div>
       </section>
       <section class="price">
+
         <div class="container">
-
-          <div class="row grid">
-            <h2 class="item-title">Property price trends on Palm Jumeirah</h2>
-
+          <div class="content-wrap">
+            <div class="row grid">
+              <h2 class="item-title">Property price trends on Palm Jumeirah</h2>
+  
+              
+                <ul class="list">
+                  <li class="list__item">The initial price for a 1-bedroom apartment for sale in the complex of Seven Palm constitutes AED 889K (USD 242K)</li>
+                  <li class="list__item">A luxurious penthouse with two bedrooms in Palm Beach Towers can be purchased at a starting cost of AED 7.3M (USD 2M)</li>
+                  <li class="list__item">The minimum cost of a 3-bedroom villa in Canal Cove Villas constitutes AED 9.5M (USD 2.5M)</li>
+                  <li class="list__item">A duplex with one bedroom in Raffles The Palm can be purchased for AED 10.5M (USD 2.8M)</li>
+                </ul>
+      
+              <div class="diagram">
+                <div class="diagram__item ">
+                  <span class="price-val blue">AED 889K</span>
+                  <span class="price-val">(USD 242K)</span>
+                  <div class="scale height-1">
+                    <div class="scale__info">
+                      <span class="conut">1</span>
+                      <img src="./assets/imgs/beds.svg" alt="">
+                    </div>
+                  </div>
+                  <span class="name">Apartment</span>
+                </div>
+                <div class="diagram__item ">
+                  <span class="price-val blue">AED 7.3M
+                    </span>
+                  <span class="price-val">(USD 2M)</span>
+                  <div class="scale height-4">
+                    <div class="scale__info">
+                      <span class="conut">2</span>
+                      <img src="./assets/imgs/beds.svg" alt="">
+                    </div>
+                  </div>
+                  <span class="name">Penthouse</span>
+                </div>
+                <div class="diagram__item">
+                  <span class="price-val blue">AED 9.5M
+                    </span>
+                  <span class="price-val">(USD 2.5M)</span>
+                  <div class="scale height-5">
+                    <div class="scale__info">
+                      <span class="conut">3</span>
+                      <img src="./assets/imgs/beds.svg" alt="">
+                    </div>
+                  </div>
+                  <span class="name">Villa</span>
+                </div>
+                <div class="diagram__item">
+                  <span class="price-val blue">AED 10.5M
+                    </span>
+                  <span class="price-val">(USD 2.8M)</span>
+                  <div class="scale height-6">
+                    <div class="scale__info">
+                      <span class="conut">1</span>
+                      <img src="./assets/imgs/beds.svg" alt="">
+                    </div>
+                  </div>
+                  <span class="name">Duplex</span>
+                </div>
+                <div class="diagram__item">
+                  <span class="price-val blue">AED 4.5M
+                    </span>
+                  <span class="price-val">(USD 1.2M)</span>
+                  <div class="scale height-2">
+                    <div class="scale__info">
+                      <span class="conut">2</span>
+                      <img src="./assets/imgs/beds.svg" alt="">
+                    </div>
+                  </div>
+                  <span class="name">Townhouse</span>
+                </div>
+                <div class="diagram__item">
+                  <span class="price-val blue">AED 22.8M
+                    </span>
+                  <span class="price-val">(USD 6.2M)</span>
+                  <div class="scale height-7">
+                    <div class="scale__info">
+                      
+                      <img src="./assets/imgs/half-flour.svg" alt="">
+                    </div>
+                  </div>
+                  <span class="name">Half-floor</span>
+                </div>
+                <div class="diagram__item">
+                  <span class="price-val blue">AED 5.6M
+                    </span>
+                  <span class="price-val">(USD 1.5M)</span>
+                  <div class="scale height-3">
+                    <div class="scale__info">
+                      
+                      <img src="./assets/imgs/full-floor.svg" alt="">
+                    </div>
+                  </div>
+                  <span class="name">Full-floor</span>
+                </div>
+                <div class="diagram__item">
+                  <span class="price-val blue">AED 27M
+                    </span>
+                  <span class="price-val">(USD 7.3M)</span>
+                  <div class="scale height-8">
+                    <div class="scale__info">
+                      
+                      <img src="./assets/imgs/plot.svg" alt="">
+                    </div>
+                  </div>
+                  <span class="name">Plot</span>
+                </div>
+              </div>
+            </div>
+            <div class="row grid">
+              
+              <img src="./assets/imgs/waterpool.png" class="img" alt="build">
             
+       
               <ul class="list">
-                <li class="list__item">The initial price for a 1-bedroom apartment for sale in the complex of Seven Palm constitutes AED 889K (USD 242K)</li>
-                <li class="list__item">A luxurious penthouse with two bedrooms in Palm Beach Towers can be purchased at a starting cost of AED 7.3M (USD 2M)</li>
-                <li class="list__item">The minimum cost of a 3-bedroom villa in Canal Cove Villas constitutes AED 9.5M (USD 2.5M)</li>
-                <li class="list__item">A duplex with one bedroom in Raffles The Palm can be purchased for AED 10.5M (USD 2.8M)</li>
+                <li class="list__item">A spacious townhouse with two bedrooms in Kempinski Palm Residence is available at an initial price of AED 4.5M (USD 1.2M)</li>
+                <li class="list__item">The starting price for a half-floor property in Serenia Living Tower 3 constitutes AED 22.8M (USD 6.2M)</li>
+                <li class="list__item">A full-floor property in Ellington Beach House can be purchased at a minimum cost of AED 5.6M (USD 1.5M)</li>
+                <li class="list__item">Investors can buy a land plot in the community of Garden Homes on Palm Jumeirah for a starting cost of AED 27M (USD 7.3M)</li>
               </ul>
-    
-            <div class="diagram">
-              <div class="diagram__item ">
-                <span class="price-val blue">AED 889K</span>
-                <span class="price-val">(USD 242K)</span>
-                <div class="scale height-1">
-                  <div class="scale__info">
-                    <span class="conut">1</span>
-                    <img src="./assets/imgs/beds.svg" alt="">
-                  </div>
+              <div class="roi">
+                <div class="roi__item blue">
+                  <span class="roi__item__type">Apartments</span>
+                  <div class="roi__item__title">ROI 5%</div>
+                  <p class="roi__item__deskr">The estimated ROI for luxury apartments in the prestigious area of Palm Jumeirah constitutes 5%.</p>
                 </div>
-                <span class="name">Apartment</span>
-              </div>
-              <div class="diagram__item ">
-                <span class="price-val blue">AED 7.3M
-                  </span>
-                <span class="price-val">(USD 2M)</span>
-                <div class="scale height-4">
-                  <div class="scale__info">
-                    <span class="conut">2</span>
-                    <img src="./assets/imgs/beds.svg" alt="">
-                  </div>
+                <div class="roi__item">
+                  <span class="roi__item__type">Villas</span>
+                  <div class="roi__item__title">ROI 3-5%</div>
+                  <p class="roi__item__deskr">Owners of spacious and elegant villas in the waterfront area can anticipate an average ROI between 3–5%.</p>
                 </div>
-                <span class="name">Penthouse</span>
               </div>
-              <div class="diagram__item">
-                <span class="price-val blue">AED 9.5M
-                  </span>
-                <span class="price-val">(USD 2.5M)</span>
-                <div class="scale height-5">
-                  <div class="scale__info">
-                    <span class="conut">3</span>
-                    <img src="./assets/imgs/beds.svg" alt="">
-                  </div>
-                </div>
-                <span class="name">Villa</span>
-              </div>
-              <div class="diagram__item">
-                <span class="price-val blue">AED 10.5M
-                  </span>
-                <span class="price-val">(USD 2.8M)</span>
-                <div class="scale height-6">
-                  <div class="scale__info">
-                    <span class="conut">1</span>
-                    <img src="./assets/imgs/beds.svg" alt="">
-                  </div>
-                </div>
-                <span class="name">Duplex</span>
-              </div>
-              <div class="diagram__item">
-                <span class="price-val blue">AED 4.5M
-                  </span>
-                <span class="price-val">(USD 1.2M)</span>
-                <div class="scale height-2">
-                  <div class="scale__info">
-                    <span class="conut">2</span>
-                    <img src="./assets/imgs/beds.svg" alt="">
-                  </div>
-                </div>
-                <span class="name">Townhouse</span>
-              </div>
-              <div class="diagram__item">
-                <span class="price-val blue">AED 22.8M
-                  </span>
-                <span class="price-val">(USD 6.2M)</span>
-                <div class="scale height-7">
-                  <div class="scale__info">
-                    
-                    <img src="./assets/imgs/half-flour.svg" alt="">
-                  </div>
-                </div>
-                <span class="name">Half-floor</span>
-              </div>
-              <div class="diagram__item">
-                <span class="price-val blue">AED 5.6M
-                  </span>
-                <span class="price-val">(USD 1.5M)</span>
-                <div class="scale height-3">
-                  <div class="scale__info">
-                    
-                    <img src="./assets/imgs/full-floor.svg" alt="">
-                  </div>
-                </div>
-                <span class="name">Full-floor</span>
-              </div>
-              <div class="diagram__item">
-                <span class="price-val blue">AED 27M
-                  </span>
-                <span class="price-val">(USD 7.3M)</span>
-                <div class="scale height-8">
-                  <div class="scale__info">
-                    
-                    <img src="./assets/imgs/plot.svg" alt="">
-                  </div>
-                </div>
-                <span class="name">Plot</span>
-              </div>
-            </div>
-          </div>
-          <div class="row grid">
             
-            <img src="./assets/imgs/waterpool.png" class="img" alt="build">
-          
-     
-            <ul class="list">
-              <li class="list__item">A spacious townhouse with two bedrooms in Kempinski Palm Residence is available at an initial price of AED 4.5M (USD 1.2M)</li>
-              <li class="list__item">The starting price for a half-floor property in Serenia Living Tower 3 constitutes AED 22.8M (USD 6.2M)</li>
-              <li class="list__item">A full-floor property in Ellington Beach House can be purchased at a minimum cost of AED 5.6M (USD 1.5M)</li>
-              <li class="list__item">Investors can buy a land plot in the community of Garden Homes on Palm Jumeirah for a starting cost of AED 27M (USD 7.3M)</li>
-            </ul>
-            <div class="roi">
-              <div class="roi__item blue">
-                <span class="roi__item__type">Apartments</span>
-                <div class="roi__item__title">ROI 5%</div>
-                <p class="roi__item__deskr">The estimated ROI for luxury apartments in the prestigious area of Palm Jumeirah constitutes 5%.</p>
-              </div>
-              <div class="roi__item">
-                <span class="roi__item__type">Villas</span>
-                <div class="roi__item__title">ROI 3-5%</div>
-                <p class="roi__item__deskr">Owners of spacious and elegant villas in the waterfront area can anticipate an average ROI between 3–5%.</p>
-              </div>
-            </div>
-          
-        </div>
+          </div>
+          </div>
+         
        
         </div>
       </section>
       <section class="contact-from">
         <div class="container">
-          <div class="content-item">
-            <h3 class="form-title">Buying property with Metropolitan Premium Properties</h3>
-            <form action="#" class="form">
-              <input class="form__input" type="text" placeholder="First Name">
-              <input class="form__input" type="text" placeholder="Last Name">
-              <input class="form__input" type="email" placeholder="Email">
-              <input class="form__input" type="tel" placeholder="Phone with country code">
-              <div class="form__terms">
-                <input class="checkbox" type="checkbox" checked name="terms" id="terms">
-
-                <label for="terms">I agree to <a href="#">Terms of use and Privacy Policy</a></label>
+          <div class="content-wrap">
+            <div class="content-item">
+              <h3 class="form-title">Buying property with Metropolitan Premium Properties</h3>
+              <form action="#" class="form">
+                <input class="form__input" type="text" placeholder="First Name">
+                <input class="form__input" type="text" placeholder="Last Name">
+                <input class="form__input" type="email" placeholder="Email">
+                <input class="form__input" type="tel" placeholder="Phone with country code">
+                <div class="form__terms">
+                  <input class="checkbox" type="checkbox" checked name="terms" id="terms">
+  
+                  <label for="terms">I agree to <a href="#">Terms of use and Privacy Policy</a></label>
+                </div>
+                <button class="sub-btn" type="submit">Send Request</button>
+              </form>
+            </div>
+            <div class="content-item">
+              <div class="text-wrap">
+                <h4 class="sub-title">The Metropolitan Premium Properties agency will provide professional help in buying luxurious property on Palm Jumeirah.</h4>
+                <ul class="list">
+                  <li class="list__item">Our highly experienced agents will help you to choose the most suitable property that will meet your budget and goals in the area.</li>
+                  <li class="list__item">Specialists within our company will assist you and fully conduct the real estate transaction, from collecting the package of documents to receiving the keys. </li>
+                </ul>
               </div>
-              <button class="sub-btn" type="submit">Send Request</button>
-            </form>
-          </div>
-          <div class="content-item">
-            <div class="text-wrap">
-              <h4 class="sub-title">The Metropolitan Premium Properties agency will provide professional help in buying luxurious property on Palm Jumeirah.</h4>
-              <ul class="list">
-                <li class="list__item">Our highly experienced agents will help you to choose the most suitable property that will meet your budget and goals in the area.</li>
-                <li class="list__item">Specialists within our company will assist you and fully conduct the real estate transaction, from collecting the package of documents to receiving the keys. </li>
-              </ul>
             </div>
           </div>
+         
             
         </div>
       </section>
@@ -1201,12 +1213,13 @@
         <div class="top">
           <div class="top__item">
             <a href="#" class="home"
-              ><img src="./assets/imgs/logo.svg" alt=""
+              ><img src="./assets/imgs/new_logo.svg" alt=""
             /></a>
-            <a href="#" class="contact-btn">Contact us</a>
             <p class="address">
               Office 1913, Al Manara Tower, Business Bay, Dubai, UAE
             </p>
+            <a href="#" class="contact-btn">Contact us</a>
+
             <div class="social">
               <a href="#" class="social__link">
                 <img src="./assets/imgs/fb.svg" alt=""

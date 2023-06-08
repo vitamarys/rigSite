@@ -12,7 +12,7 @@
   }
   .content-item {
     background-color: $blue-background;
-    background-image: url(../assets/imgs/line.png);
+    // background-image: url(../assets/imgs/line.png);
     background-repeat: no-repeat;
     background-size: cover;
     padding: 20px 20px 25px 20px;
@@ -162,6 +162,8 @@
       }
       &::before {
         content: url("../assets/imgs/zoom.svg");
+        position: relative;
+        top: 1px;
         margin-right: 10px;
       }
     }
@@ -219,6 +221,9 @@
         flex-direction: column;
         justify-content: flex-end;
         overflow: hidden;
+        @include adaptive(phoneLandscape, phonePortrait) {
+          padding: 20px 20px 20px 20px;
+        }
         .decor {
           position: absolute;
           right: 0;

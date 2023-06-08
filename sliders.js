@@ -23,6 +23,16 @@ document.addEventListener("DOMContentLoaded", () => {
       prevEl: ".prev",
     },
   });
+  const devHero = new Swiper(".developer-slider", {
+    slideClass: "one-slide",
+    slidesPerView: 1,
+    slidesPerGroup: 1,
+    spaceBetween: 0,
+    navigation: {
+      nextEl: ".next",
+      prevEl: ".prev",
+    },
+  });
   const listing = new Swiper(".listing-slider", {
     slideClass: "listing-slide",
     slidesPerView: 1,
@@ -275,13 +285,30 @@ document.addEventListener("DOMContentLoaded", () => {
   });
   const news = new Swiper(".slider-news", {
     slideClass: "slide",
-    slidesPerView: 2,
-    slidesPerGroup: 1,
+    slidesPerView: 3,
+    slidesPerGroup: 3,
     spaceBetween: 40,
     navigation: {
       nextEl: ".next-news",
       prevEl: ".prev-news",
     },
+    breakpoints: {
+      320: {
+        slidesPerView: 1,
+        slidesPerGroup: 1,
+        spaceBetween: 10,
+      },
+      600: {
+        slidesPerView: 1,
+        slidesPerGroup: 1,
+        spaceBetween: 10,
+      },
+      1024: {
+        slidesPerView: 3,
+        slidesPerGroup: 3,
+      },
+    },
+    
   });
   slidersContols.forEach((el, index) => {
     const colapseBtn = el.querySelector(".colapse");
@@ -499,7 +526,7 @@ document.addEventListener("DOMContentLoaded", () => {
                   slidesPerView: "auto",
                 },
                 1024: {
-                  slidesPerView: auto,
+                  slidesPerView: "auto",
                   slidesPerView: "auto",
                 },
               },
@@ -511,5 +538,4 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     });
   });
-  //sliders end
 });

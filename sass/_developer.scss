@@ -1,0 +1,38 @@
+.developer {
+  .container {
+    .content-item {
+      &:nth-child(2) {
+      }
+
+      .characteristic {
+        .btns {
+          .btn {
+            &.link-to {
+              @include adaptive(
+                tabletLandscape,
+                tabletPortrait,
+                phoneLandscape,
+                phonePortrait
+              ) {
+                display: none;
+              }
+            }
+            &.transparent {
+              @include adaptive(tabletLandscape, tabletPortrait) {
+                width: 45%;
+                text-align: center;
+              }
+              @include adaptive(phoneLandscape, phonePortrait) {
+                width: 100%;
+                height: 50px;
+                background-color: $light-blue;
+                color: $white;
+                text-align: center;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

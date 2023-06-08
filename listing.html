@@ -102,9 +102,9 @@
       <div class="header__bot">
         <div class="header__bot__mobile-search">
           <div class="container">
-            <h4 class="header__bot__mobile-search__title">
+            <div class="header__bot__mobile-search__title">
               Top property for life and investments
-            </h4>
+            </div>
             <button class="header__bot__mobile-search__button">
               Find property
             </button>
@@ -121,13 +121,27 @@
 
           <nav class="nav">
             <ul class="nav__list">
-              <li class="nav__list__item">
+            
+              <li class="nav__list__item drop">
                 <a href="#"
                   ><img
+                    src="./assets/imgs/menu/menu-buy.svg"
+                    alt=""
+                    class="nav__list__item__img"
+                  />Buy <span class="arr">></span></a
+                >
+                <div class="dropdown">
+                  <a href="#">Secondary property</a>
+                  <a href="#">Off-plan property</a>
+                </div>
+              </li>
+              <li class="nav__list__item">
+                <a href="#">
+                  <img
                     src="./assets/imgs/menu/menu-aria.svg"
                     alt=""
                     class="nav__list__item__img"
-                  />Buy</a
+                  />Area Guide</a
                 >
               </li>
               <li class="nav__list__item">
@@ -136,7 +150,7 @@
                     src="./assets/imgs/menu/menu-sell.svg"
                     alt=""
                     class="nav__list__item__img"
-                  />Sell</a
+                  />Rent</a
                 >
               </li>
               <li class="nav__list__item">
@@ -145,9 +159,10 @@
                     src="./assets/imgs/menu/menu-rent.svg"
                     alt=""
                     class="nav__list__item__img"
-                  />Rent</a
+                  />Sell</a
                 >
               </li>
+              
               <li class="nav__list__item">
                 <a href="#">
                   <img
@@ -172,7 +187,7 @@
                     src="./assets/imgs/menu/menu-news.svg"
                     alt=""
                     class="nav__list__item__img"
-                  />News</a
+                  />News <span class="stiker">10</span></a
                 >
               </li>
               <li class="nav__list__item">
@@ -344,8 +359,7 @@
         </div>
       </div>
     </header>
-    <main>
-      <section class="listing">
+      <section class="listing-hero">
         <div class="container">
           <div class="bread-crums">
             <a href="#" class="bread-crums__item home">Home</a>
@@ -755,7 +769,7 @@
                 </a>
               </div>
             </div> -->
-            <h2 class="title" id="dev">Ellington properties</h2>
+            <h2 class="title" id="dev">More available by Ellington properties</h2>
             <p class="pagaraf">
               Ellington Properties is a well-known, prestigious developer in
               Dubai that specialises in building luxury properties and
@@ -1630,151 +1644,146 @@
           </div>
           <div class="slider-pop_project">
             <div class="slides-wrap swiper-wrapper">
-              <div class="slide">
-                <div class="slide__img">
+              <div class="slide small-card">
+                <div class="small-card__img">
                   <span class="price">from $4,083,900</span>
                   <img src="./assets/imgs/ap.jpeg" alt="apart" />
                 </div>
-                <div class="slide__text-section">
-                  <h4 class="slide__title">AHS One Crescent</h4>
-                  <p class="slide__rigion">Palm Jumeirah</p>
-                  <div class="slide__info">
-                    <div class="slide__info__item">
-                      <p class="slide__info__item__value">1Q 2025</p>
-                      <p class="slide__info__item__name">Handover</p>
+                <div class="small-card__text-section">
+                  <h4 class="small-card__title">AHS One Crescent</h4>
+                  <p class="small-card__rigion">Palm Jumeirah</p>
+                  <div class="small-card__info">
+                    <div class="small-card__info__item">
+                      <p class="small-card__info__item__value">1Q 2025</p>
+                      <p class="small-card__info__item__name">Handover</p>
                     </div>
-                    <div class="slide__info__item">
-                      <p class="slide__info__item__value">AHS Properties</p>
-                      <p class="slide__info__item__name">Developer</p>
+                    <div class="small-card__info__item">
+                      <p class="small-card__info__item__value">AHS Properties</p>
+                      <p class="small-card__info__item__name">Developer</p>
                     </div>
                   </div>
-                  <a href="#" class="slide__link">Learn more</a>
+                  <a href="#" class="small-card__link">Learn more</a>
                 </div>
               </div>
-              <div class="slide">
-                <div class="slide__img">
+              <div class="slide small-card">
+                <div class="small-card__img">
                   <span class="price">from $4,083,900</span>
                   <img src="./assets/imgs/ap.jpeg" alt="apart" />
                 </div>
-                <div class="slide__text-section">
-                  <h4 class="slide__title">AHS One Crescent</h4>
-                  <p class="slide__rigion">Palm Jumeirah</p>
-                  <div class="slide__info">
-                    <div class="slide__info__item">
-                      <p class="slide__info__item__value">1Q 2025</p>
-                      <p class="slide__info__item__name">Handover</p>
+                <div class="small-card__text-section">
+                  <h4 class="small-card__title">AHS One Crescent</h4>
+                  <p class="small-card__rigion">Palm Jumeirah</p>
+                  <div class="small-card__info">
+                    <div class="small-card__info__item">
+                      <p class="small-card__info__item__value">1Q 2025</p>
+                      <p class="small-card__info__item__name">Handover</p>
                     </div>
-                    <div class="slide__info__item">
-                      <p class="slide__info__item__value">AHS Properties</p>
-                      <p class="slide__info__item__name">Developer</p>
+                    <div class="small-card__info__item">
+                      <p class="small-card__info__item__value">AHS Properties</p>
+                      <p class="small-card__info__item__name">Developer</p>
                     </div>
                   </div>
-                  <a href="#" class="slide__link">Learn more</a>
+                  <a href="#" class="small-card__link">Learn more</a>
                 </div>
-              </div>
-              <div class="slide">
-                <div class="slide__img">
+              </div>   <div class="slide small-card">
+                <div class="small-card__img">
                   <span class="price">from $4,083,900</span>
                   <img src="./assets/imgs/ap.jpeg" alt="apart" />
                 </div>
-                <div class="slide__text-section">
-                  <h4 class="slide__title">AHS One Crescent</h4>
-                  <p class="slide__rigion">Palm Jumeirah</p>
-                  <div class="slide__info">
-                    <div class="slide__info__item">
-                      <p class="slide__info__item__value">1Q 2025</p>
-                      <p class="slide__info__item__name">Handover</p>
+                <div class="small-card__text-section">
+                  <h4 class="small-card__title">AHS One Crescent</h4>
+                  <p class="small-card__rigion">Palm Jumeirah</p>
+                  <div class="small-card__info">
+                    <div class="small-card__info__item">
+                      <p class="small-card__info__item__value">1Q 2025</p>
+                      <p class="small-card__info__item__name">Handover</p>
                     </div>
-                    <div class="slide__info__item">
-                      <p class="slide__info__item__value">AHS Properties</p>
-                      <p class="slide__info__item__name">Developer</p>
+                    <div class="small-card__info__item">
+                      <p class="small-card__info__item__value">AHS Properties</p>
+                      <p class="small-card__info__item__name">Developer</p>
                     </div>
                   </div>
-                  <a href="#" class="slide__link">Learn more</a>
+                  <a href="#" class="small-card__link">Learn more</a>
                 </div>
-              </div>
-              <div class="slide">
-                <div class="slide__img">
+              </div>   <div class="slide small-card">
+                <div class="small-card__img">
                   <span class="price">from $4,083,900</span>
                   <img src="./assets/imgs/ap.jpeg" alt="apart" />
                 </div>
-                <div class="slide__text-section">
-                  <h4 class="slide__title">AHS One Crescent</h4>
-                  <p class="slide__rigion">Palm Jumeirah</p>
-                  <div class="slide__info">
-                    <div class="slide__info__item">
-                      <p class="slide__info__item__value">1Q 2025</p>
-                      <p class="slide__info__item__name">Handover</p>
+                <div class="small-card__text-section">
+                  <h4 class="small-card__title">AHS One Crescent</h4>
+                  <p class="small-card__rigion">Palm Jumeirah</p>
+                  <div class="small-card__info">
+                    <div class="small-card__info__item">
+                      <p class="small-card__info__item__value">1Q 2025</p>
+                      <p class="small-card__info__item__name">Handover</p>
                     </div>
-                    <div class="slide__info__item">
-                      <p class="slide__info__item__value">AHS Properties</p>
-                      <p class="slide__info__item__name">Developer</p>
+                    <div class="small-card__info__item">
+                      <p class="small-card__info__item__value">AHS Properties</p>
+                      <p class="small-card__info__item__name">Developer</p>
                     </div>
                   </div>
-                  <a href="#" class="slide__link">Learn more</a>
+                  <a href="#" class="small-card__link">Learn more</a>
                 </div>
-              </div>
-              <div class="slide">
-                <div class="slide__img">
+              </div>   <div class="slide small-card">
+                <div class="small-card__img">
                   <span class="price">from $4,083,900</span>
                   <img src="./assets/imgs/ap.jpeg" alt="apart" />
                 </div>
-                <div class="slide__text-section">
-                  <h4 class="slide__title">AHS One Crescent</h4>
-                  <p class="slide__rigion">Palm Jumeirah</p>
-                  <div class="slide__info">
-                    <div class="slide__info__item">
-                      <p class="slide__info__item__value">1Q 2025</p>
-                      <p class="slide__info__item__name">Handover</p>
+                <div class="small-card__text-section">
+                  <h4 class="small-card__title">AHS One Crescent</h4>
+                  <p class="small-card__rigion">Palm Jumeirah</p>
+                  <div class="small-card__info">
+                    <div class="small-card__info__item">
+                      <p class="small-card__info__item__value">1Q 2025</p>
+                      <p class="small-card__info__item__name">Handover</p>
                     </div>
-                    <div class="slide__info__item">
-                      <p class="slide__info__item__value">AHS Properties</p>
-                      <p class="slide__info__item__name">Developer</p>
+                    <div class="small-card__info__item">
+                      <p class="small-card__info__item__value">AHS Properties</p>
+                      <p class="small-card__info__item__name">Developer</p>
                     </div>
                   </div>
-                  <a href="#" class="slide__link">Learn more</a>
+                  <a href="#" class="small-card__link">Learn more</a>
                 </div>
-              </div>
-              <div class="slide">
-                <div class="slide__img">
+              </div>   <div class="slide small-card">
+                <div class="small-card__img">
                   <span class="price">from $4,083,900</span>
                   <img src="./assets/imgs/ap.jpeg" alt="apart" />
                 </div>
-                <div class="slide__text-section">
-                  <h4 class="slide__title">AHS One Crescent</h4>
-                  <p class="slide__rigion">Palm Jumeirah</p>
-                  <div class="slide__info">
-                    <div class="slide__info__item">
-                      <p class="slide__info__item__value">1Q 2025</p>
-                      <p class="slide__info__item__name">Handover</p>
+                <div class="small-card__text-section">
+                  <h4 class="small-card__title">AHS One Crescent</h4>
+                  <p class="small-card__rigion">Palm Jumeirah</p>
+                  <div class="small-card__info">
+                    <div class="small-card__info__item">
+                      <p class="small-card__info__item__value">1Q 2025</p>
+                      <p class="small-card__info__item__name">Handover</p>
                     </div>
-                    <div class="slide__info__item">
-                      <p class="slide__info__item__value">AHS Properties</p>
-                      <p class="slide__info__item__name">Developer</p>
+                    <div class="small-card__info__item">
+                      <p class="small-card__info__item__value">AHS Properties</p>
+                      <p class="small-card__info__item__name">Developer</p>
                     </div>
                   </div>
-                  <a href="#" class="slide__link">Learn more</a>
+                  <a href="#" class="small-card__link">Learn more</a>
                 </div>
-              </div>
-              <div class="slide">
-                <div class="slide__img">
+              </div>   <div class="slide small-card">
+                <div class="small-card__img">
                   <span class="price">from $4,083,900</span>
                   <img src="./assets/imgs/ap.jpeg" alt="apart" />
                 </div>
-                <div class="slide__text-section">
-                  <h4 class="slide__title">AHS One Crescent</h4>
-                  <p class="slide__rigion">Palm Jumeirah</p>
-                  <div class="slide__info">
-                    <div class="slide__info__item">
-                      <p class="slide__info__item__value">1Q 2025</p>
-                      <p class="slide__info__item__name">Handover</p>
+                <div class="small-card__text-section">
+                  <h4 class="small-card__title">AHS One Crescent</h4>
+                  <p class="small-card__rigion">Palm Jumeirah</p>
+                  <div class="small-card__info">
+                    <div class="small-card__info__item">
+                      <p class="small-card__info__item__value">1Q 2025</p>
+                      <p class="small-card__info__item__name">Handover</p>
                     </div>
-                    <div class="slide__info__item">
-                      <p class="slide__info__item__value">AHS Properties</p>
-                      <p class="slide__info__item__name">Developer</p>
+                    <div class="small-card__info__item">
+                      <p class="small-card__info__item__value">AHS Properties</p>
+                      <p class="small-card__info__item__name">Developer</p>
                     </div>
                   </div>
-                  <a href="#" class="slide__link">Learn more</a>
+                  <a href="#" class="small-card__link">Learn more</a>
                 </div>
               </div>
             </div>
@@ -1899,12 +1908,13 @@
         <div class="top">
           <div class="top__item">
             <a href="#" class="home"
-              ><img src="./assets/imgs/logo_footer.svg" alt=""
+              ><img src="./assets/imgs/new_logo.svg" alt=""
             /></a>
-            <a href="#" class="contact-btn">Contact us</a>
             <p class="address">
               Office 1913, Al Manara Tower, Business Bay, Dubai, UAE
             </p>
+            <a href="#" class="contact-btn">Contact us</a>
+
             <div class="social">
               <a href="#" class="social__link">
                 <img src="./assets/imgs/fb.svg" alt=""

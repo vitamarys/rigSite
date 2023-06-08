@@ -30,6 +30,7 @@ document.addEventListener("DOMContentLoaded", () => {
      infoBlock = document.querySelector('.media-links'),
      dropdownItem = document.querySelector('.drop'),
      dropdownList = document.querySelector('.dropdown'),
+     devCards = document.querySelectorAll('.developers-list__item'),
     (headerBot = document.querySelector(".header__bot"));
   
   window.addEventListener("click", (e) => {
@@ -52,7 +53,7 @@ document.addEventListener("DOMContentLoaded", () => {
   });
   langSelectLine.forEach((el, index) => {
     el.addEventListener("click", (e) => {
-      console.log("test");
+
       const target = e.target;
       if (
         langSelect[index].className === "lang-select active" ||
@@ -75,11 +76,11 @@ document.addEventListener("DOMContentLoaded", () => {
           ".custom-select__options__list__item"
         );
         const selectTitle = select.querySelector(".custom-select__select");
-        select.classList.add("open");
+        select.classList.toggle("open");
 
         langOptions.forEach((opt) => {
           opt.addEventListener("click", (e) => {
-            console.log("12345");
+       
             select.classList.remove("open");
             btnLang[index].disabled = false;
 
@@ -183,15 +184,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  // if(stickyBlock){
-  //   window.addEventListener('scroll',()=>{
-  //     if(stickyWrapper.getBoundingClientRect().y < 0 && stickyWrapper.getBoundingClientRect().y > -stickyWrapper.offsetHeight + stickyBlock.clientHeight ){
-       
-  //       stickyBlock.style = `top: ${Math.abs(stickyWrapper.getBoundingClientRect().y) + 50}px`
-  //     }
-    
-  //   })
-  // }
+
  
   faqs.forEach(faq=>{
        
@@ -212,16 +205,17 @@ document.addEventListener("DOMContentLoaded", () => {
   if (storeProject){
     
     const projectsArr = JSON.parse(storeProject)
+    const voted =  projectsArr.filter(elArr => elArr.id === bodyPid );
+
     projectsArr.forEach(elArr=>{
-      if (elArr.id !== bodyPid  && bodyPid) {
-        console.log('asd');
+      if (elArr.id !== bodyPid && voted.length === 0 ) {
         projectsRating.forEach(el =>{
           const stars = el.querySelectorAll('.star');
           const rating = el.querySelector('.rating')
        
           stars.forEach((el , indx)=>{
             el.addEventListener('click',()=>{
-              console.log(elArr.id);
+             console.log('asdasdasdsad');
               stars.forEach((star , i)=>{
                 
                 rating.textContent = `${indx + 1 }/5`
@@ -237,27 +231,30 @@ document.addEventListener("DOMContentLoaded", () => {
               projectsArr.push({id:bodyPid, rating: indx + 1 });
               localStorage.setItem('project_rating', JSON.stringify(projectsArr))
 
-              console.log(projectsArr);
+              
             })
           
           })
         })
       }else{
-       
+      
         projectsRating.forEach(el =>{
           const stars = el.querySelectorAll('.star');
           const rating = el.querySelector('.rating')
-       
+         
           stars.forEach((el , indx)=>{
               stars.forEach((star , i)=>{
-                rating.textContent = `${elArr.rating}/5`
-                star.classList.add('def');
-
-      
-                if(i <= elArr.rating - 1){
-                  star.classList.remove('def')
-                  star.classList.add('check')
+                if(elArr.id === bodyPid){
+                  rating.textContent = `${elArr.rating}/5`
+                  star.classList.add('def');
+  
+        
+                  if(i <= elArr.rating - 1){
+                    star.classList.remove('def')
+                    star.classList.add('check')
+                  }
                 }
+               
               })
             
           
@@ -271,7 +268,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
    
 
-  }else{
+  }else if (bodyPid){
    
     projectsRating.forEach(el =>{
       const stars = el.querySelectorAll('.star');
@@ -319,15 +316,30 @@ document.addEventListener("DOMContentLoaded", () => {
     }
    
   }
+  if(devCards){
+    devCards.forEach(devCard=>{
+      devCard.addEventListener('mouseover',()=>{
+        devCard.classList.add('show-link')
+      })
+      devCard.addEventListener('mouseleave',()=>{
+        devCard.classList.remove('show-link')
+      })
+    })
+  }
  dropdownItem.addEventListener('click',()=>{
   dropdownItem.classList.toggle('open')
   dropdownList.classList.toggle('show')
  })
- dropdownItem.addEventListener('mouseleave',(e)=>{
-  const target = e.target;
-  if (target !== dropdownItem || target !== dropdownList){
-    dropdownItem.classList.remove('open')
-  dropdownList.classList.remove('show')
-  }
- })
+ if( window.innerWidth > 1366){
+ 
+  dropdownItem.addEventListener('mouseleave',(e)=>{
+    const target = e.target;
+    if (target !== dropdownItem || target !== dropdownList){
+  
+      dropdownItem.classList.remove('open')
+    dropdownList.classList.remove('show')
+    }
+   })
+ }
+
 });

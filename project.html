@@ -16,7 +16,7 @@
     />
     <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
   </head>
-  <body class="project-page">
+  <body class="project-page" data-pid="4">
     <header class="header">
       <div class="header__top">
         <div class="container">
@@ -102,9 +102,9 @@
       <div class="header__bot">
         <div class="header__bot__mobile-search">
           <div class="container">
-            <h4 class="header__bot__mobile-search__title">
+            <div class="header__bot__mobile-search__title">
               Top property for life and investments
-            </h4>
+            </div>
             <button class="header__bot__mobile-search__button">
               Find property
             </button>
@@ -121,13 +121,27 @@
 
           <nav class="nav">
             <ul class="nav__list">
-              <li class="nav__list__item">
+            
+              <li class="nav__list__item drop">
                 <a href="#"
                   ><img
+                    src="./assets/imgs/menu/menu-buy.svg"
+                    alt=""
+                    class="nav__list__item__img"
+                  />Buy <span class="arr">></span></a
+                >
+                <div class="dropdown">
+                  <a href="#">Secondary property</a>
+                  <a href="#">Off-plan property</a>
+                </div>
+              </li>
+              <li class="nav__list__item">
+                <a href="#">
+                  <img
                     src="./assets/imgs/menu/menu-aria.svg"
                     alt=""
                     class="nav__list__item__img"
-                  />Buy</a
+                  />Area Guide</a
                 >
               </li>
               <li class="nav__list__item">
@@ -136,7 +150,7 @@
                     src="./assets/imgs/menu/menu-sell.svg"
                     alt=""
                     class="nav__list__item__img"
-                  />Sell</a
+                  />Rent</a
                 >
               </li>
               <li class="nav__list__item">
@@ -145,9 +159,10 @@
                     src="./assets/imgs/menu/menu-rent.svg"
                     alt=""
                     class="nav__list__item__img"
-                  />Rent</a
+                  />Sell</a
                 >
               </li>
+              
               <li class="nav__list__item">
                 <a href="#">
                   <img
@@ -172,7 +187,7 @@
                     src="./assets/imgs/menu/menu-news.svg"
                     alt=""
                     class="nav__list__item__img"
-                  />News</a
+                  />News <span class="stiker">10</span></a
                 >
               </li>
               <li class="nav__list__item">
@@ -345,7 +360,7 @@
       </div>
     </header>
     <main >
-      <section class="project">
+      <section class="project hero-info-slider">
         <div class="container">
           <div class="bread-crums">
             <a href="#" class="bread-crums__item home">Home</a>
@@ -359,7 +374,35 @@
               and will be located right in the centre of the artificial island.
             </p>
             <div class="characteristic">
-              <div class="characteristic__item">
+              <table>
+                <tbody class="">
+                  <tr class="characteristic__item">
+                    <td class="grey">Property types</td>
+                    <td class="blue">Apartments, duplexes</td>
+                  </tr>
+                  <tr class="characteristic__item">
+                    <td class="grey">Area from </td>
+                    <td class="blue">4,470 sq. ft.</td>
+                  </tr>
+                  <tr class="characteristic__item">
+                    <td class="grey">Starting price</td>
+                    <td class="blue">21,000,000 AED</td>
+                  </tr>
+                  <tr class="characteristic__item">
+                    <td class="grey">Handover</td>
+                    <td class="blue">2027 Q3</td>
+                  </tr>
+                  <!-- <tr class="characteristic__item geo">
+                    <td class="grey">
+                      <div class="map">
+                        <button class="open-map">View map</button>
+                      </div>
+                    </td>
+                    <td class="blue">View all projects on map</td>
+                  </tr> -->
+                </tbody>
+              </table>
+              <!-- <div class="characteristic__item">
                 <span class="grey">Property types</span>
                 <span class="blue">Apartments, duplexes</span>
               </div>
@@ -370,11 +413,11 @@
               <div class="characteristic__item">
                 <span class="grey">Starting price</span>
                 <span class="blue">21,000,000 AED</span>
-              </div>
-              <div class="characteristic__item">
+              </div> -->
+              <!-- <div class="characteristic__item">
                 <span class="grey">Handover</span>
                 <span class="blue">2027 Q3</span>
-              </div>
+              </div> -->
               <div class="characteristic__item geo">
                 <img src="./assets/imgs/tablet-map.jpg" alt="tablet-map" class="tablet-map">
                 <div class="map">
@@ -388,6 +431,47 @@
               <div class="btns">
                 <a href="#" class="btn download"> Download brochure </a>
                 <a href="#" class="btn transparent"> Property Inquiry</a>
+              </div>
+            </div>
+            <div class="media-mob">
+              <div class="star-rating media-links__item project-rating">
+                <div class="stars">
+                  <div class="star check" style="
+                      background-image: url('./assets/imgs/star-rating.svg');
+                    "></div>
+                  <div class="star check" style="
+                      background-image: url('./assets/imgs/star-rating.svg');
+                    "></div>
+                  <div class="star check" style="
+                      background-image: url('./assets/imgs/star-rating.svg');
+                    "></div>
+                  <div class="star check" style="
+                      background-image: url('./assets/imgs/star-rating.svg');
+                    "></div>
+                  <div class="star def" style="background-image: url('./assets/imgs/star-half.svg')"></div>
+                </div>
+                <span class="rating">4/5</span>
+              </div>
+              <div class="share media-mob__item">
+                <span class="btn share share-btn"><svg width="13" height="11" viewBox="0 0 13 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M12.8963 4.99562L8.16888 0.107223C8.11929 0.0560134 8.05614 0.0211471 7.98741 0.00702724C7.91867 -0.0070926 7.84743 0.000167345 7.78268 0.0278901C7.71793 0.0556129 7.66258 0.102555 7.62362 0.162788C7.58466 0.22302 7.56383 0.293842 7.56377 0.366308V2.94494C4.34439 3.16431 0.449573 6.30571 0.0040125 10.3179C-0.010458 10.4456 0.0144297 10.5748 0.0751301 10.6871C0.13583 10.7994 0.229248 10.889 0.342074 10.9432C0.4549 10.9973 0.58138 11.0133 0.703497 10.9888C0.825613 10.9643 0.937138 10.9006 1.02218 10.8067C1.68757 10.0728 4.07729 7.73557 7.56377 7.58464V10.1431C7.56383 10.2156 7.58466 10.2864 7.62362 10.3466C7.66258 10.4069 7.71793 10.4538 7.78268 10.4815C7.84743 10.5092 7.91867 10.5165 7.98741 10.5024C8.05614 10.4883 8.11929 10.4534 8.16888 10.4022L12.8963 5.51379C12.9627 5.44505 13 5.35186 13 5.25471C13 5.15755 12.9627 5.06437 12.8963 4.99562ZM8.27288 9.25831V7.21007C8.27288 7.11283 8.23553 7.01958 8.16903 6.95082C8.10254 6.88206 8.01236 6.84344 7.91832 6.84344C6.27968 6.84344 4.6824 7.28645 3.17198 8.16025C2.29163 8.67162 1.48071 9.3014 0.760402 10.0331C1.03814 8.41017 1.95171 6.85566 3.36049 5.61706C4.75508 4.39557 6.45814 3.66598 7.91832 3.66598C8.01236 3.66598 8.10254 3.62735 8.16903 3.55859C8.23553 3.48984 8.27288 3.39658 8.27288 3.29935V1.25172L12.1441 5.25471L8.27288 9.25831Z" fill="#6D6D6D"></path>
+                </svg>Share</span>
+                <span class="url">/listing-unit-reference-num</span>
+                <span class="btn copy" type="button">Copy</span>
+              </div>
+              <div class="social media-mob__item social-menu">
+                <a href="#">
+                  <img src="./assets/imgs/fb-grey.svg" alt="fb">
+                </a>
+                <a href="#">
+                  <img src="./assets/imgs/tw-grey.svg" alt="fb">
+                </a>
+                <a href="#">
+                  <img src="./assets/imgs/linkin-grey.svg" alt="fb">
+                </a>
+                <a href="#">
+                  <img src="./assets/imgs/wa-grey.svg" alt="fb">
+                </a>
               </div>
             </div>
           </div>
@@ -405,18 +489,133 @@
               </p>
               <a href="#" class="info__item visual-tour">Get Virtual Tour</a>
             </div>
-            <div class="project-slider">
+            <div class="overlay">
+              <div class="head"></div>
+            </div>
+            <div class="media-links">
+              <div class="star-rating media-links__item project-rating">
+                <div class="stars">
+                  <div
+                    class="star"
+                    style="
+                      background-image: url('./assets/imgs/star-rating.svg');
+                    "
+                  ></div>
+                  <div
+                    class="star"
+                    style="
+                      background-image: url('./assets/imgs/star-rating.svg');
+                    "
+                  ></div>
+                  <div
+                    class="star"
+                    style="
+                      background-image: url('./assets/imgs/star-rating.svg');
+                    "
+                  ></div>
+                  <div
+                    class="star"
+                    style="
+                      background-image: url('./assets/imgs/star-rating.svg');
+                    "
+                  ></div>
+                  <div
+                    class="star"
+                    style="background-image: url('./assets/imgs/star-half.svg')"
+                  ></div>
+                </div>
+                <span class="rating">4.5/5 </span>
+              </div>
+              <div class="share media-links__item">
+                <span class="btn share share-btn"
+                  ><svg
+                    width="13"
+                    height="11"
+                    viewBox="0 0 13 11"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M12.8963 4.99562L8.16888 0.107223C8.11929 0.0560134 8.05614 0.0211471 7.98741 0.00702724C7.91867 -0.0070926 7.84743 0.000167345 7.78268 0.0278901C7.71793 0.0556129 7.66258 0.102555 7.62362 0.162788C7.58466 0.22302 7.56383 0.293842 7.56377 0.366308V2.94494C4.34439 3.16431 0.449573 6.30571 0.0040125 10.3179C-0.010458 10.4456 0.0144297 10.5748 0.0751301 10.6871C0.13583 10.7994 0.229248 10.889 0.342074 10.9432C0.4549 10.9973 0.58138 11.0133 0.703497 10.9888C0.825613 10.9643 0.937138 10.9006 1.02218 10.8067C1.68757 10.0728 4.07729 7.73557 7.56377 7.58464V10.1431C7.56383 10.2156 7.58466 10.2864 7.62362 10.3466C7.66258 10.4069 7.71793 10.4538 7.78268 10.4815C7.84743 10.5092 7.91867 10.5165 7.98741 10.5024C8.05614 10.4883 8.11929 10.4534 8.16888 10.4022L12.8963 5.51379C12.9627 5.44505 13 5.35186 13 5.25471C13 5.15755 12.9627 5.06437 12.8963 4.99562ZM8.27288 9.25831V7.21007C8.27288 7.11283 8.23553 7.01958 8.16903 6.95082C8.10254 6.88206 8.01236 6.84344 7.91832 6.84344C6.27968 6.84344 4.6824 7.28645 3.17198 8.16025C2.29163 8.67162 1.48071 9.3014 0.760402 10.0331C1.03814 8.41017 1.95171 6.85566 3.36049 5.61706C4.75508 4.39557 6.45814 3.66598 7.91832 3.66598C8.01236 3.66598 8.10254 3.62735 8.16903 3.55859C8.23553 3.48984 8.27288 3.39658 8.27288 3.29935V1.25172L12.1441 5.25471L8.27288 9.25831Z"
+                      fill="#6D6D6D"
+                    />
+                  </svg>
+                  Share</span
+                >
+                <span class="url">/listing-unit-reference-num</span>
+                <span class="btn copy">Copy</span>
+              </div>
+              <div class="social media-links__item social-menu">
+                <a href="#">
+                  <svg
+                    width="22"
+                    height="22"
+                    viewBox="0 0 22 22"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M11 0C4.92519 0 0 4.95493 0 11.0664C0 16.5891 4.022 21.1666 9.28163 22V14.266H6.48735V11.0664H9.28163V8.62823C9.28163 5.8525 10.9241 4.32186 13.4356 4.32186C14.6392 4.32186 15.8999 4.53768 15.8999 4.53768V7.25918H14.5094C13.1452 7.25918 12.7184 8.11359 12.7184 8.98903V11.0642H15.7668L15.2794 14.2638H12.7184V21.9978C17.978 21.1688 22 16.5902 22 11.0664C22 4.95493 17.0748 0 11 0Z"
+                      fill="#6D6D6D"
+                    />
+                  </svg>
+                </a>
+                <a href="#">
+                  <svg
+                    width="23"
+                    height="23"
+                    viewBox="0 0 23 23"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M11.5 0C5.14933 0 0 5.14933 0 11.5C0 17.8507 5.14933 23 11.5 23C17.8507 23 23 17.8507 23 11.5C23 5.14933 17.8507 0 11.5 0ZM17.0267 8.66864C17.0344 8.78929 17.0344 8.91507 17.0344 9.03828C17.0344 12.8066 14.1645 17.1473 8.9202 17.1473C7.30301 17.1473 5.80391 16.6776 4.54096 15.869C4.77199 15.8946 4.99275 15.9049 5.22891 15.9049C6.56373 15.9049 7.79074 15.4531 8.76875 14.6882C7.51607 14.6625 6.46362 13.8411 6.10424 12.7116C6.54319 12.7758 6.9385 12.7758 7.39029 12.6603C6.74528 12.5292 6.16553 12.1789 5.74953 11.6689C5.33353 11.1588 5.10694 10.5205 5.10826 9.86228V9.82634C5.4856 10.0394 5.92969 10.1703 6.39431 10.1883C6.00373 9.92798 5.68341 9.57532 5.46176 9.16157C5.24011 8.74783 5.12398 8.28578 5.12366 7.81641C5.12366 7.28504 5.26228 6.79989 5.51127 6.37891C6.22721 7.26024 7.12058 7.98106 8.13334 8.49451C9.14609 9.00796 10.2556 9.30256 11.3896 9.35915C10.9866 7.42109 12.4344 5.85268 14.1748 5.85268C14.9962 5.85268 15.7355 6.19665 16.2566 6.75112C16.9009 6.63047 17.517 6.38917 18.0663 6.06574C17.8532 6.72545 17.4066 7.28248 16.8136 7.63415C17.3886 7.57254 17.9431 7.41339 18.4565 7.19007C18.0689 7.75993 17.5837 8.26563 17.0267 8.66864Z"
+                      fill="#6D6D6D"
+                    />
+                  </svg>
+                </a>
+                <a href="#">
+                  <svg
+                    width="23"
+                    height="23"
+                    viewBox="0 0 23 23"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M11.5 0C5.14865 0 0 5.14865 0 11.5C0 17.8514 5.14865 23 11.5 23C17.8514 23 23 17.8514 23 11.5C23 5.14865 17.8514 0 11.5 0ZM8.6849 16.2665H6.35615V8.77234H8.6849V16.2665ZM7.50615 7.85234C6.77062 7.85234 6.29505 7.33125 6.29505 6.68677C6.29505 6.02911 6.785 5.52359 7.53609 5.52359C8.28719 5.52359 8.74719 6.02911 8.76156 6.68677C8.76156 7.33125 8.28719 7.85234 7.50615 7.85234ZM17.1901 16.2665H14.8614V12.1133C14.8614 11.1466 14.5235 10.4902 13.6814 10.4902C13.0381 10.4902 12.656 10.9346 12.4871 11.3622C12.4248 11.5144 12.4092 11.73 12.4092 11.9444V16.2653H10.0793V11.1622C10.0793 10.2266 10.0493 9.44438 10.0182 8.77115H12.0415L12.1481 9.81213H12.1948C12.5015 9.32339 13.2526 8.60224 14.5092 8.60224C16.0413 8.60224 17.1901 9.62885 17.1901 11.8354V16.2665Z"
+                      fill="#6D6D6D"
+                    />
+                  </svg>
+                </a>
+                <a href="#">
+                  <svg
+                    width="23"
+                    height="23"
+                    viewBox="0 0 23 23"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M11.5 0C17.8515 0 23 5.14855 23 11.5C23 17.8514 17.8515 23 11.5 23C9.4677 23.0033 7.47117 22.4654 5.71551 21.4417L0.00461617 23L1.55942 17.2868C0.534873 15.5306 -0.00337913 13.5332 1.59623e-05 11.5C1.59623e-05 5.14855 5.14856 0 11.5 0ZM7.58081 6.095L7.35081 6.1042C7.20191 6.11326 7.05639 6.15238 6.92301 6.2192C6.79826 6.28984 6.68438 6.37815 6.58491 6.4814C6.44691 6.61135 6.36871 6.72405 6.28476 6.8333C5.8594 7.38633 5.63038 8.0653 5.63386 8.76299C5.63616 9.32649 5.78336 9.87504 6.01336 10.3879C6.48371 11.4252 7.25766 12.5235 8.27886 13.5412C8.52496 13.7862 8.76646 14.0323 9.02636 14.2611C10.2953 15.3783 11.8074 16.184 13.4424 16.614L14.0956 16.7141C14.3083 16.7256 14.5211 16.7095 14.735 16.6991C15.0699 16.6819 15.3969 16.5912 15.6929 16.4335C15.8435 16.3559 15.9905 16.2715 16.1334 16.1805C16.1334 16.1805 16.1828 16.1483 16.2771 16.077C16.4324 15.962 16.5278 15.8803 16.6566 15.7458C16.7521 15.6469 16.8349 15.5307 16.8981 15.3985C16.9878 15.211 17.0775 14.8534 17.1143 14.5555C17.1419 14.3278 17.1339 14.2036 17.1304 14.1266C17.1258 14.0035 17.0235 13.8759 16.9119 13.8218L16.2426 13.5217C16.2426 13.5217 15.2421 13.0858 14.6303 12.8075C14.5663 12.7796 14.4977 12.7636 14.4279 12.7604C14.3492 12.7523 14.2697 12.7612 14.1947 12.7864C14.1198 12.8115 14.051 12.8525 13.9932 12.9064C13.9875 12.9041 13.9104 12.9697 13.079 13.9771C13.0312 14.0412 12.9655 14.0897 12.8901 14.1163C12.8148 14.1429 12.7332 14.1465 12.6558 14.1266C12.5808 14.1065 12.5074 14.0811 12.4361 14.0507C12.2935 13.9909 12.2441 13.9679 12.1463 13.9265C11.4863 13.6385 10.8752 13.2493 10.3351 12.773C10.1902 12.6465 10.0556 12.5085 9.91761 12.3751C9.46518 11.9419 9.07089 11.4517 8.74461 10.9169L8.67676 10.8077C8.62803 10.7343 8.58862 10.6551 8.55946 10.5719C8.51576 10.4029 8.62961 10.2672 8.62961 10.2672C8.62961 10.2672 8.90906 9.96129 9.03901 9.79569C9.16551 9.63469 9.27246 9.47829 9.34146 9.36674C9.47716 9.14824 9.51971 8.92399 9.44841 8.75034C9.12641 7.96375 8.79291 7.1806 8.45021 6.4032C8.38236 6.2491 8.18111 6.1387 7.99826 6.11685C7.93616 6.10995 7.87406 6.10305 7.81196 6.09845C7.65752 6.09077 7.50277 6.09231 7.34851 6.10305L7.57966 6.09385L7.58081 6.095Z"
+                      fill="#6D6D6D"
+                    />
+                  </svg>
+                </a>
+              </div>
+            </div>
+            <div class="project-slider one-slider">
               <div class="swiper-wrapper">
-                <div class="project-slide">
+                <div class="project-slide one-slide">
                   <img src="./assets/imgs/project-slide.jpg" alt="" />
                 </div>
-                <div class="project-slide">
+                <div class="project-slide one-slide">
                   <img src="./assets/imgs/project-slide.jpg" alt="" />
                 </div>
-                <div class="project-slide">
+                <div class="project-slide one-slide">
                   <img src="./assets/imgs/project-slide.jpg" alt="" />
                 </div>
-                <div class="project-slide">
+                <div class="project-slide one-slide">
                   <img src="./assets/imgs/project-slide.jpg" alt="" />
                 </div>
               </div>
@@ -659,7 +858,7 @@
       <section class="lift">
         <div class="container">
           <div class="wrapper">
-            <h2 class="title">Como Residences for sale</h2>
+            <h2 class="title" id="about">Como Residences for sale</h2>
             <p class="paragraf">
               The residential complex by Nakheel Properties, will provide its
               occupants with resort-like living and access to endless premium
@@ -677,7 +876,7 @@
               21,949 sq. ft. Each premises will come with 3–6 parking spaces,
               while residents of the penthouse will get 10 parking spaces.
             </p>
-            <div class="slider-pag">
+            <div class="slider-pag" id="floor">
               <h2 class="title">Floor Plans</h2>
               <div class="pagination">
                 <p class="deskr">Select number of bedrooms</p>
@@ -784,7 +983,7 @@
                 </div>
               </div>
             </div>
-            <div class="payment">
+            <div class="payment" id="plan">
               <h2 class="title">Payment Plan</h2>
               <ul class="payment__list">
                 <li class="payment__list__item">
@@ -801,46 +1000,54 @@
                 </li>
               </ul>
             </div>
-            <form action="#" class="form">
-              <img src="./assets/imgs/wom-form.png" class="women" alt="women" />
-              <h3 class="title">
-                Buying property with Metropolitan Premium Properties
-              </h3>
-              <div class="input-wrap">
-                <label for="first-name">First Name</label>
-                <input type="text" id="first-name" class="input" />
+            <div  class="form-block">
+              <div class="content-item">
+                <h3 class="title">
+                  Buying property with Metropolitan Premium Properties
+                </h3>
+                <form action="#" class="form-contant">
+                  <div class="input-wrap">
+                    <label for="first-name">First Name</label>
+                    <input placeholder="Olivia" type="text" id="first-name" class="input" />
+                  </div>
+                  <div class="input-wrap">
+                    <label for="second-name">Last Name</label>
+                    <input placeholder="Rhye" type="text" id="second-name" class="input" />
+                  </div>
+                  <div class="input-wrap">
+                    <label for="email">Email</label>
+                    <input placeholder="email@example.ru" type="email" id="email" class="input" />
+                  </div>
+                  <div class="input-wrap">
+                    <label for="phone">Phone with country code</label>
+                    <input placeholder="+7 (999) 999-99-99" type="tel" id="phone" class="input" />
+                  </div>
+                  <div class="check-wrap">
+                    <input
+                      class="checkbox"
+                      type="checkbox"
+                      checked
+                      name="terms"
+                      id="terms"
+                    />
+    
+                    <label class="check-label" for="terms"
+                      >I agree to
+                      <a href="#">Terms of use and Privacy Policy</a></label
+                    >
+                  </div>
+    
+                  <button class="submit w-100-arr" type="submit">
+                    Send Request
+                  </button>
+                </form>
               </div>
-              <div class="input-wrap">
-                <label for="second-name">Last Name</label>
-                <input type="text" id="second-name" class="input" />
-              </div>
-              <div class="input-wrap">
-                <label for="email">Email</label>
-                <input type="email" id="email" class="input" />
-              </div>
-              <div class="input-wrap">
-                <label for="phone">Phone with country code</label>
-                <input type="tel" id="phone" class="input" />
-              </div>
-              <div class="check-wrap">
-                <input
-                  class="checkbox"
-                  type="checkbox"
-                  checked
-                  name="terms"
-                  id="terms"
-                />
+              <div class="content-item">
+                <img src="./assets/imgs/form-build.png" class="build" alt="build" />
 
-                <label class="check-label" for="terms"
-                  >I agree to
-                  <a href="#">Terms of use and Privacy Policy</a></label
-                >
               </div>
 
-              <button class="submit w-100-arr" type="submit">
-                Send Request
-              </button>
-            </form>
+            </div>
             <h2 class="title">Prices for Como Residences</h2>
             <p class="paragraf">
               As of Q2 2023, the initial cost of a 2-bedroom residence in the
@@ -849,7 +1056,7 @@
               information about the project, please get in touch with our
               Metropolitan Premium Properties brokers.
             </p>
-            <div class="cards">
+            <div class="cards" id="prices">
               <div class="cards__item">
                 <span class="type">2-bedroom residence</span>
                 <span class="big">AED 21,000,000</span>
@@ -885,7 +1092,7 @@
               that renting a residence out will provide you with a stable
               income.
             </p>
-            <h3 class="title-blue">Amenities</h3>
+            <h3 class="title-blue" id="amenities">Amenities</h3>
             <p class="paragraf">
               A perfect blend of luxury amenities will be offered to occupants
               of Como Residences, fulfilling every moment of their lives with
@@ -984,34 +1191,56 @@
           </div>
           <div class="scroll">
             <div class="scroll-block">
-              <h3 class="title">Como Residences by Nakheel</h3>
-              <div class="content-item">
-                <span class="name">Property type</span> 
-                <span class="desc">Apartments, duplexes</span>
-              </div>
-              <div class="content-item">
-                <span class="name">Area from </span> 
-                <span class="desc">4,470 sq. ft.</span>
-              </div>
-              <div class="content-item">
-                <span class="name">Starting price</span> 
-                <span class="desc">21,000,000 AED</span>
-              </div>
-              <div class="content-item">
-                <span class="name">Handover</span> 
-                <span class="desc">2027 Q3</span>
-              </div>
-              <div class="content-item">
-                <div class="map">
-                  <button class="open-map">View map</button>
+              <ul class="anchor-list">
+                <li class="anchor-list__item">
+                  <a href="#about">About the project</a>
+                </li>
+                <li class="anchor-list__item">
+                  <a href="#floor">Floor Plans</a>
+                </li>
+                <li class="anchor-list__item">
+                  <a href="#prices">Prices</a>
+                </li>
+                <li class="anchor-list__item">
+                  <a href="#amenities">Amenities</a>
+                </li>
+                <li class="anchor-list__item">
+                  <a href="#plan">Payment Plan</a>
+                </li>
+                <li class="anchor-list__item">
+                  <a href="#faq">FAQ</a>
+                </li>
+              </ul>
+              <div class="content-block">
+                <h3 class="title">Como Residences by Nakheel</h3>
+                <div class="content-item">
+                  <span class="name">Property type</span> 
+                  <span class="desc">Apartments, duplexes</span>
                 </div>
-               
-                <span class="desc">Palm Jumeirah, Dubai</span>
+                <div class="content-item">
+                  <span class="name">Area from </span> 
+                  <span class="desc">4,470 sq. ft.</span>
+                </div>
+                <div class="content-item">
+                  <span class="name">Starting price</span> 
+                  <span class="desc">21,000,000 AED</span>
+                </div>
+                <div class="content-item">
+                  <span class="name">Handover</span> 
+                  <span class="desc">2027 Q3</span>
+                </div>
+                <div class="content-item">
+                  <div class="map">
+                    <button class="open-map">View map</button>
+                  </div>
+                  <span class="desc">Palm Jumeirah, Dubai</span>
+                </div>
+                <div class="scroll-links">
+                  <a href="#" class="blue-link">Download brochure</a>
+                  <a href="#" class="trans-link">Property Inquiry</a>
+                </div>
               </div>
-              <div class="scroll-links">
-                <a href="#" class="blue-link">Download brochure</a>
-                <a href="#" class="trans-link">Property Inquiry</a>
-              </div>
+
              
             </div>
      
@@ -1020,8 +1249,8 @@
       </section>
       <section class="faq">
         <div class="container">
-          <h2 class="title">FAQ</h2>
-          <div class="faq-list">
+          <h2 class="title" id="faq">FAQ</h2>
+          <div class="faq-list" >
             <div class="faq-list__item">
               <p class="question">What is the process of purchasing a property in Como Residences?</p>
               <button class="more"> <img src="./assets/imgs/plus.svg" alt="plus"></button>
@@ -1147,151 +1376,146 @@
           </div>
           <div class="slider-pop_project">
             <div class="slides-wrap swiper-wrapper">
-              <div class="slide">
-                <div class="slide__img">
+              <div class="slide small-card">
+                <div class="small-card__img">
                   <span class="price">from $4,083,900</span>
                   <img src="./assets/imgs/ap.jpeg" alt="apart" />
                 </div>
-                <div class="slide__text-section">
-                  <h4 class="slide__title">AHS One Crescent</h4>
-                  <p class="slide__rigion">Palm Jumeirah</p>
-                  <div class="slide__info">
-                    <div class="slide__info__item">
-                      <p class="slide__info__item__value">1Q 2025</p>
-                      <p class="slide__info__item__name">Handover</p>
+                <div class="small-card__text-section">
+                  <h4 class="small-card__title">AHS One Crescent</h4>
+                  <p class="small-card__rigion">Palm Jumeirah</p>
+                  <div class="small-card__info">
+                    <div class="small-card__info__item">
+                      <p class="small-card__info__item__value">1Q 2025</p>
+                      <p class="small-card__info__item__name">Handover</p>
                     </div>
-                    <div class="slide__info__item">
-                      <p class="slide__info__item__value">AHS Properties</p>
-                      <p class="slide__info__item__name">Developer</p>
+                    <div class="small-card__info__item">
+                      <p class="small-card__info__item__value">AHS Properties</p>
+                      <p class="small-card__info__item__name">Developer</p>
                     </div>
                   </div>
-                  <a href="#" class="slide__link">Learn more</a>
+                  <a href="#" class="small-card__link">Learn more</a>
                 </div>
               </div>
-              <div class="slide">
-                <div class="slide__img">
+              <div class="slide small-card">
+                <div class="small-card__img">
                   <span class="price">from $4,083,900</span>
                   <img src="./assets/imgs/ap.jpeg" alt="apart" />
                 </div>
-                <div class="slide__text-section">
-                  <h4 class="slide__title">AHS One Crescent</h4>
-                  <p class="slide__rigion">Palm Jumeirah</p>
-                  <div class="slide__info">
-                    <div class="slide__info__item">
-                      <p class="slide__info__item__value">1Q 2025</p>
-                      <p class="slide__info__item__name">Handover</p>
+                <div class="small-card__text-section">
+                  <h4 class="small-card__title">AHS One Crescent</h4>
+                  <p class="small-card__rigion">Palm Jumeirah</p>
+                  <div class="small-card__info">
+                    <div class="small-card__info__item">
+                      <p class="small-card__info__item__value">1Q 2025</p>
+                      <p class="small-card__info__item__name">Handover</p>
                     </div>
-                    <div class="slide__info__item">
-                      <p class="slide__info__item__value">AHS Properties</p>
-                      <p class="slide__info__item__name">Developer</p>
+                    <div class="small-card__info__item">
+                      <p class="small-card__info__item__value">AHS Properties</p>
+                      <p class="small-card__info__item__name">Developer</p>
                     </div>
                   </div>
-                  <a href="#" class="slide__link">Learn more</a>
+                  <a href="#" class="small-card__link">Learn more</a>
                 </div>
-              </div>
-              <div class="slide">
-                <div class="slide__img">
+              </div>   <div class="slide small-card">
+                <div class="small-card__img">
                   <span class="price">from $4,083,900</span>
                   <img src="./assets/imgs/ap.jpeg" alt="apart" />
                 </div>
-                <div class="slide__text-section">
-                  <h4 class="slide__title">AHS One Crescent</h4>
-                  <p class="slide__rigion">Palm Jumeirah</p>
-                  <div class="slide__info">
-                    <div class="slide__info__item">
-                      <p class="slide__info__item__value">1Q 2025</p>
-                      <p class="slide__info__item__name">Handover</p>
+                <div class="small-card__text-section">
+                  <h4 class="small-card__title">AHS One Crescent</h4>
+                  <p class="small-card__rigion">Palm Jumeirah</p>
+                  <div class="small-card__info">
+                    <div class="small-card__info__item">
+                      <p class="small-card__info__item__value">1Q 2025</p>
+                      <p class="small-card__info__item__name">Handover</p>
                     </div>
-                    <div class="slide__info__item">
-                      <p class="slide__info__item__value">AHS Properties</p>
-                      <p class="slide__info__item__name">Developer</p>
+                    <div class="small-card__info__item">
+                      <p class="small-card__info__item__value">AHS Properties</p>
+                      <p class="small-card__info__item__name">Developer</p>
                     </div>
                   </div>
-                  <a href="#" class="slide__link">Learn more</a>
+                  <a href="#" class="small-card__link">Learn more</a>
                 </div>
-              </div>
-              <div class="slide">
-                <div class="slide__img">
+              </div>   <div class="slide small-card">
+                <div class="small-card__img">
                   <span class="price">from $4,083,900</span>
                   <img src="./assets/imgs/ap.jpeg" alt="apart" />
                 </div>
-                <div class="slide__text-section">
-                  <h4 class="slide__title">AHS One Crescent</h4>
-                  <p class="slide__rigion">Palm Jumeirah</p>
-                  <div class="slide__info">
-                    <div class="slide__info__item">
-                      <p class="slide__info__item__value">1Q 2025</p>
-                      <p class="slide__info__item__name">Handover</p>
+                <div class="small-card__text-section">
+                  <h4 class="small-card__title">AHS One Crescent</h4>
+                  <p class="small-card__rigion">Palm Jumeirah</p>
+                  <div class="small-card__info">
+                    <div class="small-card__info__item">
+                      <p class="small-card__info__item__value">1Q 2025</p>
+                      <p class="small-card__info__item__name">Handover</p>
                     </div>
-                    <div class="slide__info__item">
-                      <p class="slide__info__item__value">AHS Properties</p>
-                      <p class="slide__info__item__name">Developer</p>
+                    <div class="small-card__info__item">
+                      <p class="small-card__info__item__value">AHS Properties</p>
+                      <p class="small-card__info__item__name">Developer</p>
                     </div>
                   </div>
-                  <a href="#" class="slide__link">Learn more</a>
+                  <a href="#" class="small-card__link">Learn more</a>
                 </div>
-              </div>
-              <div class="slide">
-                <div class="slide__img">
+              </div>   <div class="slide small-card">
+                <div class="small-card__img">
                   <span class="price">from $4,083,900</span>
                   <img src="./assets/imgs/ap.jpeg" alt="apart" />
                 </div>
-                <div class="slide__text-section">
-                  <h4 class="slide__title">AHS One Crescent</h4>
-                  <p class="slide__rigion">Palm Jumeirah</p>
-                  <div class="slide__info">
-                    <div class="slide__info__item">
-                      <p class="slide__info__item__value">1Q 2025</p>
-                      <p class="slide__info__item__name">Handover</p>
+                <div class="small-card__text-section">
+                  <h4 class="small-card__title">AHS One Crescent</h4>
+                  <p class="small-card__rigion">Palm Jumeirah</p>
+                  <div class="small-card__info">
+                    <div class="small-card__info__item">
+                      <p class="small-card__info__item__value">1Q 2025</p>
+                      <p class="small-card__info__item__name">Handover</p>
                     </div>
-                    <div class="slide__info__item">
-                      <p class="slide__info__item__value">AHS Properties</p>
-                      <p class="slide__info__item__name">Developer</p>
+                    <div class="small-card__info__item">
+                      <p class="small-card__info__item__value">AHS Properties</p>
+                      <p class="small-card__info__item__name">Developer</p>
                     </div>
                   </div>
-                  <a href="#" class="slide__link">Learn more</a>
+                  <a href="#" class="small-card__link">Learn more</a>
                 </div>
-              </div>
-              <div class="slide">
-                <div class="slide__img">
+              </div>   <div class="slide small-card">
+                <div class="small-card__img">
                   <span class="price">from $4,083,900</span>
                   <img src="./assets/imgs/ap.jpeg" alt="apart" />
                 </div>
-                <div class="slide__text-section">
-                  <h4 class="slide__title">AHS One Crescent</h4>
-                  <p class="slide__rigion">Palm Jumeirah</p>
-                  <div class="slide__info">
-                    <div class="slide__info__item">
-                      <p class="slide__info__item__value">1Q 2025</p>
-                      <p class="slide__info__item__name">Handover</p>
+                <div class="small-card__text-section">
+                  <h4 class="small-card__title">AHS One Crescent</h4>
+                  <p class="small-card__rigion">Palm Jumeirah</p>
+                  <div class="small-card__info">
+                    <div class="small-card__info__item">
+                      <p class="small-card__info__item__value">1Q 2025</p>
+                      <p class="small-card__info__item__name">Handover</p>
                     </div>
-                    <div class="slide__info__item">
-                      <p class="slide__info__item__value">AHS Properties</p>
-                      <p class="slide__info__item__name">Developer</p>
+                    <div class="small-card__info__item">
+                      <p class="small-card__info__item__value">AHS Properties</p>
+                      <p class="small-card__info__item__name">Developer</p>
                     </div>
                   </div>
-                  <a href="#" class="slide__link">Learn more</a>
+                  <a href="#" class="small-card__link">Learn more</a>
                 </div>
-              </div>
-              <div class="slide">
-                <div class="slide__img">
+              </div>   <div class="slide small-card">
+                <div class="small-card__img">
                   <span class="price">from $4,083,900</span>
                   <img src="./assets/imgs/ap.jpeg" alt="apart" />
                 </div>
-                <div class="slide__text-section">
-                  <h4 class="slide__title">AHS One Crescent</h4>
-                  <p class="slide__rigion">Palm Jumeirah</p>
-                  <div class="slide__info">
-                    <div class="slide__info__item">
-                      <p class="slide__info__item__value">1Q 2025</p>
-                      <p class="slide__info__item__name">Handover</p>
+                <div class="small-card__text-section">
+                  <h4 class="small-card__title">AHS One Crescent</h4>
+                  <p class="small-card__rigion">Palm Jumeirah</p>
+                  <div class="small-card__info">
+                    <div class="small-card__info__item">
+                      <p class="small-card__info__item__value">1Q 2025</p>
+                      <p class="small-card__info__item__name">Handover</p>
                     </div>
-                    <div class="slide__info__item">
-                      <p class="slide__info__item__value">AHS Properties</p>
-                      <p class="slide__info__item__name">Developer</p>
+                    <div class="small-card__info__item">
+                      <p class="small-card__info__item__value">AHS Properties</p>
+                      <p class="small-card__info__item__name">Developer</p>
                     </div>
                   </div>
-                  <a href="#" class="slide__link">Learn more</a>
+                  <a href="#" class="small-card__link">Learn more</a>
                 </div>
               </div>
             </div>
@@ -1415,12 +1639,13 @@
         <div class="top">
           <div class="top__item">
             <a href="#" class="home"
-              ><img src="./assets/imgs/logo_footer.svg" alt=""
+              ><img src="./assets/imgs/new_logo.svg" alt=""
             /></a>
-            <a href="#" class="contact-btn">Contact us</a>
             <p class="address">
               Office 1913, Al Manara Tower, Business Bay, Dubai, UAE
             </p>
+            <a href="#" class="contact-btn">Contact us</a>
+
             <div class="social">
               <a href="#" class="social__link">
                 <img src="./assets/imgs/fb.svg" alt=""

@@ -1,34 +1,3 @@
-.rev{
-  .header__bot{
-    .container{
-      -webkit-box-orient: horizontal;
-      -webkit-box-direction: reverse;
-          -ms-flex-direction: row-reverse;
-              flex-direction: row-reverse;
-
-      @include adaptive( tabletLandscape, tabletPortrait, phoneLandscape, phonePortrait) {
-        -webkit-box-orient: vertical;
-        -webkit-box-direction: normal;
-            -ms-flex-direction: column;
-                flex-direction: column;
-      }
-
-    }
-    .filters{
-      -webkit-box-orient: horizontal;
-      -webkit-box-direction: reverse;
-          -ms-flex-direction: row-reverse;
-              flex-direction: row-reverse;
-      @include adaptive( tabletLandscape, tabletPortrait, phoneLandscape, phonePortrait) {
-        -webkit-box-orient: vertical;
-        -webkit-box-direction: normal;
-            -ms-flex-direction: column;
-                flex-direction: column;
-      }
-  }
-}
-}
-
 .categories {
   padding: 60px 0 45px 0;
   background-size: cover;
@@ -43,92 +12,17 @@
     padding: 40px 0;
   }
   .container {
-    .info {
-      width: 100%;
-      display: -webkit-box;
-      display: -ms-flexbox;
-      display: flex;
+    .info-hero {
       margin-bottom: 55px;
-      @include adaptive( tabletLandscape, tabletPortrait, phoneLandscape, phonePortrait) {
-      -ms-flex-wrap: wrap;
-          flex-wrap: wrap;
-      margin-bottom: 20px;
-       }
-      &__item {
-        width: 50%;
-        @include adaptive( tabletLandscape, tabletPortrait, phoneLandscape, phonePortrait) {
-          width: 100%;
-        
-         }
-        &:nth-child(2) {
-          background-color: $white;
-          padding: 25px;
-          position: relative;
-          border-radius: 20px;
-          
-        }
-        .bread-crums {
-          margin-bottom: 40px;
-         
-        }
-        .title {
-          max-width: 330px;
-          @include adaptive( tabletLandscape, tabletPortrait, phoneLandscape, phonePortrait) {
-            max-width: 100%;
-          
-           }
-           @include adaptive( tabletLandscape, tabletPortrait) {
-            margin-bottom: 30px;
-           }
-           @include adaptive( phoneLandscape, phonePortrait) {
-            margin-bottom: 15px;
-           }
-        }
-        .sub-titile {
-          z-index: 2;
-          position: relative;
-          @include fontSetings($s: 30px, $w: 400, $lh: 39px);
-          color: $light-blue;
-          max-width: 360px;
-          margin-bottom: 20px;
-          @include adaptive( phoneLandscape, phonePortrait) {
-            @include fontSetings($s: 22px, $w: 400, $lh: 29px);
-
-           }
-        }
-        .descr {
-          @include fontSetings($s: 12px, $w: 400, $lh: 18px);
-          max-width: 300px;
-          display: -webkit-box;
-          display: -ms-flexbox;
-          display: flex;
-          -webkit-box-align: center;
-              -ms-flex-align: center;
-                  align-items: center;
-          color: $grey;
-          z-index: 2;
-          position: relative;
-
-          &::before {
-            content: url("../assets/imgs/circle-solid.svg");
-            width: 20px;
-            height: 20px;
-            margin-right: 15px;
-          }
-        }
-        .dec {
-          position: absolute;
-          right: 5px;
-          top: 0;
-          height: 100%;
-          z-index: 1;
-          @include adaptive( phoneLandscape, phonePortrait) {
-            opacity: 0.3;
-          }
-        }
+      @include adaptive(
+        tabletLandscape,
+        tabletPortrait,
+        phoneLandscape,
+        phonePortrait
+      ) {
+        margin-bottom: 20px;
       }
     }
-
     .form {
       width: 100%;
       margin-bottom: 20px;
@@ -139,7 +33,7 @@
       display: -ms-flexbox;
       display: flex;
       -ms-flex-wrap: wrap;
-          flex-wrap: wrap;
+      flex-wrap: wrap;
       gap: 10px 0;
       padding: 30px 25px;
       border: 1px solid $light-blue;
@@ -149,12 +43,11 @@
         color: $blue;
 
         @include fontSetings();
-        @include adaptive(  tabletPortrait, phoneLandscape, phonePortrait) {
+        @include adaptive(tabletPortrait, phoneLandscape, phonePortrait) {
           width: 50%;
-        
-         }
-         @include adaptive( phoneLandscape, phonePortrait) {
-          @include fontSetings($s:12px);
+        }
+        @include adaptive(phoneLandscape, phonePortrait) {
+          @include fontSetings($s: 12px);
         }
         .quantity {
           color: $grey;
@@ -211,30 +104,32 @@
       display: flex;
       gap: 30px;
       -ms-flex-wrap: wrap;
-          flex-wrap: wrap;
-      @include adaptive( tabletLandscape, tabletPortrait, phoneLandscape, phonePortrait) {
+      flex-wrap: wrap;
+      @include adaptive(
+        tabletLandscape,
+        tabletPortrait,
+        phoneLandscape,
+        phonePortrait
+      ) {
         gap: 20px;
-      
-       }
+      }
       .list-item {
         background-color: $white;
         width: calc(33.333% - 20px);
         border-radius: 20px;
         cursor: pointer;
-        @include adaptive( tabletLandscape, tabletPortrait) {
+        @include adaptive(tabletLandscape, tabletPortrait) {
           width: calc(50% - 10px);
-        
-         }
-         @include adaptive(  phoneLandscape, phonePortrait) {
+        }
+        @include adaptive(phoneLandscape, phonePortrait) {
           width: 100%;
-        
-         }
-         .handover-deck{
+        }
+        .handover-deck {
           position: absolute;
           width: 100%;
           height: 100%;
           padding: 10px;
-          background: rgba(0, 173, 229, 0.8); 
+          background: rgba(0, 173, 229, 0.8);
           border-radius: 10px 0px 0px 10px;
           color: $white;
           display: -webkit-box;
@@ -242,18 +137,18 @@
           display: flex;
           -webkit-box-orient: vertical;
           -webkit-box-direction: normal;
-              -ms-flex-direction: column;
-                  flex-direction: column;
+          -ms-flex-direction: column;
+          flex-direction: column;
           -webkit-box-pack: end;
-              -ms-flex-pack: end;
-                  justify-content: flex-end;
-          &__title{
+          -ms-flex-pack: end;
+          justify-content: flex-end;
+          &__title {
             padding-bottom: 5px;
-            @include fontSetings($s: 16px, $w:600);
+            @include fontSetings($s: 16px, $w: 600);
             position: relative;
             margin-bottom: 5px;
-            &::before{
-              content: '';
+            &::before {
+              content: "";
               height: 1px;
               width: 85%;
               background-color: $white;
@@ -262,37 +157,35 @@
               left: 0;
               bottom: 0;
             }
-            .pointer{
+            .pointer {
               @include fontSetings($s: 10px);
- 
             }
           }
-          &__desc{
-            @include fontSetings($s: 10px, $lh:14px);
+          &__desc {
+            @include fontSetings($s: 10px, $lh: 14px);
             display: -webkit-box;
             display: -ms-flexbox;
             display: flex;
             gap: 5px;
             -webkit-box-align: center;
-                -ms-flex-align: center;
-                    align-items: center;
-            &::before{
-              content: url('../assets/imgs/precent.svg');
+            -ms-flex-align: center;
+            align-items: center;
+            &::before {
+              content: url("../assets/imgs/precent.svg");
               width: 10px;
               height: 12px;
             }
           }
-          
         }
         &__imgs {
           display: -webkit-box;
           display: -ms-flexbox;
           display: flex;
           -ms-flex-wrap: wrap;
-              flex-wrap: wrap;
+          flex-wrap: wrap;
           position: relative;
           gap: 4px;
-          height: 350px;
+          height: 270px;
           .type {
             position: absolute;
             left: 15px;
@@ -303,7 +196,7 @@
             padding: 3px 10px;
             @include fontSetings($s: 12px);
           }
-          
+
           &__img {
             -webkit-transition: 0.3s;
             -o-transition: 0.3s;
@@ -313,18 +206,16 @@
             &.big {
               width: 100%;
               height: 70%;
-              img{
+              img {
                 border-radius: 20px 20px 0px 0px;
               }
             }
             &.left {
-          
               img {
                 border-radius: 0px 10px 10px 0px;
               }
             }
             &.right {
-           
               position: relative;
               img {
                 border-radius: 10px 0px 0px 10px;
@@ -334,7 +225,7 @@
               width: 100%;
               height: 100%;
               -o-object-fit: cover;
-                 object-fit: cover;
+              object-fit: cover;
             }
           }
         }
@@ -349,7 +240,7 @@
             position: relative;
             margin-bottom: 15px;
             @include fontSetings();
-           
+
             &::before {
               content: "";
               height: 1px;
@@ -366,22 +257,22 @@
             display: -ms-flexbox;
             display: flex;
             margin-bottom: 25px;
-            @include adaptive( tabletLandscape, tabletPortrait) {
+            @include adaptive(tabletLandscape, tabletPortrait) {
               -ms-flex-wrap: wrap;
-                  flex-wrap: wrap;
+              flex-wrap: wrap;
               gap: 15px 0;
-             }
+            }
             &__item {
               display: -webkit-box;
               display: -ms-flexbox;
               display: flex;
               -webkit-box-align: center;
-                  -ms-flex-align: center;
-                      align-items: center;
+              -ms-flex-align: center;
+              align-items: center;
               gap: 5px;
               @include fontSetings($s: 12px, $lh: 18px, $w: 400);
               color: $grey;
-             
+
               &:nth-child(1) {
                 padding-right: 10px;
                 border-right: 1px solid #e7e7e7;
@@ -392,9 +283,9 @@
               }
               &:nth-child(3) {
                 padding-left: 10px;
-                @include adaptive( tabletLandscape, tabletPortrait) {
+                @include adaptive(tabletLandscape, tabletPortrait) {
                   padding-left: 0px;
-                 }
+                }
               }
             }
           }
@@ -405,8 +296,8 @@
             display: -ms-flexbox;
             display: flex;
             -webkit-box-align: center;
-                -ms-flex-align: center;
-                    align-items: center;
+            -ms-flex-align: center;
+            align-items: center;
             gap: 5px;
             margin-bottom: 20px;
             &::before {
@@ -419,8 +310,8 @@
             display: flex;
             gap: 10px;
             -webkit-box-align: center;
-                -ms-flex-align: center;
-                    align-items: center;
+            -ms-flex-align: center;
+            align-items: center;
             .contact-btn {
               height: 45px;
               width: 50%;
@@ -452,25 +343,24 @@
               // width: -moz-fit-content;
               // width: fit-content;
               color: $blue;
-              @include fontSetings($w:700);
+              @include fontSetings($w: 700);
             }
           }
         }
-        &:hover{
+        &:hover {
           -webkit-box-shadow: 0px 10px 30px rgba(64, 69, 70, 0.1);
-                  box-shadow: 0px 10px 30px rgba(64, 69, 70, 0.1);
+          box-shadow: 0px 10px 30px rgba(64, 69, 70, 0.1);
           -webkit-transition: 0.3s;
           -o-transition: 0.3s;
           transition: 0.3s;
-          .list-item__imgs__img{
+          .list-item__imgs__img {
             -webkit-transition: 0.3s;
             -o-transition: 0.3s;
             transition: 0.3s;
             height: 40%;
-            &.big{
+            &.big {
               height: 60%;
             }
-            
           }
         }
       }
@@ -483,61 +373,59 @@
         display: -ms-flexbox;
         display: flex;
         -ms-flex-wrap: wrap;
-            flex-wrap: wrap;
-        gap: 20px;
-        &:hover{
+        flex-wrap: wrap;
+        align-content: flex-start;
+        // gap: 20px;
+        &:hover {
           -webkit-box-shadow: none;
-                  box-shadow: none;
-        }
-        &__item{
-          width: 100%;
-          padding: 20px;
-          border: 1px solid transparent;
-          background-color: $blue-background;
-          border-radius: 20px;
-          height: calc(50% - 10px);
-          &__type{
-            @include fontSetings($s:12px, $lh:18px);
-            color: $grey;
-            border: 1px solid $grey;
-            border-radius: 20px;
-            padding: 2px 10px;
-            display: block;
-            width: -webkit-fit-content;
-            width: -moz-fit-content;
-            width: fit-content;
-            margin-bottom: 55px;
-          }
-          &__title{
-            @include fontSetings($s:25px, $lh:35px);
-            margin-bottom: 10px;
-
-          }
-          &__link{
-            color: $grey;
-            @include fontSetings( $lh:19px);
-
-          }
-          // &.white{
-          //   background-color: transparent;
-          //   border: 1px solid $blue;
-          //   .last__item__type{
-          //     color: $blue;
-          //     border: 1px solid $blue;
-          //   }
-          //   .last__item__title{
-          //     color: $blue;
-          //   }
-          //   .last__item__link{
-          //     color: $blue;
-          //   }
-            
-          // }
+          box-shadow: none;
         }
         &__title {
-          @include fontSetings($s: 40px, $lh: 48px);
-          margin-bottom: 5px;
+          @include fontSetings($s: 35px, $lh: 42px);
+          margin-bottom: 10px;
         }
+        // &__item{
+        //   width: 100%;
+        //   padding: 20px;
+        //   border: 1px solid transparent;
+        //   background-color: $blue-background;
+        //   border-radius: 20px;
+        //   height: calc(50% - 10px);
+        //   &__type{
+        //     @include fontSetings($s:12px, $lh:18px);
+        //     color: $grey;
+        //     border: 1px solid $grey;
+        //     border-radius: 20px;
+        //     padding: 2px 10px;
+        //     display: block;
+        //     width: -webkit-fit-content;
+        //     width: -moz-fit-content;
+        //     width: fit-content;
+        //     margin-bottom: 55px;
+        //   }
+
+        //   &__link{
+        //     color: $grey;
+        //     @include fontSetings( $lh:19px);
+
+        //   }
+        //   // &.white{
+        //   //   background-color: transparent;
+        //   //   border: 1px solid $blue;
+        //   //   .last__item__type{
+        //   //     color: $blue;
+        //   //     border: 1px solid $blue;
+        //   //   }
+        //   //   .last__item__title{
+        //   //     color: $blue;
+        //   //   }
+        //   //   .last__item__link{
+        //   //     color: $blue;
+        //   //   }
+
+        //   // }
+        // }
+
         &__deskr {
           @include fontSetings($s: 12px, $lh: 18px);
           color: $grey;
@@ -557,8 +445,8 @@
             display: -ms-flexbox;
             display: flex;
             -webkit-box-align: center;
-                -ms-flex-align: center;
-                    align-items: center;
+            -ms-flex-align: center;
+            align-items: center;
             gap: 10px;
             margin-bottom: 25px;
             .checkbox {
@@ -588,8 +476,8 @@
             display: flex;
             gap: 10px;
             -webkit-box-align: center;
-                -ms-flex-align: center;
-                    align-items: center;
+            -ms-flex-align: center;
+            align-items: center;
             &::after {
               content: url(../assets/imgs/circle-small.svg);
               width: 25px;
@@ -599,34 +487,40 @@
         }
       }
     }
-   
   }
 }
 .why-buy {
   padding-bottom: 120px;
-  @include adaptive( tabletLandscape, tabletPortrait) {
+  @include adaptive(tabletLandscape, tabletPortrait) {
     padding-bottom: 100px;
-  
-   }
+  }
   //  @include adaptive( phoneLandscape, phonePortrait) {
   //   display: none;
-  
+
   //  }
   .container {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    @include adaptive( tabletLandscape, tabletPortrait, phoneLandscape, phonePortrait) {
+    @include adaptive(
+      tabletLandscape,
+      tabletPortrait,
+      phoneLandscape,
+      phonePortrait
+    ) {
       -ms-flex-wrap: wrap;
-          flex-wrap: wrap;
-    
-     }
+      flex-wrap: wrap;
+    }
     .content-item {
       width: 35%;
-      @include adaptive( tabletLandscape, tabletPortrait, phoneLandscape, phonePortrait) {
+      @include adaptive(
+        tabletLandscape,
+        tabletPortrait,
+        phoneLandscape,
+        phonePortrait
+      ) {
         width: 100%;
-      
-       }
+      }
       &:nth-child(1) {
         padding-right: 20px;
         display: -webkit-box;
@@ -634,17 +528,21 @@
         display: flex;
         -webkit-box-orient: vertical;
         -webkit-box-direction: normal;
-            -ms-flex-direction: column;
-                flex-direction: column;
+        -ms-flex-direction: column;
+        flex-direction: column;
         -webkit-box-pack: justify;
-            -ms-flex-pack: justify;
-                justify-content: space-between;
-        @include adaptive( tabletLandscape, tabletPortrait, phoneLandscape, phonePortrait) {
+        -ms-flex-pack: justify;
+        justify-content: space-between;
+        @include adaptive(
+          tabletLandscape,
+          tabletPortrait,
+          phoneLandscape,
+          phonePortrait
+        ) {
           padding-right: 0px;
           -ms-flex-wrap: wrap;
-              flex-wrap: wrap;
-        
-         }
+          flex-wrap: wrap;
+        }
       }
       &:nth-child(2) {
         width: 65%;
@@ -655,30 +553,44 @@
         display: -ms-flexbox;
         display: flex;
         gap: 20px;
-        @include adaptive( tabletLandscape, tabletPortrait, phoneLandscape, phonePortrait) {
+        @include adaptive(
+          tabletLandscape,
+          tabletPortrait,
+          phoneLandscape,
+          phonePortrait
+        ) {
           width: 100%;
           -ms-flex-wrap: wrap;
-              flex-wrap: wrap;
-         }
+          flex-wrap: wrap;
+        }
       }
       &__block {
         &:nth-child(1) {
           padding-bottom: 20px;
           border-bottom: 1px solid $light-blue;
-          @include adaptive( tabletLandscape, tabletPortrait, phoneLandscape, phonePortrait) {
-           margin-bottom: 40px;
-           
-            }
+          @include adaptive(
+            tabletLandscape,
+            tabletPortrait,
+            phoneLandscape,
+            phonePortrait
+          ) {
+            margin-bottom: 40px;
+          }
         }
-        &:nth-child(2){
-          @include adaptive( tabletLandscape, tabletPortrait, phoneLandscape, phonePortrait) {
-           display: none;
-          
-           }
+        &:nth-child(2) {
+          @include adaptive(
+            tabletLandscape,
+            tabletPortrait,
+            phoneLandscape,
+            phonePortrait
+          ) {
+            display: none;
+          }
         }
         .title {
           @include fontSetings($s: 40px, $w: 400, $lh: 56px);
           margin-bottom: 20px;
+          max-width: 95%;
         }
         .descr {
           @include fontSetings();
@@ -719,17 +631,15 @@
         display: -ms-flexbox;
         display: flex;
         -ms-flex-wrap: wrap;
-            flex-wrap: wrap;
+        flex-wrap: wrap;
 
         gap: 20px;
-        @include adaptive( tabletLandscape, tabletPortrait) {
+        @include adaptive(tabletLandscape, tabletPortrait) {
           width: calc(50% - 10px);
-        
-         }
-         @include adaptive(  phoneLandscape, phonePortrait) {
+        }
+        @include adaptive(phoneLandscape, phonePortrait) {
           width: 100%;
-        
-         }
+        }
         &__item {
           background-color: $blue-background;
           width: 100%;
@@ -744,11 +654,11 @@
             display: -ms-flexbox;
             display: flex;
             -webkit-box-align: center;
-                -ms-flex-align: center;
-                    align-items: center;
+            -ms-flex-align: center;
+            align-items: center;
             -webkit-box-pack: center;
-                -ms-flex-pack: center;
-                    justify-content: center;
+            -ms-flex-pack: center;
+            justify-content: center;
             margin-bottom: 40px;
           }
           .sub-title {
@@ -763,15 +673,18 @@
         }
       }
       .link-mob {
-     
         display: none;
-   
-        @include adaptive( tabletLandscape, tabletPortrait, phoneLandscape, phonePortrait) {
-       display: -webkit-box;
-       display: -ms-flexbox;
-       display: flex;
-        
-         }
+
+        @include adaptive(
+          tabletLandscape,
+          tabletPortrait,
+          phoneLandscape,
+          phonePortrait
+        ) {
+          display: -webkit-box;
+          display: -ms-flexbox;
+          display: flex;
+        }
         &::after {
           content: url(../assets/imgs/Circle.svg);
           width: 30px;
@@ -783,21 +696,28 @@
 }
 .types {
   padding-bottom: 120px;
-  @include adaptive( tabletLandscape, tabletPortrait, phoneLandscape, phonePortrait) {
+  @include adaptive(
+    tabletLandscape,
+    tabletPortrait,
+    phoneLandscape,
+    phonePortrait
+  ) {
     padding-bottom: 100px;
-  
-   }
+  }
   .container {
-    
     @include adaptive(phoneLandscape, phonePortrait) {
       padding: 0;
-    
-     }
+    }
     .title {
       margin-bottom: 40px;
-      @include adaptive( tabletLandscape, tabletPortrait, phoneLandscape, phonePortrait) {
+      @include adaptive(
+        tabletLandscape,
+        tabletPortrait,
+        phoneLandscape,
+        phonePortrait
+      ) {
         padding: 0 20px;
-       }
+      }
     }
     .content-body {
       padding: 0 50px;
@@ -805,67 +725,85 @@
       display: -ms-flexbox;
       display: flex;
       -ms-flex-wrap: wrap;
-          flex-wrap: wrap;
+      flex-wrap: wrap;
       gap: 40px 0px;
       position: relative;
-      @include adaptive( tabletLandscape, tabletPortrait, phoneLandscape, phonePortrait) {
+      @include adaptive(
+        tabletLandscape,
+        tabletPortrait,
+        phoneLandscape,
+        phonePortrait
+      ) {
         padding: 0 20px;
         gap: 20px;
-       }
+      }
       .points {
         position: absolute;
         left: 15px;
         top: 100px;
-        @include adaptive( tabletLandscape, tabletPortrait, phoneLandscape, phonePortrait) {
-         display: none;
-        
-         }
+        @include adaptive(
+          tabletLandscape,
+          tabletPortrait,
+          phoneLandscape,
+          phonePortrait
+        ) {
+          display: none;
+        }
       }
-      .row{
+      .row {
         display: -webkit-box;
         display: -ms-flexbox;
         display: flex;
         gap: 0 20px;
         width: 100%;
-        &.rev{
-          @include adaptive( tabletLandscape, tabletPortrait, phoneLandscape, phonePortrait) {
-           -webkit-box-orient: vertical;
-           -webkit-box-direction: reverse;
-               -ms-flex-direction: column-reverse;
-                   flex-direction: column-reverse;
-            
-           }
+        &.rev {
+          @include adaptive(
+            tabletLandscape,
+            tabletPortrait,
+            phoneLandscape,
+            phonePortrait
+          ) {
+            -webkit-box-orient: vertical;
+            -webkit-box-direction: reverse;
+            -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+          }
         }
-        @include adaptive( tabletLandscape, tabletPortrait, phoneLandscape, phonePortrait) {
+        @include adaptive(
+          tabletLandscape,
+          tabletPortrait,
+          phoneLandscape,
+          phonePortrait
+        ) {
           -ms-flex-wrap: wrap;
-              flex-wrap: wrap;
+          flex-wrap: wrap;
           background-color: $white;
           border-radius: 20px;
-          
-
-         }
-         
+        }
       }
       .content-item {
         width: calc(50% - 10px);
         border-radius: 20px;
         position: relative;
-        
-        @include adaptive( tabletLandscape, tabletPortrait, phoneLandscape, phonePortrait) {
-          width:  100%;
-          padding: 20px; 
-         
 
-         }
+        @include adaptive(
+          tabletLandscape,
+          tabletPortrait,
+          phoneLandscape,
+          phonePortrait
+        ) {
+          width: 100%;
+          padding: 20px;
+        }
         img {
           width: 100%;
           height: 100%;
           -o-object-fit: cover;
-             object-fit: cover;
+          object-fit: cover;
           border-radius: 20px;
-          @include adaptive(  phoneLandscape, phonePortrait) {
+          @include adaptive(phoneLandscape, phonePortrait) {
             min-height: 305px;
-           }
+          }
         }
         .img-deskr {
           position: absolute;
@@ -878,28 +816,37 @@
           border-radius: 10px;
           text-align: center;
           width: calc(100% - 40px);
-          @include adaptive( tabletLandscape, tabletPortrait, phoneLandscape, phonePortrait) {
-          width: 90%;
-          left: 50%;
-          bottom: 8%;
-          -webkit-transform: translateX(-50%);
-              -ms-transform: translateX(-50%);
-                  transform: translateX(-50%);
-     
-           }
-           @include adaptive(  phoneLandscape, phonePortrait) {
+          @include adaptive(
+            tabletLandscape,
+            tabletPortrait,
+            phoneLandscape,
+            phonePortrait
+          ) {
+            width: 90%;
+            left: 50%;
+            bottom: 8%;
+            -webkit-transform: translateX(-50%);
+            -ms-transform: translateX(-50%);
+            transform: translateX(-50%);
+          }
+          @include adaptive(phoneLandscape, phonePortrait) {
             padding: 11px 10px;
             width: 85%;
-           }
+          }
         }
         &.text {
           padding: 25px;
           background-color: $white;
-          @include adaptive( tabletLandscape, tabletPortrait, phoneLandscape, phonePortrait) {
-            padding: 20px;          
-           }
+          @include adaptive(
+            tabletLandscape,
+            tabletPortrait,
+            phoneLandscape,
+            phonePortrait
+          ) {
+            padding: 20px;
+          }
         }
-        .num-wr{
+        .num-wr {
           position: relative;
           width: -webkit-fit-content;
           width: -moz-fit-content;
@@ -916,18 +863,16 @@
           display: -ms-flexbox;
           display: flex;
           -webkit-box-pack: center;
-              -ms-flex-pack: center;
-                  justify-content: center;
+          -ms-flex-pack: center;
+          justify-content: center;
           -webkit-box-align: center;
-              -ms-flex-align: center;
-                  align-items: center;
+          -ms-flex-align: center;
+          align-items: center;
           z-index: 3;
           position: relative;
           margin-bottom: 35px;
-          
-          
         }
-        .hover{
+        .hover {
           display: block;
           width: 100%;
           height: 100%;
@@ -942,10 +887,10 @@
         .content-title {
           @include fontSetings($s: 25px, $lh: 35px);
           margin-bottom: 15px;
-          @include adaptive(  phoneLandscape, phonePortrait) {
+          @include adaptive(phoneLandscape, phonePortrait) {
             @include fontSetings($s: 18px, $lh: 25px);
             margin-bottom: 10px;
-           }
+          }
         }
         .deskr {
           color: $grey;
@@ -957,371 +902,390 @@
 }
 .price {
   padding-bottom: 120px;
-  @include adaptive( tabletLandscape, tabletPortrait, phoneLandscape, phonePortrait) {
+  @include adaptive(
+    tabletLandscape,
+    tabletPortrait,
+    phoneLandscape,
+    phonePortrait
+  ) {
     padding-bottom: 100px;
-  
-   }
+  }
   .container {
-    padding: 35px;
-    background-color: $white;
-    border-radius: 20px;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-    gap: 70px;
- 
-    @include adaptive( tabletLandscape, tabletPortrait, phoneLandscape, phonePortrait) {
-      padding: 20px;
-      gap: 0px;
-     }
-   
-    .row {
-      width: 100%;
-   
-     
-     
-      &.grid {
-        display: grid;
-        gap: 10px;
-        @include adaptive( tabletLandscape, tabletPortrait, phoneLandscape, phonePortrait) {
-          gap: 40px 0px;
-        
-         }
-        grid-template-columns: 37% 13% 37% 11%;
-        grid-template-rows: repeat(3, auto);
-        .img {
-          grid-column: 1 / 3;
-          grid-row: 1 / -1;
-          @include adaptive( tabletLandscape, tabletPortrait) {
-            grid-column: 1 / -1;
-            grid-row: 3 / 4;
-            max-height:530px;
-          
-           }
-           @include adaptive(  phoneLandscape, phonePortrait) {
-            grid-column: 1 / -1;
-            grid-row: 3 / 4;
-            max-height: 350px;
-          
-           }
-        }
-        .list {
-          grid-column: 3 / -1;
-          grid-row: 1 / 3;
-          @include adaptive( tabletLandscape, tabletPortrait, phoneLandscape, phonePortrait) {
-            grid-column: 1 / -1;
+    .content-wrap {
+      padding: 35px;
+      background-color: $white;
+      border-radius: 20px;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+      gap: 70px;
+
+      @include adaptive(
+        tabletLandscape,
+        tabletPortrait,
+        phoneLandscape,
+        phonePortrait
+      ) {
+        padding: 20px;
+        gap: 0px;
+      }
+
+      .row {
+        width: 100%;
+
+        &.grid {
+          display: grid;
+          gap: 10px;
+          @include adaptive(
+            tabletLandscape,
+            tabletPortrait,
+            phoneLandscape,
+            phonePortrait
+          ) {
+            gap: 40px 0px;
+          }
+          grid-template-columns: 37% 13% 37% 11%;
+          grid-template-rows: repeat(3, auto);
+          .img {
+            grid-column: 1 / 3;
+            grid-row: 1 / -1;
+            @include adaptive(tabletLandscape, tabletPortrait) {
+              grid-column: 1 / -1;
+              grid-row: 3 / 4;
+              max-height: 530px;
+            }
+            @include adaptive(phoneLandscape, phonePortrait) {
+              grid-column: 1 / -1;
+              grid-row: 3 / 4;
+              max-height: 350px;
+            }
+          }
+          .list {
+            grid-column: 3 / -1;
             grid-row: 1 / 3;
-          
-           }
-        }
-        .roi {
-          grid-column: 3 / -1;
-          @include adaptive( tabletLandscape, tabletPortrait, phoneLandscape, phonePortrait) {
-            grid-column: 1 / -1;
-          
-          
-           }
-        }
-        .item-title{
-         
+            @include adaptive(
+              tabletLandscape,
+              tabletPortrait,
+              phoneLandscape,
+              phonePortrait
+            ) {
+              grid-column: 1 / -1;
+              grid-row: 1 / 3;
+            }
+          }
+          .roi {
+            grid-column: 3 / -1;
+            @include adaptive(
+              tabletLandscape,
+              tabletPortrait,
+              phoneLandscape,
+              phonePortrait
+            ) {
+              grid-column: 1 / -1;
+            }
+          }
+          .item-title {
             @include fontSetings($s: 40px, $lh: 56px);
             margin-bottom: 35px;
-      
-          
-          grid-column: 1 / 2;
-          grid-row: 1 ;
-          @include adaptive( tabletLandscape, tabletPortrait, phoneLandscape, phonePortrait) {
-            grid-column: 1 / 4;
-            grid-row: 1 ;
-          
-           }
-       
-        }
-      
-        &:nth-child(1){
-          .list{
-            grid-column: 1 / 2;
-            grid-row: 2/ 4;
-            @include adaptive( tabletLandscape, tabletPortrait, phoneLandscape, phonePortrait) {
-              grid-column: 1 / -1;
-              grid-row: 4 / -1 ;
-            
-             }
-          }
-          .diagram{
-            grid-column: 2 / -1;
-            grid-row: 1/ -1;
-            @include adaptive( tabletLandscape, tabletPortrait, phoneLandscape, phonePortrait) {
-              grid-column: 1 / -1;
-              grid-row: 2 / 4 ;
-            
-             }
-          }
-        }
-      }
-     
-    
-      .list {
-      
-        &__item {
-          @include fontSetings();
-          margin-bottom: 5px;
-          padding: 15px 20px 15px 45px;
-          border-radius: 10px;
-          color: $grey;
-          position: relative;
-          &:nth-child(odd) {
-            background-color: #dff6fd;
-          }
-          &::before {
-            content: url("../assets/imgs/tick.svg");
-            position: absolute;
-            display: block;
-            width: 20px;
-            height: 20px;
-            left: 15px;
-            top: 20px;
-          }
-        }
-      }
-      .content-item {
-        width: 50%;
-        
-      }
-      .diagram {
-        position: relative;
-        padding-bottom: 20px;
-        padding-left: 40px;
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: flex;
-        gap: 15px;
-        -webkit-box-align: end;
-            -ms-flex-align: end;
-                align-items: end;
-        @include adaptive( tabletLandscape, tabletPortrait, phoneLandscape, phonePortrait) {
-          min-height: 460px;
-        
-         }
-         @include adaptive(  phoneLandscape, phonePortrait) {
-          min-height: 250px;
-          gap: 7px;
-          padding-bottom: 20px;
-          padding-left: 15px;
-        
-         }
 
-        &::after {
-          content: "";
-          height: 101%;
-          width: 1px;
-          display: block;
-          position: absolute;
-          border: 1px dashed $light-grey;
-          left: 25px;
-          top: 0;
-          @include adaptive(  phoneLandscape, phonePortrait) {
-            left: 10px;
-          
-           }
+            grid-column: 1 / 2;
+            grid-row: 1;
+            @include adaptive(
+              tabletLandscape,
+              tabletPortrait,
+              phoneLandscape,
+              phonePortrait
+            ) {
+              grid-column: 1 / 4;
+              grid-row: 1;
+            }
+          }
+
+          &:nth-child(1) {
+            .list {
+              grid-column: 1 / 2;
+              grid-row: 2/ 4;
+              @include adaptive(
+                tabletLandscape,
+                tabletPortrait,
+                phoneLandscape,
+                phonePortrait
+              ) {
+                grid-column: 1 / -1;
+                grid-row: 4 / -1;
+              }
+            }
+            .diagram {
+              grid-column: 2 / -1;
+              grid-row: 1/ -1;
+              @include adaptive(
+                tabletLandscape,
+                tabletPortrait,
+                phoneLandscape,
+                phonePortrait
+              ) {
+                grid-column: 1 / -1;
+                grid-row: 2 / 4;
+              }
+            }
+          }
         }
-        &::before {
-          content: "";
-          height: 1px;
-          width: 100%;
-          display: block;
-          position: absolute;
-          border: 1px dashed $light-grey;
-          bottom: 20px;
-          left: 0;
+
+        .list {
+          &__item {
+            @include fontSetings();
+            margin-bottom: 5px;
+            padding: 15px 20px 15px 45px;
+            border-radius: 10px;
+            color: $grey;
+            position: relative;
+            &:nth-child(odd) {
+              background-color: #dff6fd;
+            }
+            &::before {
+              content: url("../assets/imgs/tick.svg");
+              position: absolute;
+              display: block;
+              width: 20px;
+              height: 20px;
+              left: 15px;
+              top: 20px;
+            }
+          }
         }
-        &__item {
-          width: 10%;
-          height: 100%;
+        .content-item {
+          width: 50%;
+        }
+        .diagram {
+          position: relative;
+          padding-bottom: 20px;
+          padding-left: 40px;
           display: -webkit-box;
           display: -ms-flexbox;
           display: flex;
-          -webkit-box-orient: vertical;
-          -webkit-box-direction: normal;
-              -ms-flex-direction: column;
-                  flex-direction: column;
-          -webkit-box-pack: end;
-              -ms-flex-pack: end;
-                  justify-content: flex-end;
-          -webkit-box-align: center;
-              -ms-flex-align: center;
-                  align-items: center;
-          position: relative;
-          @include adaptive(  phoneLandscape, phonePortrait) {
-            width: 11%;
-          
-           }
-          .price-val {
-            @include fontSetings($s: 12px, $lh: 16px);
-            white-space: nowrap;
-            @include adaptive(  phoneLandscape, phonePortrait) {
-              @include fontSetings($s: 5px, $lh: 8px);
-            
-             }
-            color: $grey;
-            &.blue {
-              color: $blue;
+          gap: 15px;
+          -webkit-box-align: end;
+          -ms-flex-align: end;
+          align-items: end;
+          @include adaptive(
+            tabletLandscape,
+            tabletPortrait,
+            phoneLandscape,
+            phonePortrait
+          ) {
+            min-height: 460px;
+          }
+          @include adaptive(phoneLandscape, phonePortrait) {
+            min-height: 250px;
+            gap: 7px;
+            padding-bottom: 20px;
+            padding-left: 15px;
+          }
+
+          &::after {
+            content: "";
+            height: 101%;
+            width: 1px;
+            display: block;
+            position: absolute;
+            border: 1px dashed $light-grey;
+            left: 25px;
+            top: 0;
+            @include adaptive(phoneLandscape, phonePortrait) {
+              left: 10px;
             }
           }
-          .scale {
-            width: 95%;
-            border-radius: 10px;
-            background-color: $blue-background;
-            margin-top: 5px;
+          &::before {
+            content: "";
+            height: 1px;
+            width: 100%;
+            display: block;
+            position: absolute;
+            border: 1px dashed $light-grey;
+            bottom: 20px;
+            left: 0;
+          }
+          &__item {
+            width: 10%;
+            height: 100%;
             display: -webkit-box;
             display: -ms-flexbox;
             display: flex;
-            -webkit-box-pack: center;
-                -ms-flex-pack: center;
-                    justify-content: center;
-            -webkit-box-align: end;
-                -ms-flex-align: end;
-                    align-items: flex-end;
-            padding-bottom: 30px;
-            @include adaptive(  phoneLandscape, phonePortrait) {
-              padding-bottom: 10px;
-            
-             }
-            &__info {
+            -webkit-box-orient: vertical;
+            -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+            flex-direction: column;
+            -webkit-box-pack: end;
+            -ms-flex-pack: end;
+            justify-content: flex-end;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            align-items: center;
+            position: relative;
+            @include adaptive(phoneLandscape, phonePortrait) {
+              width: 11%;
+            }
+            .price-val {
+              @include fontSetings($s: 12px, $lh: 16px);
+              white-space: nowrap;
+              @include adaptive(phoneLandscape, phonePortrait) {
+                @include fontSetings($s: 5px, $lh: 8px);
+              }
+              color: $grey;
+              &.blue {
+                color: $blue;
+              }
+            }
+            .scale {
+              width: 95%;
+              border-radius: 10px;
+              background-color: $blue-background;
+              margin-top: 5px;
               display: -webkit-box;
               display: -ms-flexbox;
               display: flex;
-              gap: 5px;
-              @include adaptive(  phoneLandscape, phonePortrait) {
-                -webkit-box-align: center;
-                    -ms-flex-align: center;
-                        align-items: center;        
-                gap: 1px;        
-               }
-              .conut {
-                color: $blue;
-                @include fontSetings($s: 16px, $lh: 24px);
-                @include adaptive(  phoneLandscape, phonePortrait) {
-                  @include fontSetings($s: 7px, $lh: 11px);
-                  
-                 }
+              -webkit-box-pack: center;
+              -ms-flex-pack: center;
+              justify-content: center;
+              -webkit-box-align: end;
+              -ms-flex-align: end;
+              align-items: flex-end;
+              padding-bottom: 30px;
+              @include adaptive(phoneLandscape, phonePortrait) {
+                padding-bottom: 10px;
               }
-              img{
-                @include adaptive(  phoneLandscape, phonePortrait) {
-                 -webkit-transform: scale(0.75);
-                     -ms-transform: scale(0.75);
-                         transform: scale(0.75);
-                
-                 }
+              &__info {
+                display: -webkit-box;
+                display: -ms-flexbox;
+                display: flex;
+                gap: 5px;
+                @include adaptive(phoneLandscape, phonePortrait) {
+                  -webkit-box-align: center;
+                  -ms-flex-align: center;
+                  align-items: center;
+                  gap: 1px;
+                }
+                .conut {
+                  color: $blue;
+                  @include fontSetings($s: 16px, $lh: 24px);
+                  @include adaptive(phoneLandscape, phonePortrait) {
+                    @include fontSetings($s: 7px, $lh: 11px);
+                  }
+                }
+                img {
+                  @include adaptive(phoneLandscape, phonePortrait) {
+                    -webkit-transform: scale(0.75);
+                    -ms-transform: scale(0.75);
+                    transform: scale(0.75);
+                  }
+                }
+              }
+              &.height-1 {
+                height: 17%;
+              }
+              &.height-2 {
+                height: 30%;
+              }
+              &.height-3 {
+                height: 35%;
+              }
+              &.height-4 {
+                height: 42%;
+              }
+              &.height-5 {
+                height: 54%;
+              }
+              &.height-6 {
+                height: 64%;
+              }
+              &.height-7 {
+                height: 82%;
+              }
+              &.height-8 {
+                height: 100%;
               }
             }
-            &.height-1 {
-              height: 17%;
+            .name {
+              position: absolute;
+              bottom: -25px;
+              left: 50%;
+              -webkit-transform: translateX(-50%);
+              -ms-transform: translateX(-50%);
+              transform: translateX(-50%);
+              @include fontSetings($s: 12px, $lh: 18px);
+              white-space: nowrap;
+              color: $grey;
+              @include adaptive(phoneLandscape, phonePortrait) {
+                @include fontSetings($s: 6px, $lh: 8px);
+                bottom: -18px;
+              }
             }
-            &.height-2 {
-              height: 30%;
-            }
-            &.height-3 {
-              height: 35%;
-            }
-            &.height-4 {
-              height: 42%;
-            }
-            &.height-5 {
-              height: 54%;
-            }
-            &.height-6 {
-              height: 64%;
-            }
-            &.height-7 {
-              height: 82%;
-            }
-            &.height-8 {
-              height: 100%;
-            }
-          }
-          .name {
-            position: absolute;
-            bottom: -25px;
-            left: 50%;
-            -webkit-transform: translateX(-50%);
-                -ms-transform: translateX(-50%);
-                    transform: translateX(-50%);
-            @include fontSetings($s: 12px, $lh: 18px);
-            white-space: nowrap;
-            color: $grey;
-            @include adaptive(  phoneLandscape, phonePortrait) {
-              @include fontSetings($s: 6px, $lh: 8px);
-              bottom: -18px;
-             }
           }
         }
-      }
-      .img {
-        border-radius: 20px;
-        width: 100%;
-        height: 100%;
-        -o-object-fit: cover;
-           object-fit: cover;
-        border-radius: 20px;
-      }
-      .roi {
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: flex;
-        gap: 15px;
-        @include adaptive(  phoneLandscape, phonePortrait) {
-          -webkit-box-orient: vertical;
-          -webkit-box-direction: normal;
-              -ms-flex-direction: column;
-                  flex-direction: column;
-        
-         }
-        &__item {
-          width: 50%;
-          padding: 20px;
-          border: 2px solid $light-blue;
+        .img {
           border-radius: 20px;
-          background-color: $white;
-          @include adaptive(  phoneLandscape, phonePortrait) {
-            width: 100%;
-          
-           }
-          &.blue {
-            background-color: $light-blue;
-            .roi__item__type {
-              border: 1px solid $white;
-              color: $white;
-            }
-            .roi__item__title {
-              color: $white;
-            }
-            .roi__item__deskr {
-              color: $white;
-            }
+          width: 100%;
+          height: 100%;
+          -o-object-fit: cover;
+          object-fit: cover;
+          border-radius: 20px;
+        }
+        .roi {
+          display: -webkit-box;
+          display: -ms-flexbox;
+          display: flex;
+          gap: 15px;
+          @include adaptive(phoneLandscape, phonePortrait) {
+            -webkit-box-orient: vertical;
+            -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+            flex-direction: column;
           }
-          &__type {
-            @include fontSetings($s: 12px, $lh: 18px);
-            border: 1px solid $blue;
-            border-radius: 30px;
-            padding: 4px 14px;
-            color: $blue;
-            margin-bottom: 40px;
-            display: block;
-            width: -webkit-fit-content;
-            width: -moz-fit-content;
-            width: fit-content;
-          }
-          &__title {
-            @include fontSetings($s: 30px, $w: 600, $lh: 36px);
-            color: $black;
-            margin-bottom: 10px;
-          }
-          &__deskr {
-            @include fontSetings($s: 12px, $w: 400, $lh: 18px);
-            color: $grey;
+          &__item {
+            width: 50%;
+            padding: 20px;
+            border: 2px solid $light-blue;
+            border-radius: 20px;
+            background-color: $white;
+            @include adaptive(phoneLandscape, phonePortrait) {
+              width: 100%;
+            }
+            &.blue {
+              background-color: $light-blue;
+              .roi__item__type {
+                border: 1px solid $white;
+                color: $white;
+              }
+              .roi__item__title {
+                color: $white;
+              }
+              .roi__item__deskr {
+                color: $white;
+              }
+            }
+            &__type {
+              @include fontSetings($s: 12px, $lh: 18px);
+              border: 1px solid $blue;
+              border-radius: 30px;
+              padding: 4px 14px;
+              color: $blue;
+              margin-bottom: 40px;
+              display: block;
+              width: -webkit-fit-content;
+              width: -moz-fit-content;
+              width: fit-content;
+            }
+            &__title {
+              @include fontSetings($s: 30px, $w: 600, $lh: 36px);
+              color: $black;
+              margin-bottom: 10px;
+            }
+            &__deskr {
+              @include fontSetings($s: 12px, $w: 400, $lh: 18px);
+              color: $grey;
+            }
           }
         }
       }
@@ -1330,128 +1294,167 @@
 }
 .contact-from {
   padding-bottom: 120px;
-  @include adaptive( tabletLandscape, tabletPortrait, phoneLandscape, phonePortrait) {
+  @include adaptive(
+    tabletLandscape,
+    tabletPortrait,
+    phoneLandscape,
+    phonePortrait
+  ) {
     padding-bottom: 100px;
-   }
+  }
   .container {
-    border-radius: 30px;
-    background-color: $blue-background;
-    background-image: url("../assets/imgs/form-vector.png");
-    background-size: cover;
+    .content-wrap {
+      border-radius: 30px;
+      background-color: $blue-background;
+      background-image: url("../assets/imgs/form-vector.png");
+      background-size: cover;
 
-    display: -webkit-box;
+      display: -webkit-box;
 
-    display: -ms-flexbox;
+      display: -ms-flexbox;
 
-    display: flex;
-    padding: 35px;
-    @include adaptive( tabletLandscape, tabletPortrait, phoneLandscape, phonePortrait) {
-      -ms-flex-wrap: wrap;
-          flex-wrap: wrap;
-      gap: 40px;
-     }
-    .content-item {
-      width: 50%;
-      @include adaptive( tabletLandscape, tabletPortrait, phoneLandscape, phonePortrait) {
-      width: 100%;
-       }
-      &:nth-child(2) {
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: flex;
-        -webkit-box-align: end;
-            -ms-flex-align: end;
-                align-items: end;
+      display: flex;
+      padding: 35px;
+      @include adaptive(
+        tabletLandscape,
+        tabletPortrait,
+        phoneLandscape,
+        phonePortrait
+      ) {
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+        gap: 40px;
       }
-      .form-title {
-        @include fontSetings($s: 34px, $w: 600, $lh: 49px);
-        margin-bottom: 25px;
-      }
-      .form {
-        padding: 0;
+      @include adaptive(phoneLandscape, phonePortrait) {
+        padding: 0px;
         background: none;
-        &__input {
-          width: 80%;
-          padding: 10px 15px;
-          @include fontSetings($s: 12px, $lh: 18px);
-          margin-bottom: 10px;
-          border: 1px solid #d0d5dd;
-          border-radius: 30px;
-          @include adaptive( tabletLandscape, tabletPortrait, phoneLandscape, phonePortrait) {
-            width: 100%;
-           }
+        gap: 25px;
+      }
+      .content-item {
+        width: 50%;
+        @include adaptive(
+          tabletLandscape,
+          tabletPortrait,
+          phoneLandscape,
+          phonePortrait
+        ) {
+          width: 100%;
         }
-        &__terms {
+        &:nth-child(1) {
+          @include adaptive(phoneLandscape, phonePortrait) {
+            background-color: $blue-background;
+            background-image: url("../assets/imgs/form-vector.png");
+            background-size: cover;
+            padding: 20px;
+            border-radius: 30px;
+          }
+        }
+        &:nth-child(2) {
           display: -webkit-box;
           display: -ms-flexbox;
           display: flex;
-          -webkit-box-align: center;
-              -ms-flex-align: center;
-                  align-items: center;
-          gap: 10px;
+          -webkit-box-align: end;
+          -ms-flex-align: end;
+          align-items: end;
+        }
+        .form-title {
+          @include fontSetings($s: 34px, $w: 600, $lh: 49px);
           margin-bottom: 25px;
-          .checkbox {
-            width: 20px;
-            height: 20px;
-          }
-          label {
+        }
+        .form {
+          padding: 0;
+          background: none;
+          &__input {
+            width: 80%;
+            padding: 10px 15px;
             @include fontSetings($s: 12px, $lh: 18px);
-            color: $grey;
-            a {
+            margin-bottom: 10px;
+            border: 1px solid #d0d5dd;
+            border-radius: 30px;
+            @include adaptive(
+              tabletLandscape,
+              tabletPortrait,
+              phoneLandscape,
+              phonePortrait
+            ) {
+              width: 100%;
+            }
+          }
+          &__terms {
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 25px;
+            .checkbox {
+              width: 20px;
+              height: 20px;
+            }
+            label {
+              @include fontSetings($s: 12px, $lh: 18px);
               color: $grey;
-              text-decoration: underline;
+              a {
+                color: $grey;
+                text-decoration: underline;
+              }
+            }
+          }
+          .sub-btn {
+            color: $white;
+            background-color: $blue;
+            border-radius: 60px;
+            border: none;
+            outline: none;
+            @include fontSetings($s: 14px, $w: 700, $lh: 19px);
+            height: 55px;
+            padding: 0 10px 0 20px;
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            gap: 10px;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            align-items: center;
+            cursor: pointer;
+            &::after {
+              content: url(../assets/imgs/circle-small.svg);
+              width: 25px;
+              height: 25px;
             }
           }
         }
-        .sub-btn {
-          color: $white;
-          background-color: $blue;
-          border-radius: 60px;
-          border: none;
-          outline: none;
-          @include fontSetings($s: 14px, $w: 700, $lh: 19px);
-          height: 55px;
-          padding: 0 10px 0 20px;
-          display: -webkit-box;
-          display: -ms-flexbox;
-          display: flex;
-          gap: 10px;
-          -webkit-box-align: center;
-              -ms-flex-align: center;
-                  align-items: center;
-          cursor: pointer;
-          &::after {
-            content: url(../assets/imgs/circle-small.svg);
-            width: 25px;
-            height: 25px;
+        .text-wrap {
+          padding: 20px 20px 50px 20px;
+          background-color: $white;
+          border-radius: 10px;
+          @include adaptive(phoneLandscape, phonePortrait) {
+            padding: 20px;
           }
-        }
-      }
-      .text-wrap {
-        padding: 20px 20px 50px 20px;
-        background-color: $white;
-        border-radius: 10px;
-        .sub-title {
-          @include fontSetings($s: 20px, $w: 400, $lh: 28px);
-          padding-bottom: 15px;
-          border-bottom: 1px solid $light-blue;
-          margin-bottom: 20px;
-        }
-        .list {
-          &__item {
-            @include fontSetings();
-            color: $grey;
-            margin-bottom: 15px;
-            padding-left: 30px;
-            position: relative;
-            &::before {
-              content: url(../assets/imgs/tick.svg);
-              position: absolute;
-              display: block;
-              width: 20px;
-              height: 20px;
-              left: 0px;
-              top: 5px;
+          .sub-title {
+            @include fontSetings($s: 20px, $w: 400, $lh: 28px);
+            padding-bottom: 15px;
+            border-bottom: 1px solid $light-blue;
+            margin-bottom: 20px;
+          }
+          .list {
+            &__item {
+              @include fontSetings();
+              color: $grey;
+              margin-bottom: 15px;
+              padding-left: 30px;
+              position: relative;
+              &::before {
+                content: url(../assets/imgs/tick.svg);
+                position: absolute;
+                display: block;
+                width: 20px;
+                height: 20px;
+                left: 0px;
+                top: 5px;
+              }
             }
           }
         }
@@ -1461,48 +1464,69 @@
 }
 .faq {
   padding-bottom: 120px;
-  @include adaptive( tabletLandscape, tabletPortrait, phoneLandscape, phonePortrait) {
+  @include adaptive(
+    tabletLandscape,
+    tabletPortrait,
+    phoneLandscape,
+    phonePortrait
+  ) {
     padding-bottom: 100px;
-   }
+  }
   .container {
+    .title {
+      margin-bottom: 35px;
+      @include adaptive(phoneLandscape, phonePortrait) {
+        margin-bottom: 25px;
+      }
+    }
     .faq-list {
       display: -webkit-box;
       display: -ms-flexbox;
       display: flex;
       -ms-flex-wrap: wrap;
-          flex-wrap: wrap;
+      flex-wrap: wrap;
       gap: 0 40px;
-      
+
       &__item {
         width: calc(50% - 20px);
         cursor: pointer;
-        @include adaptive( tabletLandscape, tabletPortrait, phoneLandscape, phonePortrait) {
+        @include adaptive(
+          tabletLandscape,
+          tabletPortrait,
+          phoneLandscape,
+          phonePortrait
+        ) {
           width: 100%;
-         }
+        }
         margin-bottom: -1px;
         padding: 20px 0;
         display: -webkit-box;
         display: -ms-flexbox;
         display: flex;
         -ms-flex-wrap: wrap;
-            flex-wrap: wrap;
+        flex-wrap: wrap;
         -webkit-box-align: start;
-            -ms-flex-align: start;
-                align-items: start;
+        -ms-flex-align: start;
+        align-items: start;
         -webkit-box-pack: justify;
-            -ms-flex-pack: justify;
-                justify-content: space-between;
+        -ms-flex-pack: justify;
+        justify-content: space-between;
         border-top: 1px solid $light-blue;
         border-bottom: 1px solid $light-blue;
         position: relative;
-        @include adaptive( phoneLandscape, phonePortrait) {
+        @include adaptive(phoneLandscape, phonePortrait) {
           padding-right: 25px;
-         }
-        .question{
+        }
+        .question {
           @include fontSetings($s: 20px, $lh: 28px);
-          @include adaptive( tabletLandscape, tabletPortrait, phoneLandscape, phonePortrait) {
+          @include adaptive(
+            tabletLandscape,
+            tabletPortrait,
+            phoneLandscape,
+            phonePortrait
+          ) {
             @include fontSetings($s: 16px, $lh: 22px);
-           }
+          }
         }
         .more {
           background-color: transparent;
@@ -1515,33 +1539,32 @@
           display: -ms-flexbox;
           display: flex;
           -webkit-box-align: center;
-              -ms-flex-align: center;
-                  align-items: center;
+          -ms-flex-align: center;
+          align-items: center;
           -webkit-box-pack: center;
-              -ms-flex-pack: center;
-                  justify-content: center;
+          -ms-flex-pack: center;
+          justify-content: center;
           cursor: pointer;
           position: absolute;
           top: 15px;
           right: 0;
-          @include adaptive( phoneLandscape, phonePortrait) {
-           position: absolute;
-           top: 15px;
-           right: 0;
-           }
+          @include adaptive(phoneLandscape, phonePortrait) {
+            position: absolute;
+            top: 15px;
+            right: 0;
+          }
           &:hover {
             -webkit-transition: 0.3s;
             -o-transition: 0.3s;
             transition: 0.3s;
             background-color: $blue-background;
           }
-          
         }
         .request {
           width: 100%;
           display: none;
-          &.active{
-            display: block
+          &.active {
+            display: block;
           }
           &__item {
             @include fontSetings();
@@ -1549,14 +1572,14 @@
             list-style: inside;
           }
         }
-        &.active{
-          .request{
+        &.active {
+          .request {
             display: block;
           }
-          .more{
+          .more {
             -webkit-transform: rotate(45deg);
-                -ms-transform: rotate(45deg);
-                    transform: rotate(45deg);
+            -ms-transform: rotate(45deg);
+            transform: rotate(45deg);
           }
         }
       }

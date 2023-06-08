@@ -4,14 +4,19 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Property Management</title>
+    <title>Developer</title>
     <link
       href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="./styles/all.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
   </head>
-  <body>
+  <body data-pid="123123">
     <header class="header">
       <div class="header__top">
         <div class="container">
@@ -116,7 +121,6 @@
 
           <nav class="nav">
             <ul class="nav__list">
-            
               <li class="nav__list__item drop">
                 <a href="#"
                   ><img
@@ -157,7 +161,7 @@
                   />Sell</a
                 >
               </li>
-              
+
               <li class="nav__list__item">
                 <a href="#">
                   <img
@@ -355,352 +359,296 @@
       </div>
     </header>
     <main>
-      <section class="prop-mang">
+      <section class="developer hero-info-slider">
         <div class="container">
           <div class="bread-crums">
             <a href="#" class="bread-crums__item home">Home</a>
-            <a href="#" class="bread-crums__item">Property Management</a>
+            <a href="#" class="bread-crums__item">Developers</a>
+            <a href="#" class="bread-crums__item">Nakheel</a>
           </div>
-          <div class="content-section">
-            <h1 class="title">Property Management</h1>
-            <div class="tags">
-              <a href="#" class="tags__item">Property valuation</a>
-              <a href="#" class="tags__item">Setting the rental price</a>
-              <a href="#" class="tags__item">Repairs</a>
-              <a href="#" class="tags__item">Marketing services</a>
-              <a href="#" class="tags__item">Tenant screening</a>
-              <a href="#" class="tags__item">Solving issues</a>
-              <a href="#" class="tags__item all">View all services</a>
-            </div>
-          </div>
-          <div class="content-section">
-            <div class="content-section__item">
-              <img src="./assets/imgs/prop-dek.svg" class="dekor" alt="dekor">
-              <p class="deskr">Package for the real estate management service</p>
-              <a href="#" class="link">Management of property for rent</a>
-            </div>
-            <div class="content-section__item">
-              <h2 class="title">Professional help in property management</h2>
-              <button type="button" class="w-100-arr btn">Send Request</button>
-            </div>
-          </div>
-         
-        </div>
-      </section>
-      <section class="prop-build">
-        <div class="container">
-          <div class="build">
-            <img src="./assets/imgs/prp-img.png" alt="" class="build__img">
-          </div>
-        </div>
-      </section>
-      <section class="prop-who">
-        <div class="container">
-          <div class="content-section">
-            <h2 class="title">Who We Are</h2>
-            <p class="paragraf">Owning a rental property requires constant care of it, which takes a lot of effort and time from the owner. Fixing a dishwasher or leaking pipes, as well as calls to utilities, are some of the problems that an owner may face. There are different laws and regulations in the country regarding the leasing of real estate, therefore compliance with the legal norms of the UAE is an important issue.</p>
-            <div class="check-paragraf">The best solution to protect your investment and make it easier to own a rental real estate is to contact a property management company with a strong reputation.</div>
-          </div>
-          <div class="content-section">
-              <img src="./assets/imgs/prp-grey.png" alt="build" class="img">
-          </div>
-          <div class="content-section">
-            <div class="content-item">
-              <h4 class="sub-title">The portfolio of Metropolitan Premium Properties includes over 269 property management projects</h4>
-            </div>
-            <div class="content-item">
-              <p class="paragraf">Our agency Metropolitan Premium Properties offers real estate owners a property management service that will not only save their time and effort, but also provide a constant income. In addition, our specialists will inform you about any changes concerning the rights of landlords and tenants.</p>
-              <button type="button" class="w-100-arr btn">Send Request</button>
-
-            </div>
-          </div>
-            
-        </div>
-      </section>
-      <section class="prp-magment-service">
-        <div class="container">
-          <span class="line"></span>
-          <h2 class="title">Our Property Management Services</h2>
-          <h5 class="sub-title">
-            The company of Metropolitan Premium Properties offers two packages for the real estate management service:
-          </h5>
-          <div class="baners">
-            <div class="baners__item">
-              <div class="img-wrap">
-                <img src="./assets/imgs/keys.svg" alt="keys">
-              </div>
-              <h5 class="baners__item__title">Package for the management of property <span class="blue">for rent</span></h5>
-              <p class="baners__item__descr">7% of the rental amount, subject to a minimum fee of AED 3K (USD 817) + VAT</p>
-              <a href="#" class="baners__item__link">Send Request ></a>
-            </div>
-            <div class="baners__item">
-              <div class="img-wrap">
-                <img src="./assets/imgs/prp-home.svg" alt="home">
-              </div>
-              <h5 class="baners__item__title">Package for the management of residence as a <span class="blue">home care</span></h5>
-              <p class="baners__item__descr">(for owner’s personal use) 
-                AED 500 (USD 136) per month + VAT</p>
-              <a href="#" class="baners__item__link">Send Request ></a>
-            </div>
-          </div>
-        </div>
-      </section>
-      <section class="prp-structure">
-        <div class="container">
-          <h4 class="title">
-            Our service of property management includes the following stages:
-          </h4>
-          <div class="stages-wrap">
-            <div class="stages">
-              <div class="stages__item light-blue">
-                <span class="stage">( 1 )</span>
-                <h5 class="name">Property valuation</h5>
-                <p class="paragraf">Specialists of Metropolitan Premium Properties will analyse the condition of real estate for identification of the advantages and disadvantages, as well as calculate the potential profitability.</p>
-              </div>
-              <div class="stages__item">
-                <span class="stage">( 2 )</span>
-                <h5 class="name">Setting the rental price</h5>
-                <p class="paragraf">This stage includes an operational analysis of the market’s state and different proposals for similar property. Then we form the optimal rental price for obtaining the maximum possible income and attraction of potential tenants.</p>
-              </div>
-              <div class="stages__item blue">
-                <span class="stage">( 3 )</span>
-                <h5 class="name">Repairs</h5>
-                <p class="paragraf">Our company will bring your housing to an optimal condition and carry out major or cosmetic repairs. We will also arrange the furniture, if necessary. A professional cleaning before settling a new tenant into the residence is included in this service.</p>
-              </div>
-            </div>
-            <div class="stages">
-              <div class="stages__item blue">
-                <span class="stage">( 4 )</span>
-                <h5 class="name">Marketing services</h5>
-                <p class="paragraf">We will promote your housing with the use of a wide range of marketing instruments, including professional photo, rental ads and video tours, which will be distributed through various information channels and international resources. Your property also will be offered to potential tenants from our extensive customer base.</p>
-              </div>
-              <div class="stages__item light-blue">
-                <span class="stage">( 5 )</span>
-                <h5 class="name">Tenant screening</h5>
-                <p class="paragraf">Our company will choose the best candidate for your property and will organise personal meetings with potential tenants.</p>
-              </div>
-              <div class="stages__item">
-                <span class="stage">( 6 )</span>
-                <h5 class="name">Solving issues</h5>
-                <p class="paragraf">In case of breakdown of household appliances or any emergency situations, specialists of Metropolitan Premium Properties will take over the interaction with the tenant.</p>
-              </div>
-            </div>
-            <div class="stages">
-              <div class="stages__item light-blue">
-                <span class="stage">( 7 )</span>
-                <h5 class="name">Legal matters</h5>
-                <p class="paragraf">Legal matters, including drafting a rental agreement, registration of real estate through the EJARI system, as well as informing the tenants of their liabilities.</p>
-              </div>
-              <div class="stages__item">
-                <span class="stage">( 8 )</span>
-                <h5 class="name">Payments management</h5>
-                <p class="paragraf">Our specialists will control the timely receipt of all payments from tenants.</p>
-              </div>
-              <div class="stages__item blue">
-                <span class="stage">( 9 )</span>
-                <h5 class="name">Extension or termination of the rental agreement</h5>
-                <p class="paragraf">At this stage, we will provide inspection of the property for possible damage, legal support, as well as monitoring the absence of debts for utilities.</p>
-              </div>
-              <div class="stages__item light-blue">
-                <span class="stage">( 10 )</span>
-                <h5 class="name">Move-in and move-out inspections</h5>
-                <p class="paragraf">We will provide a detailed report with pictures, signed by our inspector and the tenant at the time of moving-in or out.</p>
-              </div>
-  
-            </div>
-          </div>
-          
-        </div>
-      </section>
-      <section class="prp-works">
-        <div class="container">
-          <h2 class="title">How It Works</h2>
-          <h5 class="sub-title">The property management service is provided through the following steps:</h5>
-          <div class="tile">
-            <div class="tile-row">
-              <div class="tile__item">
-                <img src="./assets/imgs/prp-deck-2.png" alt="deck" class="tile__item__img">
-                <div class="num-wr">
-                  <span class="num">#1 </span>
-                  <span class="hover"></span>
-                </div>
-                <h3 class="tile__item__title half">Make a request on the website or call us</h3>
-                <p class="tile__item__deskr half">We will clarify all details about your housing by phone and set a meeting time</p>
-                <button class="w-100-arr tile__item__btn">Send Request</button>
-              </div>
-              <div class="tile__item tile__item-bg" style="background-image: url('./assets/imgs/prp-tile-1.png');">
-                
-              </div>
-            </div>
-            <div class="tile-row">
-              <div class="tile__item tile__item-bg" style="background-image: url('./assets/imgs/prp-tile-2.png');">
-              
-              </div>
-              <div class="tile__item">
-                <div class="num-wr">
-                  <span class="num">#2</span>
-                  
-                  <span class="hover"></span>
-                </div>
-                <h3 class="tile__item__title">Our expert will come to you in order to assess more accurately</h3>
-                <p class="tile__item__deskr">Our expert will come to you in order to assess more accurately the apartment, townhouse, villa or commercial real estate. We also will set the exact market value of your real estate. This service is free.
-                </p>
-              </div>
-            </div>
-            <div class="tile-row">
-              <div class="tile__item">
-                <div class="num-wr">
-                  <span class="num">#3 </span>
-                  <span class="hover"></span>
-                </div>
-                <h3 class="tile__item__title">Preparing documents and tenant sourcing</h3>
-                <p class="tile__item__deskr">Agents of Metropolitan Premium Properties will check all documents on your housing and provide help in preparing the missing documentation. This stage also includes preparing the property for rent, tenant screening, viewings and the drawing up a tenancy contract.
-                </p>
-              </div>
-              <div class="tile__item tile__item-bg" style="background-image: url('./assets/imgs/prp-tile-bg3.png');"></div>
-            </div>
-            <div class="tile-row">
-              <div class="tile__item tile__item-bg" style="background-image: url('./assets/imgs/prp-tile-bg4.png');"></div>
-              <div class="tile__item">
-                <img src="./assets/imgs/prp-deck-2.png" alt="deck" class="tile__item__img">
-  
-                <div class="num-wr">
-                <span class="num">#4 </span>
-                <span class="hover"></span>
-              </div>
-              <h3 class="tile__item__title half">Carrying out of the transaction</h3>
-                <p class="tile__item__deskr half">We will collect the first month's rent and security deposit.
-                </p>
-            </div>
-            </div>
-           
-          </div>
-        </div>
-      </section>
-      <section class="app">
-        <div class="container">
-          <div class="line"></div>
-          <h2 class="title">
-            HappyLandlord
-          </h2>
-          <p class="descr">Metropolitan Premium Properties offers clients a special mobile application HappyLandlord, which provides all important documents and financial reports relating to real estate. You can download the application on the App Store.</p>
-          <a href="#" class="app-link">
-            <img src="./assets/imgs/app-st.png" class="app-img" alt="app-store">
-          </a>
-            <img src="./assets/imgs/Phone_1.png" class="phone" alt="phone">
-        </div>
-      </section>
-      <section class="prp-services">
-        <div class="container">
-          <div class="contant-section">
-            <h2 class="title">Our Services</h2>
-            <p class="descr">
-              The company of Metropolitan Premium Properties provides a wide range of service related real estate, including:
-            </p>
-          </div>
-          <div class="contant-section">
-            <ul class="services-list">
-              <li class="services-list__item">Utilities connections and payments </li>
-              <li class="services-list__item">Rental finance management </li>
-              <li class="services-list__item">Snagging inspection </li>
-              <li class="services-list__item">Property handover </li>
-              <li class="services-list__item">Legal matters </li>
-              <li class="services-list__item">Move-in and move-out inspections </li>
-              <li class="services-list__item">Property insurance </li>
-              <li class="services-list__item">Repairs and cleaning </li>
-              <li class="services-list__item">Repairs and cleaning </li>
-            </ul>
-          </div>
-
-        </div>
-      </section>
-      <section class="contact-form managers">
-        <div class="container">
           <div class="content-item">
-            <h3 class="form-title">Get a free consultation</h3>
+            <h2 class="title">Nakheel</h2>
             <p class="deskr">
-              Just type your contacts and our experts will help you buy the best
+              Nakheel is a sought-after developer in Dubai. They build various
+              types of facilities – shopping centers, houses, villas,
+              apartments, townhouses and others.
             </p>
-            <form action="#" class="form">
-              <div class="input-wrap">
-                <label for="first-name">First Name</label>
-                <input
-                  type="text"
-                  placeholder="Olivia"
-                  id="first-name"
-                  class="input"
-                />
+            <!-- <div class="characteristic">
+                  <div class="characteristic__item">
+                    <span class="grey">Property types</span>
+                    <span class="blue">Apartments, duplexes</span>
+                  </div>
+                  <div class="characteristic__item">
+                    <span class="grey">Area from </span>
+                    <span class="blue">4,470 sq. ft.</span>
+                  </div>
+                  <div class="characteristic__item">
+                    <span class="grey">Starting price</span>
+                    <span class="blue">21,000,000 AED</span>
+                  </div>
+                  <div class="characteristic__item">
+                    <span class="grey">Handover</span>
+                    <span class="blue">2027 Q3</span>
+                  </div>
+                  <div class="characteristic__item geo">
+                    <img src="./assets/imgs/tablet-map.jpg" alt="tablet-map" class="tablet-map">
+                    <div class="map">
+                      <button class="open-map">View map</button>
+    
+                    </div>
+                    <span class="blue">Palm Jumeirah, Dubai, UAE</span>
+                    
+    
+                  </div>
+                 
+                </div> -->
+            <div class="characteristic">
+              <table>
+                <tbody class="">
+                  <tr class="characteristic__item">
+                    <td class="grey">Projects</td>
+                    <td class="blue">50</td>
+                  </tr>
+                  <tr class="characteristic__item">
+                    <td class="grey">Founded in</td>
+                    <td class="blue">2000 y.</td>
+                  </tr>
+                  <tr class="characteristic__item">
+                    <td class="grey">Price from</td>
+                    <td class="blue">477,600 AED</td>
+                  </tr>
+                  <tr class="characteristic__item">
+                    <td class="grey">
+                      <div class="map">
+                        <button class="open-map">View map</button>
+                      </div>
+                    </td>
+                    <td class="blue">View all projects on map</td>
+                  </tr>
+                </tbody>
+              </table>
+              <div class="btns">
+                <a href="#" class="btn link-to"> Discover new project </a>
+                <a href="#" class="btn transparent"> Property Inquiry</a>
               </div>
-              <div class="input-wrap">
-                <label for="second-name">Last Name</label>
-                <input
-                  type="text"
-                  placeholder="Rhye"
-                  id="second-name"
-                  class="input"
-                />
+           
+            </div>
+            <div class="media-mob">
+              <div class="star-rating media-links__item project-rating">
+                <div class="stars">
+                  <div
+                    class="star check"
+                    style="
+                      background-image: url('./assets/imgs/star-rating.svg');
+                    "
+                  ></div>
+                  <div
+                    class="star check"
+                    style="
+                      background-image: url('./assets/imgs/star-rating.svg');
+                    "
+                  ></div>
+                  <div
+                    class="star check"
+                    style="
+                      background-image: url('./assets/imgs/star-rating.svg');
+                    "
+                  ></div>
+                  <div
+                    class="star check"
+                    style="
+                      background-image: url('./assets/imgs/star-rating.svg');
+                    "
+                  ></div>
+                  <div
+                    class="star def"
+                    style="background-image: url('./assets/imgs/star-half.svg')"
+                  ></div>
+                </div>
+                <span class="rating">4/5</span>
               </div>
-              <div class="input-wrap">
-                <label for="email">Email</label>
-                <input
-                  type="email"
-                  placeholder="email@example.ru"
-                  id="email"
-                  class="input"
-                />
+              <div class="share media-mob__item">
+                <span class="btn share share-btn"
+                  ><svg
+                    width="13"
+                    height="11"
+                    viewBox="0 0 13 11"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M12.8963 4.99562L8.16888 0.107223C8.11929 0.0560134 8.05614 0.0211471 7.98741 0.00702724C7.91867 -0.0070926 7.84743 0.000167345 7.78268 0.0278901C7.71793 0.0556129 7.66258 0.102555 7.62362 0.162788C7.58466 0.22302 7.56383 0.293842 7.56377 0.366308V2.94494C4.34439 3.16431 0.449573 6.30571 0.0040125 10.3179C-0.010458 10.4456 0.0144297 10.5748 0.0751301 10.6871C0.13583 10.7994 0.229248 10.889 0.342074 10.9432C0.4549 10.9973 0.58138 11.0133 0.703497 10.9888C0.825613 10.9643 0.937138 10.9006 1.02218 10.8067C1.68757 10.0728 4.07729 7.73557 7.56377 7.58464V10.1431C7.56383 10.2156 7.58466 10.2864 7.62362 10.3466C7.66258 10.4069 7.71793 10.4538 7.78268 10.4815C7.84743 10.5092 7.91867 10.5165 7.98741 10.5024C8.05614 10.4883 8.11929 10.4534 8.16888 10.4022L12.8963 5.51379C12.9627 5.44505 13 5.35186 13 5.25471C13 5.15755 12.9627 5.06437 12.8963 4.99562ZM8.27288 9.25831V7.21007C8.27288 7.11283 8.23553 7.01958 8.16903 6.95082C8.10254 6.88206 8.01236 6.84344 7.91832 6.84344C6.27968 6.84344 4.6824 7.28645 3.17198 8.16025C2.29163 8.67162 1.48071 9.3014 0.760402 10.0331C1.03814 8.41017 1.95171 6.85566 3.36049 5.61706C4.75508 4.39557 6.45814 3.66598 7.91832 3.66598C8.01236 3.66598 8.10254 3.62735 8.16903 3.55859C8.23553 3.48984 8.27288 3.39658 8.27288 3.29935V1.25172L12.1441 5.25471L8.27288 9.25831Z"
+                      fill="#6D6D6D"
+                    ></path></svg>Share</span>
+                <span class="url">/listing-unit-reference-num</span>
+                <span class="btn copy" type="button">Copy</span>
               </div>
-              <div class="input-wrap">
-                <label for="phone">Phone with country code</label>
-                <input
-                  type="tel"
-                  placeholder="+7 (999) 999-99-99"
-                  id="phone"
-                  class="input"
-                />
+              <div class="social media-mob__item social-menu">
+                <a href="#">
+                  <img src="./assets/imgs/fb-grey.svg" alt="fb" />
+                </a>
+                <a href="#">
+                  <img src="./assets/imgs/tw-grey.svg" alt="fb" />
+                </a>
+                <a href="#">
+                  <img src="./assets/imgs/linkin-grey.svg" alt="fb" />
+                </a>
+                <a href="#">
+                  <img src="./assets/imgs/wa-grey.svg" alt="fb" />
+                </a>
               </div>
-              <div class="check-wrap">
-                <input
-                  class="checkbox"
-                  type="checkbox"
-                  checked
-                  name="terms"
-                  id="terms"
-                />
+            </div>
+            <div class="mob-right-section">
+                <div class="img-wrap">
+                    <img src="./assets/imgs/imageDev.png" alt="">
+                </div>
+                <a href="#" class="btn link-to"> Discover new project </a>
 
-                <label class="check-label" for="terms"
-                  >I agree to
-                  <a href="#">Terms of use and Privacy Policy</a></label
-                >
               </div>
-
-              <button class="submit w-100-arr" type="submit">
-                Send Request
-              </button>
-            </form>
           </div>
           <div class="content-item">
-            <img src="./assets/imgs/new_logo.svg" alt="logo " class="logo" />
-           <div class="manager">
-            <img
-              src="./assets/imgs/aico.png"
-              alt="manager"
-              class="manager-big"
-              
-            />
-            <img
-            src="./assets/imgs/manager-sm.png"
-            alt="manager"
-            class="manager-small"
-            
-          />
-          </div>
-            <div class="manager-contact">
-              <p class="name">Aiko Durimkhan</p>
-              <p class="position">
-                Property Management Director
+            <button class="watch-video">Watch the video</button>
+            <button class="controls next">
+              <img src="./assets/imgs/arr-slide__white.svg" alt="arrow" />
+            </button>
+            <button class="controls prev">
+              <img src="./assets/imgs/arr-slide__white.svg" alt="arrow" />
+            </button>
+            <div class="info">
+              <p class="info__item total">
+                <span class="number">28</span> photos
               </p>
-              <a href="#" class="link">+971 58 211 4214</a>
-              <a href="#" class="link mail">pm@metropolitan.realestate</a>
+              <a href="#" class="info__item visual-tour">Get Virtual Tour</a>
+            </div>
+            <div class="overlay">
+              <div class="head"></div>
+            </div>
+            <div class="media-links">
+              <div class="star-rating media-links__item project-rating">
+                <div class="stars">
+                  <div
+                    class="star"
+                    style="
+                      background-image: url('./assets/imgs/star-rating.svg');
+                    "
+                  ></div>
+                  <div
+                    class="star"
+                    style="
+                      background-image: url('./assets/imgs/star-rating.svg');
+                    "
+                  ></div>
+                  <div
+                    class="star"
+                    style="
+                      background-image: url('./assets/imgs/star-rating.svg');
+                    "
+                  ></div>
+                  <div
+                    class="star"
+                    style="
+                      background-image: url('./assets/imgs/star-rating.svg');
+                    "
+                  ></div>
+                  <div
+                    class="star"
+                    style="background-image: url('./assets/imgs/star-half.svg')"
+                  ></div>
+                </div>
+                <span class="rating">4.5/5 </span>
+              </div>
+              <div class="share media-links__item">
+                <span class="btn share share-btn"
+                  ><svg
+                    width="13"
+                    height="11"
+                    viewBox="0 0 13 11"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M12.8963 4.99562L8.16888 0.107223C8.11929 0.0560134 8.05614 0.0211471 7.98741 0.00702724C7.91867 -0.0070926 7.84743 0.000167345 7.78268 0.0278901C7.71793 0.0556129 7.66258 0.102555 7.62362 0.162788C7.58466 0.22302 7.56383 0.293842 7.56377 0.366308V2.94494C4.34439 3.16431 0.449573 6.30571 0.0040125 10.3179C-0.010458 10.4456 0.0144297 10.5748 0.0751301 10.6871C0.13583 10.7994 0.229248 10.889 0.342074 10.9432C0.4549 10.9973 0.58138 11.0133 0.703497 10.9888C0.825613 10.9643 0.937138 10.9006 1.02218 10.8067C1.68757 10.0728 4.07729 7.73557 7.56377 7.58464V10.1431C7.56383 10.2156 7.58466 10.2864 7.62362 10.3466C7.66258 10.4069 7.71793 10.4538 7.78268 10.4815C7.84743 10.5092 7.91867 10.5165 7.98741 10.5024C8.05614 10.4883 8.11929 10.4534 8.16888 10.4022L12.8963 5.51379C12.9627 5.44505 13 5.35186 13 5.25471C13 5.15755 12.9627 5.06437 12.8963 4.99562ZM8.27288 9.25831V7.21007C8.27288 7.11283 8.23553 7.01958 8.16903 6.95082C8.10254 6.88206 8.01236 6.84344 7.91832 6.84344C6.27968 6.84344 4.6824 7.28645 3.17198 8.16025C2.29163 8.67162 1.48071 9.3014 0.760402 10.0331C1.03814 8.41017 1.95171 6.85566 3.36049 5.61706C4.75508 4.39557 6.45814 3.66598 7.91832 3.66598C8.01236 3.66598 8.10254 3.62735 8.16903 3.55859C8.23553 3.48984 8.27288 3.39658 8.27288 3.29935V1.25172L12.1441 5.25471L8.27288 9.25831Z"
+                      fill="#6D6D6D"
+                    />
+                  </svg>
+                  Share</span
+                >
+                <span class="url">/listing-unit-reference-num</span>
+                <span class="btn copy">Copy</span>
+              </div>
+              <div class="social media-links__item social-menu">
+                <a href="#">
+                  <svg
+                    width="22"
+                    height="22"
+                    viewBox="0 0 22 22"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M11 0C4.92519 0 0 4.95493 0 11.0664C0 16.5891 4.022 21.1666 9.28163 22V14.266H6.48735V11.0664H9.28163V8.62823C9.28163 5.8525 10.9241 4.32186 13.4356 4.32186C14.6392 4.32186 15.8999 4.53768 15.8999 4.53768V7.25918H14.5094C13.1452 7.25918 12.7184 8.11359 12.7184 8.98903V11.0642H15.7668L15.2794 14.2638H12.7184V21.9978C17.978 21.1688 22 16.5902 22 11.0664C22 4.95493 17.0748 0 11 0Z"
+                      fill="#6D6D6D"
+                    />
+                  </svg>
+                </a>
+                <a href="#">
+                  <svg
+                    width="23"
+                    height="23"
+                    viewBox="0 0 23 23"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M11.5 0C5.14933 0 0 5.14933 0 11.5C0 17.8507 5.14933 23 11.5 23C17.8507 23 23 17.8507 23 11.5C23 5.14933 17.8507 0 11.5 0ZM17.0267 8.66864C17.0344 8.78929 17.0344 8.91507 17.0344 9.03828C17.0344 12.8066 14.1645 17.1473 8.9202 17.1473C7.30301 17.1473 5.80391 16.6776 4.54096 15.869C4.77199 15.8946 4.99275 15.9049 5.22891 15.9049C6.56373 15.9049 7.79074 15.4531 8.76875 14.6882C7.51607 14.6625 6.46362 13.8411 6.10424 12.7116C6.54319 12.7758 6.9385 12.7758 7.39029 12.6603C6.74528 12.5292 6.16553 12.1789 5.74953 11.6689C5.33353 11.1588 5.10694 10.5205 5.10826 9.86228V9.82634C5.4856 10.0394 5.92969 10.1703 6.39431 10.1883C6.00373 9.92798 5.68341 9.57532 5.46176 9.16157C5.24011 8.74783 5.12398 8.28578 5.12366 7.81641C5.12366 7.28504 5.26228 6.79989 5.51127 6.37891C6.22721 7.26024 7.12058 7.98106 8.13334 8.49451C9.14609 9.00796 10.2556 9.30256 11.3896 9.35915C10.9866 7.42109 12.4344 5.85268 14.1748 5.85268C14.9962 5.85268 15.7355 6.19665 16.2566 6.75112C16.9009 6.63047 17.517 6.38917 18.0663 6.06574C17.8532 6.72545 17.4066 7.28248 16.8136 7.63415C17.3886 7.57254 17.9431 7.41339 18.4565 7.19007C18.0689 7.75993 17.5837 8.26563 17.0267 8.66864Z"
+                      fill="#6D6D6D"
+                    />
+                  </svg>
+                </a>
+                <a href="#">
+                  <svg
+                    width="23"
+                    height="23"
+                    viewBox="0 0 23 23"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M11.5 0C5.14865 0 0 5.14865 0 11.5C0 17.8514 5.14865 23 11.5 23C17.8514 23 23 17.8514 23 11.5C23 5.14865 17.8514 0 11.5 0ZM8.6849 16.2665H6.35615V8.77234H8.6849V16.2665ZM7.50615 7.85234C6.77062 7.85234 6.29505 7.33125 6.29505 6.68677C6.29505 6.02911 6.785 5.52359 7.53609 5.52359C8.28719 5.52359 8.74719 6.02911 8.76156 6.68677C8.76156 7.33125 8.28719 7.85234 7.50615 7.85234ZM17.1901 16.2665H14.8614V12.1133C14.8614 11.1466 14.5235 10.4902 13.6814 10.4902C13.0381 10.4902 12.656 10.9346 12.4871 11.3622C12.4248 11.5144 12.4092 11.73 12.4092 11.9444V16.2653H10.0793V11.1622C10.0793 10.2266 10.0493 9.44438 10.0182 8.77115H12.0415L12.1481 9.81213H12.1948C12.5015 9.32339 13.2526 8.60224 14.5092 8.60224C16.0413 8.60224 17.1901 9.62885 17.1901 11.8354V16.2665Z"
+                      fill="#6D6D6D"
+                    />
+                  </svg>
+                </a>
+                <a href="#">
+                  <svg
+                    width="23"
+                    height="23"
+                    viewBox="0 0 23 23"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M11.5 0C17.8515 0 23 5.14855 23 11.5C23 17.8514 17.8515 23 11.5 23C9.4677 23.0033 7.47117 22.4654 5.71551 21.4417L0.00461617 23L1.55942 17.2868C0.534873 15.5306 -0.00337913 13.5332 1.59623e-05 11.5C1.59623e-05 5.14855 5.14856 0 11.5 0ZM7.58081 6.095L7.35081 6.1042C7.20191 6.11326 7.05639 6.15238 6.92301 6.2192C6.79826 6.28984 6.68438 6.37815 6.58491 6.4814C6.44691 6.61135 6.36871 6.72405 6.28476 6.8333C5.8594 7.38633 5.63038 8.0653 5.63386 8.76299C5.63616 9.32649 5.78336 9.87504 6.01336 10.3879C6.48371 11.4252 7.25766 12.5235 8.27886 13.5412C8.52496 13.7862 8.76646 14.0323 9.02636 14.2611C10.2953 15.3783 11.8074 16.184 13.4424 16.614L14.0956 16.7141C14.3083 16.7256 14.5211 16.7095 14.735 16.6991C15.0699 16.6819 15.3969 16.5912 15.6929 16.4335C15.8435 16.3559 15.9905 16.2715 16.1334 16.1805C16.1334 16.1805 16.1828 16.1483 16.2771 16.077C16.4324 15.962 16.5278 15.8803 16.6566 15.7458C16.7521 15.6469 16.8349 15.5307 16.8981 15.3985C16.9878 15.211 17.0775 14.8534 17.1143 14.5555C17.1419 14.3278 17.1339 14.2036 17.1304 14.1266C17.1258 14.0035 17.0235 13.8759 16.9119 13.8218L16.2426 13.5217C16.2426 13.5217 15.2421 13.0858 14.6303 12.8075C14.5663 12.7796 14.4977 12.7636 14.4279 12.7604C14.3492 12.7523 14.2697 12.7612 14.1947 12.7864C14.1198 12.8115 14.051 12.8525 13.9932 12.9064C13.9875 12.9041 13.9104 12.9697 13.079 13.9771C13.0312 14.0412 12.9655 14.0897 12.8901 14.1163C12.8148 14.1429 12.7332 14.1465 12.6558 14.1266C12.5808 14.1065 12.5074 14.0811 12.4361 14.0507C12.2935 13.9909 12.2441 13.9679 12.1463 13.9265C11.4863 13.6385 10.8752 13.2493 10.3351 12.773C10.1902 12.6465 10.0556 12.5085 9.91761 12.3751C9.46518 11.9419 9.07089 11.4517 8.74461 10.9169L8.67676 10.8077C8.62803 10.7343 8.58862 10.6551 8.55946 10.5719C8.51576 10.4029 8.62961 10.2672 8.62961 10.2672C8.62961 10.2672 8.90906 9.96129 9.03901 9.79569C9.16551 9.63469 9.27246 9.47829 9.34146 9.36674C9.47716 9.14824 9.51971 8.92399 9.44841 8.75034C9.12641 7.96375 8.79291 7.1806 8.45021 6.4032C8.38236 6.2491 8.18111 6.1387 7.99826 6.11685C7.93616 6.10995 7.87406 6.10305 7.81196 6.09845C7.65752 6.09077 7.50277 6.09231 7.34851 6.10305L7.57966 6.09385L7.58081 6.095Z"
+                      fill="#6D6D6D"
+                    />
+                  </svg>
+                </a>
+              </div>
+            </div>
+            <div class="one-slider developer-slider">
+              <div class="swiper-wrapper">
+                <div class="one-slide">
+                  <img src="./assets/imgs/dev-slide.png" alt="" />
+                </div>
+                <div class="one-slide">
+                  <img src="./assets/imgs/dev-slide.png" alt="" />
+                </div>
+                <div class="one-slide">
+                  <img src="./assets/imgs/dev-slide.png" alt="" />
+                </div>
+                <div class="one-slide">
+                  <img src="./assets/imgs/dev-slide.png" alt="" />
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -903,5 +851,6 @@
       </div>
     </footer>
     <script src="./scripts.js"></script>
+    <script src="./sliders.js"></script>
   </body>
 </html>

@@ -2,14 +2,10 @@
 html {
   font-family: $baseFont;
   position: relative;
- 
-
 }
 body {
   background: $main-bg;
   color: $black;
-
-  
 }
 main,
 footer {
@@ -19,8 +15,7 @@ footer {
     overflow: hidden;
   }
 }
-section:not(.lift, .listing-about){
-  
+section:not(.lift, .listing-about) {
   width: 100%;
   overflow-x: hidden;
 }
@@ -28,17 +23,15 @@ section:not(.lift, .listing-about){
   max-width: 1160px;
   width: 100%;
   margin: 0 auto;
-  
+
   @include adaptive(desktopS) {
     padding: 0 40px;
   }
   @include adaptive(tabletLandscape, tabletPortrait) {
     padding: 0 70px;
- 
   }
   @include adaptive(phoneLandscape, phonePortrait) {
     padding: 0 25px;
-  
   }
 }
 .title {
@@ -59,6 +52,8 @@ section:not(.lift, .listing-about){
   padding: 13px 13px 13px 25px;
   background-color: $blue;
   border-radius: 60px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -85,6 +80,8 @@ section:not(.lift, .listing-about){
   border: 2px solid $blue;
   background-color: $blue;
   border-radius: 60px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -93,6 +90,8 @@ section:not(.lift, .listing-about){
   -ms-flex-pack: justify;
   justify-content: space-between;
   color: $white;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
   width: fit-content;
 }
 .trans-link {
@@ -103,6 +102,8 @@ section:not(.lift, .listing-about){
   color: $light-blue;
   border: 2px solid $light-blue;
   border-radius: 60px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -110,279 +111,100 @@ section:not(.lift, .listing-about){
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
   width: fit-content;
 }
 
-.bread-crums {
+.open-map {
+  height: 40px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  gap: 5px;
-  @include adaptive(tabletLandscape, tabletPortrait) {
-    margin-bottom: 35px;
-  }
-  @include adaptive(phoneLandscape, phonePortrait) {
-    margin-bottom: 30px;
-  }
-  &__item {
-    padding: 5px 15px;
-    background: $white;
-    border-radius: 30px;
-    color: $black;
-    @include fontSetings($s: 12px, $w: 600, $lh: 18px);
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-    &.home {
-      &::before {
-        margin-right: 8px;
-        content: url("../assets/imgs/home.svg");
-        height: 16px;
-        width: 12px;
-      }
-    }
-  }
-}
-.open-map{
-  height: 40px;
-  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
   gap: 3px;
   padding: 0 12px;
-  background: linear-gradient(0deg, rgba(97, 199, 232, 0.6), rgba(97, 199, 232, 0.6)), url('../assets/imgs/open-map.png');
+  white-space: nowrap;
+  background: -webkit-gradient(
+      linear,
+      left bottom,
+      left top,
+      from(rgba(97, 199, 232, 0.6)),
+      to(rgba(97, 199, 232, 0.6))
+    ),
+    url("../assets/imgs/open-map.png");
+  background: -o-linear-gradient(
+      bottom,
+      rgba(97, 199, 232, 0.6),
+      rgba(97, 199, 232, 0.6)
+    ),
+    url("../assets/imgs/open-map.png");
+  background: linear-gradient(
+      0deg,
+      rgba(97, 199, 232, 0.6),
+      rgba(97, 199, 232, 0.6)
+    ),
+    url("../assets/imgs/open-map.png");
   border: 1px solid $white;
   background-size: 90%;
   border-radius: 30px;
   color: $white;
-  @include fontSetings($w: 600);
+  @include fontSetings($s: 10px, $w: 600);
+  -webkit-transition: 0.3s;
+  -o-transition: 0.3s;
   transition: 0.3s;
 
   cursor: pointer;
-  &::before{
-    content: url('../assets/imgs/zoom-icon.svg');
+  &::before {
+    content: url("../assets/imgs/zoom-icon.svg");
     width: 18px;
     height: 18px;
-
   }
-  &:hover{
-    background: linear-gradient(0deg, rgba(97, 199, 232, 1), rgba(97, 199, 232, 1)), url('../assets/imgs/open-map.png');
-    transition: 0.3s;
-
-  }
-  
-}
-.big-type-banner {
-  background-color: $white;
- 
-  border-radius: 20px;
-  cursor: pointer;
-  
- 
-  &__imgs {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-    position: relative;
-    gap: 4px;
-    height: 350px;
-    .type {
-      position: absolute;
-      left: 15px;
-      top: 15px;
-      color: $blue;
-      background-color: $white;
-      border-radius: 20px;
-      padding: 3px 10px;
-      @include fontSetings($s: 12px);
-    }
-    
-    &__img {
-      transition: 0.3s;
-      width: calc(50% - 2px);
-      height: 30%;
-      &.big {
-        width: 100%;
-        height: 70%;
-        img{
-          border-radius: 20px 20px 0px 0px;
-        }
-      }
-      &.left {
-    
-        img {
-          border-radius: 0px 10px 10px 0px;
-        }
-      }
-      &.right {
-     
-        position: relative;
-        img {
-          border-radius: 10px 0px 0px 10px;
-        }
-      }
-      img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-      }
-    }
-  }
-  &__info {
-    padding: 20px 10px 20px 20px;
-    .price {
-      padding: 0;
-      @include fontSetings($s: 25px, $lh: 35px, $w: 700);
-    }
-    .dev-loc {
-      padding-bottom: 10px;
-      position: relative;
-      margin-bottom: 15px;
-      @include fontSetings();
-     
-      &::before {
-        content: "";
-        height: 1px;
-        width: 140px;
-        background-color: $light-blue;
-        display: block;
-        position: absolute;
-        bottom: 0;
-        left: 0;
-      }
-    }
-    .characteristics {
-      display: -webkit-box;
-      display: -ms-flexbox;
-      display: flex;
-      margin-bottom: 25px;
-      @include adaptive( tabletLandscape, tabletPortrait) {
-        -ms-flex-wrap: wrap;
-            flex-wrap: wrap;
-        gap: 15px 0;
-       }
-      &__item {
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: flex;
-        -webkit-box-align: center;
-            -ms-flex-align: center;
-                align-items: center;
-        gap: 5px;
-        @include fontSetings($s: 12px, $lh: 18px, $w: 400);
-        color: $grey;
-       
-        &:nth-child(1) {
-          padding-right: 10px;
-          border-right: 1px solid #e7e7e7;
-        }
-        &:nth-child(2) {
-          padding: 0 10px;
-          border-right: 1px solid #e7e7e7;
-        }
-        &:nth-child(3) {
-          padding-left: 10px;
-          @include adaptive( tabletLandscape, tabletPortrait) {
-            padding-left: 0px;
-           }
-        }
-      }
-    }
-    .geo {
-      @include fontSetings($s: 12px, $lh: 18px, $w: 400);
-      color: $grey;
-      display: -webkit-box;
-      display: -ms-flexbox;
-      display: flex;
-      -webkit-box-align: center;
-          -ms-flex-align: center;
-              align-items: center;
-      gap: 5px;
-      margin-bottom: 20px;
-      &::before {
-        content: url("../assets/imgs/pin.svg");
-      }
-    }
-    .card-links {
-      display: -webkit-box;
-      display: -ms-flexbox;
-      display: flex;
-      gap: 10px;
-      -webkit-box-align: center;
-          -ms-flex-align: center;
-              align-items: center;
-      .contact-btn {
-        height: 45px;
-        width: 50%;
-      }
-      .learn-more {
-        // height: 45px;
-        // width: 50%;
-        // display: -webkit-box;
-        // display: -ms-flexbox;
-        // display: flex;
-        // -webkit-box-align: center;
-        //     -ms-flex-align: center;
-        //         align-items: center;
-        // -webkit-box-pack: center;
-        //     -ms-flex-pack: center;
-        //         justify-content: center;
-        // @include fontSetings();
-        // border: 2px solid $light-blue;
-        // background: $white;
-        // border-radius: 30px;
-        // padding: 0 25px;
-        // gap: 15px;
-        // color: $light-blue;
-        // font-family: "Manrope", sans-serif;
-        // font-size: 14px;
-        // font-weight: 600;
-        // line-height: 22px;
-        // width: -webkit-fit-content;
-        // width: -moz-fit-content;
-        // width: fit-content;
-        color: $blue;
-        @include fontSetings($w:700);
-      }
-    }
-  }
-  &:hover{
-    -webkit-box-shadow: 0px 10px 30px rgba(64, 69, 70, 0.1);
-            box-shadow: 0px 10px 30px rgba(64, 69, 70, 0.1);
+  &:hover {
+    background: -webkit-gradient(
+        linear,
+        left bottom,
+        left top,
+        from(rgba(97, 199, 232, 1)),
+        to(rgba(97, 199, 232, 1))
+      ),
+      url("../assets/imgs/open-map.png");
+    background: -o-linear-gradient(
+        bottom,
+        rgba(97, 199, 232, 1),
+        rgba(97, 199, 232, 1)
+      ),
+      url("../assets/imgs/open-map.png");
+    background: linear-gradient(
+        0deg,
+        rgba(97, 199, 232, 1),
+        rgba(97, 199, 232, 1)
+      ),
+      url("../assets/imgs/open-map.png");
     -webkit-transition: 0.3s;
     -o-transition: 0.3s;
     transition: 0.3s;
-    .big-type-banner__imgs__img{
-      transition: 0.3s;
-      height: 40%;
-      &.big{
-        height: 60%;
-      }
-      
-    }
   }
 }
+
 .pagination-section {
   margin: 0 auto;
-  @include adaptive(  phoneLandscape, phonePortrait) {
-   width: 100%;
-
-    
-     }
+  @include adaptive(phoneLandscape, phonePortrait) {
+    width: 100%;
+  }
   .pagination {
     &__list {
-      
       display: -webkit-box;
       display: -ms-flexbox;
       display: flex;
       -webkit-box-align: center;
-          -ms-flex-align: center;
-              align-items: center;
+      -ms-flex-align: center;
+      align-items: center;
       .btn {
         cursor: pointer;
       }
@@ -392,8 +214,8 @@ section:not(.lift, .listing-about){
       .next {
         margin-left: 40px;
         -webkit-transform: rotate(180deg);
-            -ms-transform: rotate(180deg);
-                transform: rotate(180deg);
+        -ms-transform: rotate(180deg);
+        transform: rotate(180deg);
       }
       .page {
         width: 35px;
@@ -402,11 +224,11 @@ section:not(.lift, .listing-about){
         display: -ms-flexbox;
         display: flex;
         -webkit-box-align: center;
-            -ms-flex-align: center;
-                align-items: center;
+        -ms-flex-align: center;
+        align-items: center;
         -webkit-box-pack: center;
-            -ms-flex-pack: center;
-                justify-content: center;
+        -ms-flex-pack: center;
+        justify-content: center;
         border-radius: 50%;
         cursor: pointer;
         @include fontSetings($s: 16px);
@@ -416,30 +238,26 @@ section:not(.lift, .listing-about){
           background: $blue-background;
         }
       }
-      @include adaptive( phoneLandscape, phonePortrait) {
+      @include adaptive(phoneLandscape, phonePortrait) {
         display: none;
       }
- 
     }
-    .laod-more{
+    .laod-more {
       display: none;
       border: none;
       outline: none;
-     
+
       &::after {
-      -webkit-transform: rotate(90deg);
-          -ms-transform: rotate(90deg);
-              transform: rotate(90deg);
+        -webkit-transform: rotate(90deg);
+        -ms-transform: rotate(90deg);
+        transform: rotate(90deg);
       }
-      @include adaptive(  phoneLandscape, phonePortrait) {
+      @include adaptive(phoneLandscape, phonePortrait) {
         display: -webkit-box;
         display: -ms-flexbox;
         display: flex;
-
-        
-         }
+      }
     }
-   
   }
   .info {
     margin-top: 20px;
@@ -448,153 +266,43 @@ section:not(.lift, .listing-about){
     color: $grey;
   }
 }
-.small-card {
+
+input[type="checkbox"] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  border-radius: 3px;
   cursor: pointer;
-  background-color: $white;
- 
-  border-radius: 20px;
-  -ms-flex-negative: 0;
-  flex-shrink: 0;
-  
-  &__img {
-    height: 220px;
-    width: 100%;
-    position: relative;
-    img {
-      width: 100%;
-      height: 100%;
-      -o-object-fit: cover;
-      object-fit: cover;
-      border-radius: 20px 20px 0px 0px;
-    }
-    .price {
-      position: absolute;
-      top: 15px;
-      left: 15px;
-      display: -webkit-box;
-      display: -ms-flexbox;
-      display: flex;
-      gap: 6px;
-      -webkit-box-align: center;
-      -ms-flex-align: center;
-      align-items: center;
-      padding: 3px 5px;
-      background: $white;
-      border-radius: 15px;
-      color: $blue;
-
-      @include fontSetings($s: 12px, $w: 400, $lh: 18px);
-      &::before {
-        content: url("../assets/imgs/cur.svg");
-        width: 18px;
-        height: 18px;
-      }
-    }
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  border: 1px solid #d0d5dd;
+  &::after {
+    content: url("../assets/imgs/checked.svg");
+    display: none;
   }
-  &__text-section {
-    padding: 20px;
-    overflow: hidden;
-
-  }
-  &__title {
-    @include fontSetings($s: 20px, $w: 700, $lh: 28px);
-    display: block;
-    margin-bottom: 5px;
-    position: relative;
-    white-space: nowrap;
-    background: linear-gradient(90deg, #1c1c1c 0%, #1c1c1c 87.95%, rgba(28, 28, 28, 0) 96.83%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-    text-fill-color: transparent;
-  
-    
-  }
-  &__rigion {
-    @include fontSetings($s: 12px, $w: 400, $lh: 18px);
-    color: $slide-grey;
-    position: relative;
-    padding-top: 10px;
-    &::before {
-      content: "";
-      height: 1px;
-      width: 110px;
-      position: absolute;
-      display: block;
-      top: 0;
-      left: 0;
-      background-color: $light-blue;
-    }
-  }
-  &__info {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    gap: 25px;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-    margin-top: 15px;
-    &__item {
-      &__value {
-        @include fontSetings($s: 18px, $w: 400, $lh: 25px);
-        @include adaptive(phoneLandscape, phonePortrait) {
-          @include fontSetings($s: 16px, $w: 400, $lh: 25px);
- 
-        }
-      }
-      &__name {
-        @include fontSetings($s: 12px, $w: 400, $lh: 18px);
-        color: $slide-grey;
-      }
-    }
-  }
-  &__link {
-    color: $white;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    @include fontSetings($s: 14px, $w: 700, $lh: 19px);
-
-    -webkit-box-align: center;
-
-    -ms-flex-align: center;
-
-    align-items: center;
-    background: $light-blue;
-    border-radius: 60px;
-    height: 45px;
-    width: -webkit-fit-content;
-    width: -moz-fit-content;
-    width: fit-content;
-    padding: 0 10px 0 20px;
-    gap: 20px;
-    margin-top: 25px;
-    &::after {
-      content: url(../assets/imgs/circle-sl.svg);
-      width: 25px;
-      height: 25px;
-    }
-  }
-  &.run-text{
-    &:hover{
-      .small-card__title{
-        animation: runText 5s infinite linear;
-        -webkit-text-fill-color:$black;
-        background: none;
-      }
-    }
-   
-    
+  &:hover {
+    border: 1px solid #b3e1f0;
+    -webkit-transition: 0.3s;
+    -o-transition: 0.3s;
+    transition: 0.3s;
   }
 }
-
-@keyframes runText {
-  0%{
-    transform: translate(0, 0);
-  }
-  
-  100%{
-    transform: translate(-160%, 0);
+input[type="checkbox"]:checked {
+  background-color: $blue;
+  border: 1px solid $blue;
+  -webkit-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
+  &::after {
+    display: block;
   }
 }
