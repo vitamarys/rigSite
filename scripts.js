@@ -3,17 +3,16 @@ document.addEventListener("DOMContentLoaded", () => {
    const container = document.querySelector(".container");
   gradient = document.querySelectorAll(".gradient");
   (wrapper = document.querySelectorAll(".slides-wrap")),
-    (langSelect = document.querySelectorAll(".lang-select")),
-    (langSelectLine = document.querySelectorAll(".lang-select__line"));
-  (langForm = document.querySelectorAll(".lang")),
-    (languageVal = document.querySelectorAll(".language")),
-    (currencyVal = document.querySelectorAll(".currency")),
-    // (selectValues = document.querySelectorAll(".custom-select__select")),
+    (langSelect = document.querySelector(".lang-select")),
+    (langSelectLine = document.querySelector(".lang-select__line"));
+  (langForm = document.querySelector(".lang")),
+    (languageVal = document.querySelector(".language")),
+    (currencyVal = document.querySelector(".currency")),
     (filterSelects = document.querySelectorAll(".filter-select")),
     (filterOptions = document.querySelectorAll(".filter-opions")),
     (projectVal = document.querySelector("[data-prj_sel]")),
     (devVal = document.querySelector("[data-dev_sel]")),
-    (btnLang = document.querySelectorAll(".btn-lang")),
+    (btnLang = document.querySelector(".btn-lang")),
     (burgerBtn = document.querySelector(".burger")),
     (headerTop = document.querySelector(".header__top")),
     (main = document.querySelector("main")),
@@ -31,16 +30,17 @@ document.addEventListener("DOMContentLoaded", () => {
      dropdownItem = document.querySelector('.drop'),
      dropdownList = document.querySelector('.dropdown'),
      devCards = document.querySelectorAll('.developers-list__item'),
-    (headerBot = document.querySelector(".header__bot"));
+     logo = document.querySelector('.logo-head'),
+     closeSelectBtn = document.querySelector('.mob-close'),
+    headerBot = document.querySelector(".header__bot");
   
   window.addEventListener("click", (e) => {
     const target = e.target;
-    if (!target.closest(".lang-select")) {
-      langForm[0].classList.remove("active");
-      langSelect[0].classList.remove("active");
-      langSelects.forEach((el) => {
-        el.classList.remove("open");
-      });
+    if (!target.closest(".lang-select") && target == burgerBtn && burgerBtn.classList.value === 'burger active' ) {
+      langForm.classList.remove("active");
+      langSelect.classList.remove("active");
+      langSelect.classList.remove("open");
+
     }
     if (!target.closest(".filter-body")) {
       filterSelects.forEach((el) => {
@@ -51,84 +51,119 @@ document.addEventListener("DOMContentLoaded", () => {
       });
     }
   });
-  langSelectLine.forEach((el, index) => {
-    el.addEventListener("click", (e) => {
 
-      const target = e.target;
+  closeSelectBtn.addEventListener('click',()=>{
+    logo.classList.remove('show');
+    burgerBtn.classList.remove("active");
+    langForm.classList.remove("active");
+    main.classList.toggle("no-scroll");
+    footer.classList.toggle("no-scroll");
+
+  })
+
+    langSelectLine.addEventListener("click", (e) => {
+      if(window.innerWidth < 1366){
+
+        main.classList.toggle("no-scroll");
+        footer.classList.toggle("no-scroll");
+      }
+      logo.classList.add('show');
+      burgerBtn.classList.add("active");
+
       if (
-        langSelect[index].className === "lang-select active" ||
-        langSelect[index].className === "lang-select mob-lang active"
+        langSelect.className === "lang-select active"
+        
       ) {
-        langSelect[index].classList.remove("active");
-        langForm[index].classList.remove("active");
+        langSelect.classList.remove("active");
+        langForm.classList.remove("active");
       } else {
-        langSelect[index].classList.add("active");
-        langForm[index].classList.add("active");
+        langSelect.classList.add("active");
+        langForm.classList.add("active");
       }
     });
-  });
-  langForm.forEach((el, index) => {
-    langSelects = el.querySelectorAll(".custom-select");
+
+
+
+    langSelects = langForm.querySelectorAll(".custom-select");
     langSelects.forEach((select) => {
       const selectLine = select.querySelector(".custom-select__select");
+      const selectTitle = select.querySelector(".custom-select__select");
+
+      const langOptions = select.querySelectorAll(
+        ".custom-select__options__list__item"
+      );
       selectLine.addEventListener("click", (e) => {
-        const langOptions = select.querySelectorAll(
-          ".custom-select__options__list__item"
-        );
-        const selectTitle = select.querySelector(".custom-select__select");
+     
         select.classList.toggle("open");
 
-        langOptions.forEach((opt) => {
-          opt.addEventListener("click", (e) => {
-       
-            select.classList.remove("open");
-            btnLang[index].disabled = false;
+        
+      });
+      langOptions.forEach((opt) => {
+    
+        opt.addEventListener("click", (e) => {
+          
+          select.classList.remove("open");
+          btnLang.disabled = false;
 
-            langOptions.forEach((el) => {
-              el.classList.remove("selected");
-            });
-            opt.classList.add("selected");
-            selectTitle.textContent = opt.textContent;
-            if (opt.dataset.lang_value) {
-              selectTitle.dataset.lang = opt.dataset.lang_value;
-            } else {
-              selectTitle.dataset.currency = opt.dataset.currency_value;
-            }
+          langOptions.forEach((el) => {
+            el.classList.remove("selected");
           });
+          opt.classList.add("selected");
+          selectTitle.textContent = opt.textContent;
+          if (opt.dataset.lang_value) {
+            selectTitle.dataset.lang = opt.dataset.lang_value;
+          } else {
+            selectTitle.dataset.currency = opt.dataset.currency_value;
+          }
         });
       });
     });
-  });
+  
   burgerBtn.addEventListener("click", () => {
-    headerTop.classList.toggle("blue");
-    headerBot.classList.toggle("active");
+
+    if(langForm.classList.value === 'pop-up lang active'){
+      langSelect.classList.toggle("active");
+      logo.classList.remove('show');
+      langForm.classList.toggle("active");
+    }else{
+      langSelect.classList.toggle("active");
+      headerTop.classList.toggle("blue");
+      headerBot.classList.toggle("active");
+    }
+    logo.classList.toggle('show');
     burgerBtn.classList.toggle("active");
     main.classList.toggle("no-scroll");
     footer.classList.toggle("no-scroll");
   });
 
-  btnLang.forEach((el, index) => {
-    el.addEventListener("click", () => {
-      console.log(index);
-      selectValues = langForm[index].querySelectorAll(".custom-select__select");
-      console.log(selectValues);
+
+    btnLang.addEventListener("click", () => {
+      selectValues = langForm.querySelectorAll(".custom-select__select");
       selectValues.forEach((select) => {
         if (select.dataset.lang) {
-          languageVal[index].dataset.lang = select.dataset.lang;
-          languageVal[index].textContent = select.dataset.lang.toUpperCase();
+          
+          languageVal.dataset.lang = select.dataset.lang;
+          languageVal.textContent = select.dataset.lang.toUpperCase();
         } else {
-          currencyVal[index].dataset.currency = select.dataset.currency;
-          currencyVal[index].textContent =
+          currencyVal.dataset.currency = select.dataset.currency;
+          currencyVal.textContent =
             select.dataset.currency.toUpperCase();
         }
       });
-      langSelect[index].classList.remove("active");
-      langForm[index].classList.remove("active");
+      logo.classList.remove('show');
+      burgerBtn.classList.remove("active");
+      langForm.classList.remove("active");
+      langSelect.classList.remove("active");
+      langForm.classList.remove("active");
+      main.classList.remove("no-scroll");
+      footer.classList.remove("no-scroll");
     });
-  });
+
 
   filterSelects.forEach((select, index) => {
     select.addEventListener("click", () => {
+      dropdownItem.classList.remove('open');
+      dropdownList.classList.remove('show')
       if (select.className !== "filter-select active") {
         filterSelects.forEach((el) => {
           el.classList.remove("active");

@@ -61,6 +61,12 @@
   -webkit-transform: translateY(-50%);
   -ms-transform: translateY(-50%);
   transform: translateY(-50%);
+  transition: 0.3s;
+
+  &:hover {
+    transition: 0.3s;
+    background: rgba(97, 199, 232, 0.5);
+  }
   &.next {
     right: 10px;
     img {

@@ -20,9 +20,11 @@
     <header class="header">
       <div class="header__top">
         <div class="container">
-          <a href="#" class="logo"
-            ><img src="./assets/imgs/new_logo.svg" alt="logo"
-          /></a>
+          <a href="#" class="logo logo-head">
+            <img src="./assets/imgs/new_logo.svg" alt="logo" class="big-logo"/>
+            <img src="./assets/imgs/logo-small.svg" alt="logo" class="small-logo"/>
+
+        </a>
           <div class="btns-group">
             <div class="lang-select">
               <p class="lang-select__line">
@@ -35,7 +37,7 @@
                   <div class="custom-select__select" data-lang="en">
                     English / EN
                   </div>
-                  <div class="custom-select__options">
+                  <div class="custom-select__options mob">
                     <ul class="custom-select__options__list">
                       <li
                         data-lang_value="en"
@@ -63,7 +65,7 @@
                   <div class="custom-select__select" data-currency="usd">
                     USD
                   </div>
-                  <div class="custom-select__options">
+                  <div class="custom-select__options mob">
                     <ul class="custom-select__options__list">
                       <li
                         data-currency_value="usd"
@@ -87,6 +89,7 @@
                   </div>
                 </div>
                 <button class="btn-lang" disabled type="button">Save</button>
+                <button type="button" class="mob-close">← back</button>
               </div>
             </div>
 
@@ -231,16 +234,16 @@
               <div class="filter-opions">
                 <ul class="filter-opions__list">
                   <li data-prjval="1" class="filter-opions__list__item">
-                    Developer
+                   <a href="#">Developer</a> 
                   </li>
                   <li data-prjval="2" class="filter-opions__list__item">
-                    Developer 2
+                    <a href="#">Developer 2</a> 
                   </li>
                   <li data-prjval="3" class="filter-opions__list__item">
-                    Commercial Property
+                    <a href="#">Commercial Property</a> 
                   </li>
                   <li data-prjval="4" class="filter-opions__list__item">
-                    Developer 4
+                    <a href="#"> Developer 4</a> 
                   </li>
                 </ul>
               </div>
@@ -274,16 +277,16 @@
               <div class="filter-opions">
                 <ul class="filter-opions__list">
                   <li data-dev_val="1" class="filter-opions__list__item">
-                    Projects
+                    <a href="#">Projects</a> 
                   </li>
                   <li data-dev_val="2" class="filter-opions__list__item">
-                    Projects 2
+                    <a href="#">Projects2</a> 
                   </li>
                   <li data-dev_val="3" class="filter-opions__list__item select">
-                    Commercial Property
+                    <a href="#">Commercial Property</a> 
                   </li>
                   <li data-dev_val="4" class="filter-opions__list__item">
-                    Projects 4
+                    <a href="#">Projects 4</a>
                   </li>
                 </ul>
               </div>
@@ -292,7 +295,7 @@
               <img src="./assets/imgs/filter.svg" alt="filter" />
             </button>
           </div>
-          <div class="lang-select mob-lang">
+          <!-- <div class="lang-select mob-lang">
             <div class="lang-select__line">
               <span data-lang="en" class="language">EN</span> /
               <span data-currency="usd" class="currency">USD</span>
@@ -355,10 +358,11 @@
               </div>
               <button class="btn-lang" disabled type="button">Save</button>
             </div>
-          </div>
+          </div> -->
         </div>
       </div>
     </header>
+    <main>
       <section class="listing-hero">
         <div class="container">
           <div class="bread-crums">
@@ -671,7 +675,7 @@
               management, consulting services, mortgage brokerage, and many
               more.
             </p>
-            <h2 class="title" id="project">Project Details</h2>
+            <h2 class="title big-mr" id="project">Project Details</h2>
             <p class="price">
               7,615,000 AED <span class="sqft">/ 5,073 AED per sqft</span>
             </p>
@@ -769,7 +773,7 @@
                 </a>
               </div>
             </div> -->
-            <h2 class="title" id="dev">More available by Ellington properties</h2>
+            <h2 class="title" id="dev">Ellington properties</h2>
             <p class="pagaraf">
               Ellington Properties is a well-known, prestigious developer in
               Dubai that specialises in building luxury properties and
@@ -852,6 +856,7 @@
         <div class="gradient right"></div>
         <div class="gradient left"></div>
         <div class="container">
+
           <div class="slider-control">
             <h2 class="title">Similar Listings in Palm Jumeirah</h2>
             <div class="contols">
@@ -1160,7 +1165,10 @@
                 Will find the most suitable property that will meet your budget
                 and goals in the area
               </p>
-              <a href="#" class="link">+971 58 211 4214</a>
+              <div class="phone">
+                <a href="#" class="link">+971 58 211 4214</a>
+                <button class="show-phone" type="button">Show</button>
+              </div>
             </div>
           </div>
         </div>

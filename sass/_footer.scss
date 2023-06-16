@@ -48,6 +48,7 @@
         }
         @include adaptive(phoneLandscape, phonePortrait) {
           width: 100%;
+          margin-bottom: 25px;
         }
         &:nth-child(1) {
           -webkit-box-ordinal-group: 2;
@@ -60,9 +61,15 @@
             phoneLandscape,
             phonePortrait
           ) {
+            display: flex;
+            flex-direction: column;
             -webkit-box-ordinal-group: 5;
             -ms-flex-order: 4;
             order: 4;
+          }
+          @include adaptive(phoneLandscape, phonePortrait) {
+            width: 100%;
+            padding-top: 10px;
           }
         }
         &:nth-child(2) {
@@ -132,12 +139,28 @@
         }
         .contact-btn {
           margin-bottom: 20px;
+          @include adaptive(
+            tabletLandscape,
+            tabletPortrait,
+            phoneLandscape,
+            phonePortrait
+          ) {
+            order: 1;
+          }
         }
         .address {
           color: $grey;
           @include fontSetings($lh: 21px);
           max-width: 200px;
           margin-bottom: 20px;
+          @include adaptive(tabletLandscape, tabletPortrait) {
+            order: 2;
+          }
+          @include adaptive(phoneLandscape, phonePortrait) {
+            width: 100%;
+            max-width: 100%;
+            order: 2;
+          }
         }
         .social {
           display: -webkit-box;
@@ -147,6 +170,14 @@
           -webkit-box-align: center;
           -ms-flex-align: center;
           align-items: center;
+          @include adaptive(
+            tabletLandscape,
+            tabletPortrait,
+            phoneLandscape,
+            phonePortrait
+          ) {
+            order: 3;
+          }
         }
         .list-title {
           @include fontSetings($s: 22px, $w: 600, $lh: 26px);
@@ -161,12 +192,18 @@
           -ms-flex-wrap: wrap;
           flex-wrap: wrap;
           gap: 0px 50px;
+          @include adaptive(phoneLandscape, phonePortrait) {
+            gap: 0px;
+          }
           &__item {
             width: 50%;
             margin-bottom: 10px;
             max-width: 105px;
             @include adaptive(tabletLandscape, tabletPortrait) {
               max-width: calc(50% - 50px);
+            }
+            @include adaptive(phoneLandscape, phonePortrait) {
+              max-width: calc(50%);
             }
 
             a {
@@ -176,7 +213,7 @@
               color: $grey;
               @include adaptive(phoneLandscape, phonePortrait) {
                 display: block;
-                max-width: 150px;
+                width: 100%;
               }
             }
           }
@@ -223,6 +260,9 @@
           @include fontSetings($lh: 20px);
           color: $grey;
           text-decoration: underline;
+          @include adaptive(tabletLandscape, tabletPortrait) {
+            white-space: nowrap;
+          }
         }
         @include adaptive(phoneLandscape, phonePortrait) {
           gap: 0px;

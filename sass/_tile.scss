@@ -1,0 +1,205 @@
+.tile {
+  padding-bottom: 120px;
+  @include adaptive(
+    tabletLandscape,
+    tabletPortrait,
+    phoneLandscape,
+    phonePortrait
+  ) {
+    padding-bottom: 100px;
+  }
+  .container {
+    @include adaptive(phoneLandscape, phonePortrait) {
+      padding: 0;
+    }
+    .title {
+      margin-bottom: 40px;
+      @include adaptive(
+        tabletLandscape,
+        tabletPortrait,
+        phoneLandscape,
+        phonePortrait
+      ) {
+        padding: 0 20px;
+      }
+    }
+    .content-body {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+      gap: 40px;
+      position: relative;
+      @include adaptive(
+        tabletLandscape,
+        tabletPortrait,
+        phoneLandscape,
+        phonePortrait
+      ) {
+        gap: 20px;
+      }
+      .points {
+        position: absolute;
+        left: 15px;
+        top: 100px;
+        @include adaptive(
+          tabletLandscape,
+          tabletPortrait,
+          phoneLandscape,
+          phonePortrait
+        ) {
+          display: none;
+        }
+      }
+      .row {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        gap: 40px;
+        width: 100%;
+        &.rev {
+          @include adaptive(
+            tabletLandscape,
+            tabletPortrait,
+            phoneLandscape,
+            phonePortrait
+          ) {
+            -webkit-box-orient: vertical;
+            -webkit-box-direction: reverse;
+            -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+            gap: 20px;
+          }
+        }
+        @include adaptive(
+          tabletLandscape,
+          tabletPortrait,
+          phoneLandscape,
+          phonePortrait
+        ) {
+          -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+          background-color: $white;
+          border-radius: 20px;
+        }
+      }
+      .content-item {
+        width: calc(50% - 10px);
+        border-radius: 20px;
+        position: relative;
+
+        @include adaptive(
+          tabletLandscape,
+          tabletPortrait,
+          phoneLandscape,
+          phonePortrait
+        ) {
+          width: 100%;
+          padding: 20px;
+        }
+        img {
+          width: 100%;
+          height: 100%;
+          -o-object-fit: cover;
+          object-fit: cover;
+          border-radius: 20px;
+          @include adaptive(phoneLandscape, phonePortrait) {
+            min-height: 305px;
+          }
+        }
+        .img-deskr {
+          position: absolute;
+          bottom: 20px;
+          left: 20px;
+          padding: 11px 30px;
+          background-color: $blue;
+          color: #cceffa;
+          @include fontSetings($s: 16px, $lh: 24px, $w: 600);
+          border-radius: 10px;
+          text-align: center;
+          width: calc(100% - 40px);
+          @include adaptive(
+            tabletLandscape,
+            tabletPortrait,
+            phoneLandscape,
+            phonePortrait
+          ) {
+            width: 90%;
+            left: 50%;
+            bottom: 8%;
+            -webkit-transform: translateX(-50%);
+            -ms-transform: translateX(-50%);
+            transform: translateX(-50%);
+          }
+          @include adaptive(phoneLandscape, phonePortrait) {
+            padding: 11px 10px;
+            width: 85%;
+          }
+        }
+        &.text {
+          padding: 25px;
+          background-color: $white;
+          @include adaptive(
+            tabletLandscape,
+            tabletPortrait,
+            phoneLandscape,
+            phonePortrait
+          ) {
+            padding: 20px;
+          }
+        }
+        .num-wr {
+          position: relative;
+          width: -webkit-fit-content;
+          width: -moz-fit-content;
+          width: fit-content;
+        }
+        .num {
+          @include fontSetings($w: 700);
+          color: $white;
+          background-color: $blue;
+          width: 60px;
+          height: 30px;
+          border-radius: 30px;
+          display: -webkit-box;
+          display: -ms-flexbox;
+          display: flex;
+          -webkit-box-pack: center;
+          -ms-flex-pack: center;
+          justify-content: center;
+          -webkit-box-align: center;
+          -ms-flex-align: center;
+          align-items: center;
+          z-index: 3;
+          position: relative;
+          margin-bottom: 35px;
+        }
+        .hover {
+          display: block;
+          width: 100%;
+          height: 100%;
+          background-color: #dff6fd;
+          display: block;
+          position: absolute;
+          right: -15px;
+          bottom: 0;
+          border-radius: 30px;
+          z-index: 2;
+        }
+        .content-title {
+          @include fontSetings($s: 25px, $lh: 35px);
+          margin-bottom: 15px;
+          @include adaptive(phoneLandscape, phonePortrait) {
+            @include fontSetings($s: 18px, $lh: 25px);
+            margin-bottom: 10px;
+          }
+        }
+        .deskr {
+          color: $grey;
+          @include fontSetings();
+        }
+      }
+    }
+  }
+}

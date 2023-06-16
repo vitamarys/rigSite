@@ -20,9 +20,11 @@
     <header class="header">
       <div class="header__top">
         <div class="container">
-          <a href="#" class="logo"
-            ><img src="./assets/imgs/new_logo.svg" alt="logo"
-          /></a>
+          <a href="#" class="logo logo-head">
+            <img src="./assets/imgs/new_logo.svg" alt="logo" class="big-logo"/>
+            <img src="./assets/imgs/logo-small.svg" alt="logo" class="small-logo"/>
+
+        </a>
           <div class="btns-group">
             <div class="lang-select">
               <p class="lang-select__line">
@@ -35,7 +37,7 @@
                   <div class="custom-select__select" data-lang="en">
                     English / EN
                   </div>
-                  <div class="custom-select__options">
+                  <div class="custom-select__options mob">
                     <ul class="custom-select__options__list">
                       <li
                         data-lang_value="en"
@@ -63,7 +65,7 @@
                   <div class="custom-select__select" data-currency="usd">
                     USD
                   </div>
-                  <div class="custom-select__options">
+                  <div class="custom-select__options mob">
                     <ul class="custom-select__options__list">
                       <li
                         data-currency_value="usd"
@@ -87,6 +89,7 @@
                   </div>
                 </div>
                 <button class="btn-lang" disabled type="button">Save</button>
+                <button type="button" class="mob-close">← back</button>
               </div>
             </div>
 
@@ -121,6 +124,7 @@
 
           <nav class="nav">
             <ul class="nav__list">
+            
               <li class="nav__list__item drop">
                 <a href="#"
                   ><img
@@ -161,7 +165,7 @@
                   />Sell</a
                 >
               </li>
-
+              
               <li class="nav__list__item">
                 <a href="#">
                   <img
@@ -230,16 +234,16 @@
               <div class="filter-opions">
                 <ul class="filter-opions__list">
                   <li data-prjval="1" class="filter-opions__list__item">
-                    Developer
+                   <a href="#">Developer</a> 
                   </li>
                   <li data-prjval="2" class="filter-opions__list__item">
-                    Developer 2
+                    <a href="#">Developer 2</a> 
                   </li>
                   <li data-prjval="3" class="filter-opions__list__item">
-                    Commercial Property
+                    <a href="#">Commercial Property</a> 
                   </li>
                   <li data-prjval="4" class="filter-opions__list__item">
-                    Developer 4
+                    <a href="#"> Developer 4</a> 
                   </li>
                 </ul>
               </div>
@@ -273,16 +277,16 @@
               <div class="filter-opions">
                 <ul class="filter-opions__list">
                   <li data-dev_val="1" class="filter-opions__list__item">
-                    Projects
+                    <a href="#">Projects</a> 
                   </li>
                   <li data-dev_val="2" class="filter-opions__list__item">
-                    Projects 2
+                    <a href="#">Projects2</a> 
                   </li>
                   <li data-dev_val="3" class="filter-opions__list__item select">
-                    Commercial Property
+                    <a href="#">Commercial Property</a> 
                   </li>
                   <li data-dev_val="4" class="filter-opions__list__item">
-                    Projects 4
+                    <a href="#">Projects 4</a>
                   </li>
                 </ul>
               </div>
@@ -291,7 +295,7 @@
               <img src="./assets/imgs/filter.svg" alt="filter" />
             </button>
           </div>
-          <div class="lang-select mob-lang">
+          <!-- <div class="lang-select mob-lang">
             <div class="lang-select__line">
               <span data-lang="en" class="language">EN</span> /
               <span data-currency="usd" class="currency">USD</span>
@@ -354,7 +358,7 @@
               </div>
               <button class="btn-lang" disabled type="button">Save</button>
             </div>
-          </div>
+          </div> -->
         </div>
       </div>
     </header>
@@ -506,7 +510,7 @@
               </div>
           </div>
           <div class="content-item">
-            <button class="watch-video">Watch the video</button>
+          
             <button class="controls next">
               <img src="./assets/imgs/arr-slide__white.svg" alt="arrow" />
             </button>
@@ -514,10 +518,7 @@
               <img src="./assets/imgs/arr-slide__white.svg" alt="arrow" />
             </button>
             <div class="info">
-              <p class="info__item total">
-                <span class="number">28</span> photos
-              </p>
-              <a href="#" class="info__item visual-tour">Get Virtual Tour</a>
+
             </div>
             <div class="overlay">
               <div class="head"></div>
@@ -653,6 +654,665 @@
           </div>
         </div>
       </section>
+      <section class="dev-projects slider-section">
+        <div class="gradient right"></div>
+        <div class="gradient left"></div>
+        <div class="container">
+          <div class="slider-control">
+            <h2 class="title">Projects by Nakheel</h2>
+            <div class="contols">
+              <button
+                class="colapse"
+                data-slidername="devProjects"
+                type="button"
+              >
+                <span class="square"></span>
+                <span class="square"></span>
+                <span class="square"></span>
+                <span class="square"></span>
+              </button>
+              <div class="slide-control">
+                <button
+                  type="button"
+                  class="prev-slide prev-dev-projects"
+                ></button>
+                <button
+                  type="button"
+                  class="next-slide next-dev-projects"
+                ></button>
+              </div>
+            </div>
+          </div>
+          <div class="slider-dev-projects">
+            <div class="slides-wrap swiper-wrapper">
+              <div class="slide small-card">
+                <div class="small-card__img">
+                  <span class="price">from $4,083,900</span>
+                  <img src="./assets/imgs/ap.jpeg" alt="apart" />
+                </div>
+                <div class="small-card__text-section">
+                  <h4 class="small-card__title">AHS One Crescent </h4>
+                  <p class="small-card__rigion">Palm Jumeirah</p>
+                  <div class="small-card__info">
+                    <div class="small-card__info__item">
+                      <p class="small-card__info__item__value">1Q 2025</p>
+                      <p class="small-card__info__item__name">Handover</p>
+                    </div>
+                    <div class="small-card__info__item">
+                      <p class="small-card__info__item__value">AHS Properties</p>
+                      <p class="small-card__info__item__name">Developer</p>
+                    </div>
+                  </div>
+                  <a href="#" class="small-card__link">Learn more</a>
+                </div>
+              </div>
+              <div class="slide small-card">
+                <div class="small-card__img">
+                  <span class="price">from $4,083,900</span>
+                  <img src="./assets/imgs/ap.jpeg" alt="apart" />
+                </div>
+                <div class="small-card__text-section">
+                  <h4 class="small-card__title">AHS One Crescent</h4>
+                  <p class="small-card__rigion">Palm Jumeirah</p>
+                  <div class="small-card__info">
+                    <div class="small-card__info__item">
+                      <p class="small-card__info__item__value">1Q 2025</p>
+                      <p class="small-card__info__item__name">Handover</p>
+                    </div>
+                    <div class="small-card__info__item">
+                      <p class="small-card__info__item__value">AHS Properties</p>
+                      <p class="small-card__info__item__name">Developer</p>
+                    </div>
+                  </div>
+                  <a href="#" class="small-card__link">Learn more</a>
+                </div>
+              </div>
+              <div class="slide small-card">
+                <div class="small-card__img">
+                  <span class="price">from $4,083,900</span>
+                  <img src="./assets/imgs/ap.jpeg" alt="apart" />
+                </div>
+                <div class="small-card__text-section">
+                  <h4 class="small-card__title">AHS One Crescent</h4>
+                  <p class="small-card__rigion">Palm Jumeirah</p>
+                  <div class="small-card__info">
+                    <div class="small-card__info__item">
+                      <p class="small-card__info__item__value">1Q 2025</p>
+                      <p class="small-card__info__item__name">Handover</p>
+                    </div>
+                    <div class="small-card__info__item">
+                      <p class="small-card__info__item__value">AHS Properties</p>
+                      <p class="small-card__info__item__name">Developer</p>
+                    </div>
+                  </div>
+                  <a href="#" class="small-card__link">Learn more</a>
+                </div>
+              </div>
+              <div class="slide small-card">
+                <div class="small-card__img">
+                  <span class="price">from $4,083,900</span>
+                  <img src="./assets/imgs/ap.jpeg" alt="apart" />
+                </div>
+                <div class="small-card__text-section">
+                  <h4 class="small-card__title">AHS One Crescent</h4>
+                  <p class="small-card__rigion">Palm Jumeirah</p>
+                  <div class="small-card__info">
+                    <div class="small-card__info__item">
+                      <p class="small-card__info__item__value">1Q 2025</p>
+                      <p class="small-card__info__item__name">Handover</p>
+                    </div>
+                    <div class="small-card__info__item">
+                      <p class="small-card__info__item__value">AHS Properties</p>
+                      <p class="small-card__info__item__name">Developer</p>
+                    </div>
+                  </div>
+                  <a href="#" class="small-card__link">Learn more</a>
+                </div>
+              </div>
+              <div class="slide small-card">
+                <div class="small-card__img">
+                  <span class="price">from $4,083,900</span>
+                  <img src="./assets/imgs/ap.jpeg" alt="apart" />
+                </div>
+                <div class="small-card__text-section">
+                  <h4 class="small-card__title">AHS One Crescent</h4>
+                  <p class="small-card__rigion">Palm Jumeirah</p>
+                  <div class="small-card__info">
+                    <div class="small-card__info__item">
+                      <p class="small-card__info__item__value">1Q 2025</p>
+                      <p class="small-card__info__item__name">Handover</p>
+                    </div>
+                    <div class="small-card__info__item">
+                      <p class="small-card__info__item__value">AHS Properties</p>
+                      <p class="small-card__info__item__name">Developer</p>
+                    </div>
+                  </div>
+                  <a href="#" class="small-card__link">Learn more</a>
+                </div>
+              </div>
+              <div class="slide small-card">
+                <div class="small-card__img">
+                  <span class="price">from $4,083,900</span>
+                  <img src="./assets/imgs/ap.jpeg" alt="apart" />
+                </div>
+                <div class="small-card__text-section">
+                  <h4 class="small-card__title">AHS One Crescent</h4>
+                  <p class="small-card__rigion">Palm Jumeirah</p>
+                  <div class="small-card__info">
+                    <div class="small-card__info__item">
+                      <p class="small-card__info__item__value">1Q 2025</p>
+                      <p class="small-card__info__item__name">Handover</p>
+                    </div>
+                    <div class="small-card__info__item">
+                      <p class="small-card__info__item__value">AHS Properties</p>
+                      <p class="small-card__info__item__name">Developer</p>
+                    </div>
+                  </div>
+                  <a href="#" class="small-card__link">Learn more</a>
+                </div>
+              </div>
+              <div class="slide small-card">
+                <div class="small-card__img">
+                  <span class="price">from $4,083,900</span>
+                  <img src="./assets/imgs/ap.jpeg" alt="apart" />
+                </div>
+                <div class="small-card__text-section">
+                  <h4 class="small-card__title">AHS One Crescent</h4>
+                  <p class="small-card__rigion">Palm Jumeirah</p>
+                  <div class="small-card__info">
+                    <div class="small-card__info__item">
+                      <p class="small-card__info__item__value">1Q 2025</p>
+                      <p class="small-card__info__item__name">Handover</p>
+                    </div>
+                    <div class="small-card__info__item">
+                      <p class="small-card__info__item__value">AHS Properties</p>
+                      <p class="small-card__info__item__name">Developer</p>
+                    </div>
+                  </div>
+                  <a href="#" class="small-card__link">Learn more</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+       
+      </section>
+      <section class="dev-about">
+        <div class="container">
+          <div class="wrapper">
+            <h3 class="title" id="about">About the developer</h3>
+            <p class="paragraf">Nakheel is one of the largest developers in Dubai. Their most famous projects are Palm Deira, Palm Jebel Ali, Palm Jumeirah, and the artificial archipelago Dubai World. The company has built many residential areas in Dubai, including Jumeirah Lake Towers, The Gardens, International City, and Jumeirah Island. The firm’s portfolio also includes the Ibn Battuta Mall shopping area and the famous Dragon Mart.
+            </p>
+            <p class="paragraf">The organization belongs to the government of the United Arab Emirates. The Executive Director is Sheikh Ahmed bin Saeed Al Maktoum, who is a member of the UAE royal family.
+              Nakheel calls it their mission to create world-class facilities that are highly comfortable and suitable for business, and for life. They are also characterized by modern architecture.
+              </p>
+            <p class="paragraf">In his work the developer seeks to combine innovative technologies and the most effective urban planning methods. In first place are the interests of people, as well as their comfort and level of safety.
+              All assets are managed by Nakheel Asset Management and Infrastructure (NAMI). NAMI is in charge of the design and operation of everything from the tunnels to the swimming pools in many of Nakheel’s developments.</p>
+              <div class="imgs-tile">
+                <div class="img-wrap">
+                  <img src="./assets/imgs/dev-tile1.png" alt="">
+                </div>
+                <div class="img-wrap">
+                  <img src="./assets/imgs/dev-tile2.png" alt="">
+    
+                </div>
+                <div class="img-wrap big">
+                  <img src="./assets/imgs/dev-tile3.png" alt="">
+    
+                </div>
+              </div>
+              <h3 class="title second" id="popular">Popular Nakheel projects</h3>
+              <p class="paragraf">Nakheel specializes in both residential and commercial projects. </p>
+              <div class="card">
+                <div class="card__imgs">
+                  <span class="price">from $1,007,000</span>
+                  <div class="img-wrap big">
+                    <img src="./assets/imgs/dev-1-1.png" alt="build">
+                  </div>
+                  <div class="img-wrap left">
+                    <img src="./assets/imgs/dev-1-2.png" alt="build">
+                  </div>
+                  <div class="img-wrap right">
+                    <img src="./assets/imgs/dev-1-2.png" alt="build">
+
+                    <div class="overlay">
+                      <h4 class="overlay__title">Off-plan<span class="sub-title"> / Q1 - 2026</span></h4>
+                      <span class="overlay__deskr">Pay 15% for booking</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="card__info">
+                  <div class="title-block">
+                    <h4 class="title">The Palm Tower Residences</h4>
+                    <h5 class="sub-title">Apartments</h5>
+                  </div>
+             
+                  <p class="paragraf">Located in the Palm Jumeirah area, this residence sells fully furnished studios and apartments. The number of bedrooms ranges from 1 to 3. A distinctive feature are the picturesque views of the Palm Jumeirah. The starting price begins at AED 1,250,000 (USD 340,300).</p>
+                  <a href="#" class="learn-more">Learn more</a>
+                </div>
+              </div>
+              <div class="card">
+                <div class="card__imgs">
+                  <span class="price">from $762,340</span>
+                  <div class="img-wrap big">
+                    <img src="./assets/imgs/dev-2-1.png" alt="build">
+                  </div>
+                  <div class="img-wrap left">
+                    <img src="./assets/imgs/dev-2-2.png" alt="build">
+                  </div>
+                  <div class="img-wrap right">
+                    <img src="./assets/imgs/dev-2-3.png" alt="build">
+
+                    <div class="overlay">
+                      <h4 class="overlay__title">Ready to move in</h4>
+                      <span class="overlay__deskr">5 Years Free Service Charge</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="card__info">
+                  <div class="title-block">
+                  <h4 class="title">Nad Al Sheba</h4>
+                  <h5 class="sub-title">Villas</h5>
+                  </div>
+                  <p class="paragraf">This is a residential complex of the closed type, which offers villas with4 or 5 bedrooms. They are decorated in the Mediterranean and Moroccan style. The starting price is AED 2,800,000 (USD 762,300). It is a 30-minute drive from the Expo 2020 site. *The price is valid for 2023</p>
+                  <a href="#" class="learn-more">Learn more</a>
+                </div>
+              </div>
+            
+              <div class="card last">
+                <div class="card__imgs">
+                  <span class="price">from $1,007,000</span>
+                  <div class="img-wrap big">
+                    <img src="./assets/imgs/dev-3-1.png" alt="build">
+                  </div>
+                  <div class="img-wrap left">
+                    <img src="./assets/imgs/dev-3-2.png" alt="build">
+                  </div>
+                  <div class="img-wrap right">
+                    <img src="./assets/imgs/dev-3-3.png" alt="build">
+
+                    <div class="overlay">
+                      <h4 class="overlay__title">Ready to move in</h4>
+                      <span class="overlay__deskr">Attractive payment plan</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="card__info">
+                  <div class="title-block">
+                  <h4 class="title">Murooj Al Furjan</h4>
+                  <h5 class="sub-title">Townhouses</h5>
+                  </div>
+                  <p class="paragraf">Murooj Al Furjan. Buyers are offered comfortable 3 and 4 bedroom townhouses in the family gated community, Nakheel Properties. This is a residential area of Al Furjan in Dubai, which is popular due to the presence of only premium real estate, developed infrastructure. </p>
+                  <a href="#" class="learn-more">Learn more</a>
+                </div>
+              </div>
+              <p class="paragraf">Developer Nakheel offers many other interesting properties. All of them have a well-thought-out layout, attractive architectural and design decoration, and a high level of comfort.</p>
+          </div>
+         
+          <div class="scroll">
+            <div class="scroll-block">
+              <ul class="anchor-list">
+                <li class="anchor-list__item">
+                  <a href="#about">About the developer</a>
+                </li>
+                <li class="anchor-list__item">
+                  <a href="#popular">Popular Nakheel projects</a>
+                </li>
+                
+              </ul>
+              <div class="content-block">
+                <h3 class="title">Nakheel</h3>
+                <div class="content-item">
+                  <span class="name">Projects</span> 
+                  <span class="desc">50</span>
+                </div>
+                <div class="content-item">
+                  <span class="name">Founded in</span> 
+                  <span class="desc">2000 y.</span>
+                </div>
+                <div class="content-item">
+                  <span class="name">Price from</span> 
+                  <span class="desc">477,600 AED</span>
+                </div>
+                
+                <div class="content-item">
+                  <div class="map">
+                    <button class="open-map">View map</button>
+                  </div>
+                  <span class="desc">Palm Jumeirah, Dubai</span>
+                </div>
+                <div class="scroll-links">
+                 
+                  <a href="#" class="trans-link">Get a free consultation</a>
+                </div>
+              </div>
+              <div class="card">
+                <div class="img-wrap">
+                  <img src="./assets/imgs/card-img.png" alt="card" />
+                </div>
+                <a href="#" class="link-to">Discover new project</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="map-section" style="background-image: url('./assets/imgs/map-pr.jpg');">
+        <div class="overflow">
+          <div class="view">
+            <img src="./assets/imgs/zoom-big.svg" alt="zoom">
+            <span class="desck">View map</span>
+          </div>
+        </div>
+      </section>
+      <section class="contact-form dev">
+        <div class="container">
+          <div class="content-item">
+            <h3 class="form-title">Get a free consultation</h3>
+            <p class="deskr">
+              Just type your contacts and our experts will help you buy the best
+            </p>
+            <form action="#" class="form">
+              <div class="input-wrap">
+                <label for="first-name">First Name</label>
+                <input
+                  type="text"
+                  placeholder="Olivia"
+                  id="first-name"
+                  class="input"
+                />
+              </div>
+              <div class="input-wrap">
+                <label for="second-name">Last Name</label>
+                <input
+                  type="text"
+                  placeholder="Rhye"
+                  id="second-name"
+                  class="input"
+                />
+              </div>
+              <div class="input-wrap">
+                <label for="email">Email</label>
+                <input
+                  type="email"
+                  placeholder="email@example.ru"
+                  id="email"
+                  class="input"
+                />
+              </div>
+              <div class="input-wrap">
+                <label for="phone">Phone with country code</label>
+                <input
+                  type="tel"
+                  placeholder="+7 (999) 999-99-99"
+                  id="phone"
+                  class="input"
+                />
+              </div>
+              <div class="check-wrap">
+                <input
+                  class="checkbox"
+                  type="checkbox"
+                  checked
+                  name="terms"
+                  id="terms"
+                />
+
+                <label class="check-label" for="terms"
+                  >I agree to
+                  <a href="#">Terms of use and Privacy Policy</a></label
+                >
+              </div>
+
+              <button class="submit w-100-arr" type="submit">
+                Send Request
+              </button>
+            </form>
+          </div>
+          <div class="content-item">
+            <img
+              src="./assets/imgs/form-build.png"
+              alt="build"
+              class="manager"
+            />
+            <img src="./assets/imgs/new_logo.svg" alt="logo " class="logo" />
+            <div class="manager-contact">
+              <p class="name">Professional help in buying luxurious property</p>
+              <p class="position">
+                Will find the most suitable property that will meet your budget
+                and goals in the area
+              </p>
+              <div class="phone">
+                <a href="#" class="link">+971 58 211 4214</a>
+                <button class="show-phone" type="button">Show</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="big-slide slider-section">
+        <div class="gradient right"></div>
+        <div class="gradient left"></div>
+        <div class="container">
+          <div class="slider-control">
+            <h2 class="title">Buying property by Nakheel</h2>
+            <div class="contols">
+              <button class="colapse" data-slidername="propNekhel" type="button">
+                <span class="square"></span>
+                <span class="square"></span>
+                <span class="square"></span>
+                <span class="square"></span>
+              </button>
+              <div class="slide-control">
+                <button type="button" class="prev-slide prev-palm"></button>
+                <button type="button" class="next-slide next-palm"></button>
+              </div>
+            </div>
+          </div>
+          <div class="slider-nekhel-big">
+            <div class="slides-wrap swiper-wrapper">
+              <div class="slide-nekhel-big big-type-banner">
+                <div class="big-type-banner__imgs">
+                  <span class="type">Villa</span>
+                  <div class="big-type-banner__imgs__img big">
+                    <img src="./assets/imgs/big.png" alt="building-img" />
+                  </div>
+                  <div class="big-type-banner__imgs__img left">
+                    <img src="./assets/imgs/small.png" alt="building-img" />
+                  </div>
+                  <div class="big-type-banner__imgs__img right">
+                    <img src="./assets/imgs/small-2.png" alt="building-img" />
+                  </div>
+                </div>
+                <div class="big-type-banner__info">
+                  <p class="price">35,605,395 AED</p>
+                  <p class="dev-loc">
+                    <span class="dev">Canal & Burj View </span> |
+                    <span class="loc">Prime location | Vacant</span>
+                  </p>
+                  <div class="characteristics">
+                    <span class="characteristics__item"
+                      ><img src="./assets/imgs/beds.svg" alt="beds" /> 2
+                      bedrooms</span
+                    >
+                    <span class="characteristics__item"
+                      ><img src="./assets/imgs/bath.svg" alt="bath" /> 3
+                      bathrooms</span
+                    >
+                    <span class="characteristics__item"
+                      ><img src="./assets/imgs/area.svg" alt="" /> 1,515
+                      sqft</span
+                    >
+                  </div>
+                  <span class="geo">Ellington Beach House, Palm Jumeirah</span>
+                  <div class="card-links">
+                    <a href="#" class="learn-more">Learn more ></a>
+                  </div>
+                </div>
+              </div>
+              <div class="slide-nekhel-big big-type-banner">
+                <div class="big-type-banner__imgs">
+                  <span class="type">Villa</span>
+                  <div class="big-type-banner__imgs__img big">
+                    <img src="./assets/imgs/big.png" alt="building-img" />
+                  </div>
+                  <div class="big-type-banner__imgs__img left">
+                    <img src="./assets/imgs/small.png" alt="building-img" />
+                  </div>
+                  <div class="big-type-banner__imgs__img right">
+                    <img src="./assets/imgs/small-2.png" alt="building-img" />
+                  </div>
+                </div>
+                <div class="big-type-banner__info">
+                  <p class="price">35,605,395 AED</p>
+                  <p class="dev-loc">
+                    <span class="dev">Canal & Burj View </span> |
+                    <span class="loc">Prime location | Vacant</span>
+                  </p>
+                  <div class="characteristics">
+                    <span class="characteristics__item"
+                      ><img src="./assets/imgs/beds.svg" alt="beds" /> 2
+                      bedrooms</span
+                    >
+                    <span class="characteristics__item"
+                      ><img src="./assets/imgs/bath.svg" alt="bath" /> 3
+                      bathrooms</span
+                    >
+                    <span class="characteristics__item"
+                      ><img src="./assets/imgs/area.svg" alt="" /> 1,515
+                      sqft</span
+                    >
+                  </div>
+                  <span class="geo">Ellington Beach House, Palm Jumeirah</span>
+                  <div class="card-links">
+                    <a href="#" class="learn-more">Learn more ></a>
+                  </div>
+                </div>
+              </div>
+              <div class="slide-nekhel-big big-type-banner">
+                <div class="big-type-banner__imgs">
+                  <span class="type">Villa</span>
+                  <div class="big-type-banner__imgs__img big">
+                    <img src="./assets/imgs/big.png" alt="building-img" />
+                  </div>
+                  <div class="big-type-banner__imgs__img left">
+                    <img src="./assets/imgs/small.png" alt="building-img" />
+                  </div>
+                  <div class="big-type-banner__imgs__img right">
+                    <img src="./assets/imgs/small-2.png" alt="building-img" />
+                  </div>
+                </div>
+                <div class="big-type-banner__info">
+                  <p class="price">35,605,395 AED</p>
+                  <p class="dev-loc">
+                    <span class="dev">Canal & Burj View </span> |
+                    <span class="loc">Prime location | Vacant</span>
+                  </p>
+                  <div class="characteristics">
+                    <span class="characteristics__item"
+                      ><img src="./assets/imgs/beds.svg" alt="beds" /> 2
+                      bedrooms</span
+                    >
+                    <span class="characteristics__item"
+                      ><img src="./assets/imgs/bath.svg" alt="bath" /> 3
+                      bathrooms</span
+                    >
+                    <span class="characteristics__item"
+                      ><img src="./assets/imgs/area.svg" alt="" /> 1,515
+                      sqft</span
+                    >
+                  </div>
+                  <span class="geo">Ellington Beach House, Palm Jumeirah</span>
+                  <div class="card-links">
+                    <a href="#" class="learn-more">Learn more ></a>
+                  </div>
+                </div>
+              </div>
+              <div class="slide-nekhel-big big-type-banner">
+                <div class="big-type-banner__imgs">
+                  <span class="type">Villa</span>
+                  <div class="big-type-banner__imgs__img big">
+                    <img src="./assets/imgs/big.png" alt="building-img" />
+                  </div>
+                  <div class="big-type-banner__imgs__img left">
+                    <img src="./assets/imgs/small.png" alt="building-img" />
+                  </div>
+                  <div class="big-type-banner__imgs__img right">
+                    <img src="./assets/imgs/small-2.png" alt="building-img" />
+                  </div>
+                </div>
+                <div class="big-type-banner__info">
+                  <p class="price">35,605,395 AED</p>
+                  <p class="dev-loc">
+                    <span class="dev">Canal & Burj View </span> |
+                    <span class="loc">Prime location | Vacant</span>
+                  </p>
+                  <div class="characteristics">
+                    <span class="characteristics__item"
+                      ><img src="./assets/imgs/beds.svg" alt="beds" /> 2
+                      bedrooms</span
+                    >
+                    <span class="characteristics__item"
+                      ><img src="./assets/imgs/bath.svg" alt="bath" /> 3
+                      bathrooms</span
+                    >
+                    <span class="characteristics__item"
+                      ><img src="./assets/imgs/area.svg" alt="" /> 1,515
+                      sqft</span
+                    >
+                  </div>
+                  <span class="geo">Ellington Beach House, Palm Jumeirah</span>
+                  <div class="card-links">
+                    <a href="#" class="learn-more">Learn more ></a>
+                  </div>
+                </div>
+              </div>
+              <div class="slide-nekhel-big big-type-banner">
+                <div class="big-type-banner__imgs">
+                  <span class="type">Villa</span>
+                  <div class="big-type-banner__imgs__img big">
+                    <img src="./assets/imgs/big.png" alt="building-img" />
+                  </div>
+                  <div class="big-type-banner__imgs__img left">
+                    <img src="./assets/imgs/small.png" alt="building-img" />
+                  </div>
+                  <div class="big-type-banner__imgs__img right">
+                    <img src="./assets/imgs/small-2.png" alt="building-img" />
+                  </div>
+                </div>
+                <div class="big-type-banner__info">
+                  <p class="price">35,605,395 AED</p>
+                  <p class="dev-loc">
+                    <span class="dev">Canal & Burj View </span> |
+                    <span class="loc">Prime location | Vacant</span>
+                  </p>
+                  <div class="characteristics">
+                    <span class="characteristics__item"
+                      ><img src="./assets/imgs/beds.svg" alt="beds" /> 2
+                      bedrooms</span
+                    >
+                    <span class="characteristics__item"
+                      ><img src="./assets/imgs/bath.svg" alt="bath" /> 3
+                      bathrooms</span
+                    >
+                    <span class="characteristics__item"
+                      ><img src="./assets/imgs/area.svg" alt="" /> 1,515
+                      sqft</span
+                    >
+                  </div>
+                  <span class="geo">Ellington Beach House, Palm Jumeirah</span>
+                  <div class="card-links">
+                    <a href="#" class="learn-more">Learn more ></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="pagination">
+              <button class="laod-more w-100-arr">Load more projects</button>
+              <p class="info">1-12 of 123 results</p>
+            </div>
+          </div>
+        </div>
+      </section>
       <section class="popular">
         <div class="container">
           <h3 class="title">Popular searches in the UAE</h3>
@@ -764,6 +1424,7 @@
           </div>
         </div>
       </section>
+   
     </main>
     <footer class="footer">
       <div class="container">

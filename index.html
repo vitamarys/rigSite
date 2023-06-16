@@ -24,9 +24,11 @@
     <header class="header">
       <div class="header__top">
         <div class="container">
-          <a href="#" class="logo"
-            ><img src="./assets/imgs/new_logo.svg" alt="logo"
-          /></a>
+          <a href="#" class="logo logo-head">
+            <img src="./assets/imgs/new_logo.svg" alt="logo" class="big-logo"/>
+            <img src="./assets/imgs/logo-small.svg" alt="logo" class="small-logo"/>
+
+        </a>
           <div class="btns-group">
             <div class="lang-select">
               <p class="lang-select__line">
@@ -39,7 +41,7 @@
                   <div class="custom-select__select" data-lang="en">
                     English / EN
                   </div>
-                  <div class="custom-select__options">
+                  <div class="custom-select__options mob">
                     <ul class="custom-select__options__list">
                       <li
                         data-lang_value="en"
@@ -67,7 +69,7 @@
                   <div class="custom-select__select" data-currency="usd">
                     USD
                   </div>
-                  <div class="custom-select__options">
+                  <div class="custom-select__options mob">
                     <ul class="custom-select__options__list">
                       <li
                         data-currency_value="usd"
@@ -91,6 +93,7 @@
                   </div>
                 </div>
                 <button class="btn-lang" disabled type="button">Save</button>
+                <button type="button" class="mob-close">← back</button>
               </div>
             </div>
 
@@ -235,16 +238,16 @@
               <div class="filter-opions">
                 <ul class="filter-opions__list">
                   <li data-prjval="1" class="filter-opions__list__item">
-                    Developer
+                   <a href="#">Developer</a> 
                   </li>
                   <li data-prjval="2" class="filter-opions__list__item">
-                    Developer 2
+                    <a href="#">Developer 2</a> 
                   </li>
                   <li data-prjval="3" class="filter-opions__list__item">
-                    Commercial Property
+                    <a href="#">Commercial Property</a> 
                   </li>
                   <li data-prjval="4" class="filter-opions__list__item">
-                    Developer 4
+                    <a href="#"> Developer 4</a> 
                   </li>
                 </ul>
               </div>
@@ -278,16 +281,16 @@
               <div class="filter-opions">
                 <ul class="filter-opions__list">
                   <li data-dev_val="1" class="filter-opions__list__item">
-                    Projects
+                    <a href="#">Projects</a> 
                   </li>
                   <li data-dev_val="2" class="filter-opions__list__item">
-                    Projects 2
+                    <a href="#">Projects2</a> 
                   </li>
                   <li data-dev_val="3" class="filter-opions__list__item select">
-                    Commercial Property
+                    <a href="#">Commercial Property</a> 
                   </li>
                   <li data-dev_val="4" class="filter-opions__list__item">
-                    Projects 4
+                    <a href="#">Projects 4</a>
                   </li>
                 </ul>
               </div>
@@ -296,7 +299,7 @@
               <img src="./assets/imgs/filter.svg" alt="filter" />
             </button>
           </div>
-          <div class="lang-select mob-lang">
+          <!-- <div class="lang-select mob-lang">
             <div class="lang-select__line">
               <span data-lang="en" class="language">EN</span> /
               <span data-currency="usd" class="currency">USD</span>
@@ -359,7 +362,7 @@
               </div>
               <button class="btn-lang" disabled type="button">Save</button>
             </div>
-          </div>
+          </div> -->
         </div>
       </div>
     </header>
@@ -382,6 +385,9 @@
           <div class="content-section">
             <div class="project-card">
               <div class="project-card__img">
+                <button class="play">
+                  <img src="./assets/imgs/play.svg" alt="play">
+                </button>
                 <img src="./assets/imgs/apart.jpg" alt="apart" />
               </div>
               <div class="project-card__info">
@@ -411,7 +417,7 @@
                 <span class="select__text">Select Property Type</span>
               </div>
               <div class="select">
-                <span class="select__text">Beds&Baths</span>
+                <span class="select__text">Beds & Baths</span>
               </div>
               <div class="select">
                 <span class="select__text">Price (USD)</span>
@@ -1142,7 +1148,7 @@
 
         <div class="container">
           <div class="slider-control">
-            <h3 class="title">Meet the SuperAgents</h3>
+            <h3 class="title">Meet the Super Agents</h3>
             <div class="contols">
               
               <div class="slide-control">

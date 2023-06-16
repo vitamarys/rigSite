@@ -17,9 +17,11 @@
     <header class="header">
       <div class="header__top">
         <div class="container">
-          <a href="#" class="logo"
-            ><img src="./assets/imgs/new_logo.svg" alt="logo"
-          /></a>
+          <a href="#" class="logo logo-head">
+            <img src="./assets/imgs/new_logo.svg" alt="logo" class="big-logo"/>
+            <img src="./assets/imgs/logo-small.svg" alt="logo" class="small-logo"/>
+
+        </a>
           <div class="btns-group">
             <div class="lang-select">
               <p class="lang-select__line">
@@ -32,7 +34,7 @@
                   <div class="custom-select__select" data-lang="en">
                     English / EN
                   </div>
-                  <div class="custom-select__options">
+                  <div class="custom-select__options mob">
                     <ul class="custom-select__options__list">
                       <li
                         data-lang_value="en"
@@ -60,7 +62,7 @@
                   <div class="custom-select__select" data-currency="usd">
                     USD
                   </div>
-                  <div class="custom-select__options">
+                  <div class="custom-select__options mob">
                     <ul class="custom-select__options__list">
                       <li
                         data-currency_value="usd"
@@ -84,6 +86,7 @@
                   </div>
                 </div>
                 <button class="btn-lang" disabled type="button">Save</button>
+                <button type="button" class="mob-close">← back</button>
               </div>
             </div>
 
@@ -118,6 +121,7 @@
 
           <nav class="nav">
             <ul class="nav__list">
+            
               <li class="nav__list__item drop">
                 <a href="#"
                   ><img
@@ -158,7 +162,7 @@
                   />Sell</a
                 >
               </li>
-
+              
               <li class="nav__list__item">
                 <a href="#">
                   <img
@@ -227,16 +231,16 @@
               <div class="filter-opions">
                 <ul class="filter-opions__list">
                   <li data-prjval="1" class="filter-opions__list__item">
-                    Developer
+                   <a href="#">Developer</a> 
                   </li>
                   <li data-prjval="2" class="filter-opions__list__item">
-                    Developer 2
+                    <a href="#">Developer 2</a> 
                   </li>
                   <li data-prjval="3" class="filter-opions__list__item">
-                    Commercial Property
+                    <a href="#">Commercial Property</a> 
                   </li>
                   <li data-prjval="4" class="filter-opions__list__item">
-                    Developer 4
+                    <a href="#"> Developer 4</a> 
                   </li>
                 </ul>
               </div>
@@ -270,16 +274,16 @@
               <div class="filter-opions">
                 <ul class="filter-opions__list">
                   <li data-dev_val="1" class="filter-opions__list__item">
-                    Projects
+                    <a href="#">Projects</a> 
                   </li>
                   <li data-dev_val="2" class="filter-opions__list__item">
-                    Projects 2
+                    <a href="#">Projects2</a> 
                   </li>
                   <li data-dev_val="3" class="filter-opions__list__item select">
-                    Commercial Property
+                    <a href="#">Commercial Property</a> 
                   </li>
                   <li data-dev_val="4" class="filter-opions__list__item">
-                    Projects 4
+                    <a href="#">Projects 4</a>
                   </li>
                 </ul>
               </div>
@@ -288,7 +292,7 @@
               <img src="./assets/imgs/filter.svg" alt="filter" />
             </button>
           </div>
-          <div class="lang-select mob-lang">
+          <!-- <div class="lang-select mob-lang">
             <div class="lang-select__line">
               <span data-lang="en" class="language">EN</span> /
               <span data-currency="usd" class="currency">USD</span>
@@ -351,7 +355,7 @@
               </div>
               <button class="btn-lang" disabled type="button">Save</button>
             </div>
-          </div>
+          </div> -->
         </div>
       </div>
     </header>
@@ -517,6 +521,7 @@
                 </div>
               </div>
               <a href="#" class="link">View all projects > ></a>
+              <a href="#" class="mob-link"><img src="./assets/imgs/arr-blue.svg" alt=""></a>
             </div>
             <div class="developers-list__item">
               <div class="dev-logo">

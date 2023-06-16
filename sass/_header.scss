@@ -30,7 +30,7 @@
       phoneLandscape,
       phonePortrait
     ) {
-      display: none;
+      position: static;
     }
 
     &.mob-lang {
@@ -48,6 +48,20 @@
       transition: 0.3s;
     }
     &.active {
+      -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+
+      @include adaptive(
+        desktopS,
+        tabletLandscape,
+        tabletPortrait,
+        phoneLandscape,
+        phonePortrait
+      ) {
+        background-color: transparent;
+        .lang-select__line {
+          display: none;
+        }
+      }
       background-color: $main-bg;
       -webkit-transition: 0.3s;
       -o-transition: 0.3s;
@@ -74,11 +88,43 @@
       border-radius: 10px;
       width: 250px;
       z-index: 6;
+      @include adaptive(desktopS, tabletLandscape, tabletPortrait) {
+        width: 100%;
+        left: 0;
+        bottom: auto;
+        top: 68px;
+        transform: translate(0%, 0%);
+        border-radius: 0px;
+        box-shadow: none;
+        height: calc(100vh - 68px);
+        padding: 0 70px;
+      }
+      @include adaptive(phoneLandscape, phonePortrait) {
+        width: 100%;
+        left: 0;
+        bottom: auto;
+        top: 68px;
+        transform: translate(0%, 0%);
+        border-radius: 0px;
+        box-shadow: none;
+        height: calc(100vh - 68px);
+        padding: 0 25px;
+      }
       .custom-select {
         position: relative;
         margin-bottom: 10px;
         &__title {
           @include fontSetings();
+          @include adaptive(
+            desktopS,
+            tabletLandscape,
+            tabletPortrait,
+            phoneLandscape,
+            phonePortrait
+          ) {
+            @include fontSetings($s: 20px, $w: 600, $lh: 24px);
+            margin-bottom: 15px;
+          }
         }
         &__select {
           @include fontSetings();
@@ -99,6 +145,15 @@
           &::after {
             content: url("../assets/imgs/dropArrow.svg");
           }
+          @include adaptive(
+            desktopS,
+            tabletLandscape,
+            tabletPortrait,
+            phoneLandscape,
+            phonePortrait
+          ) {
+            display: none;
+          }
         }
         &__options {
           width: 100%;
@@ -110,10 +165,30 @@
           -ms-transform: translateY(5px);
           transform: translateY(5px);
           z-index: 2;
+          @include adaptive(
+            desktopS,
+            tabletLandscape,
+            tabletPortrait,
+            phoneLandscape,
+            phonePortrait
+          ) {
+            display: block;
+            position: static;
+          }
+
           &__list {
+            @include adaptive(
+              desktopS,
+              tabletLandscape,
+              tabletPortrait,
+              phoneLandscape,
+              phonePortrait
+            ) {
+              margin-bottom: 40px;
+            }
             &__item {
               @include fontSetings($s: 12px);
-              padding: 0 13px;
+              padding: 10px 13px;
               display: -webkit-box;
               display: -ms-flexbox;
               display: flex;
@@ -123,11 +198,38 @@
               -webkit-box-align: center;
               -ms-flex-align: center;
               align-items: center;
+              @include adaptive(
+                desktopS,
+                tabletLandscape,
+                tabletPortrait,
+                phoneLandscape,
+                phonePortrait
+              ) {
+                @include fontSetings();
+              }
               &:nth-child(1) {
                 padding: 5px 13px 0px 13px;
+                @include adaptive(
+                  desktopS,
+                  tabletLandscape,
+                  tabletPortrait,
+                  phoneLandscape,
+                  phonePortrait
+                ) {
+                  padding: 15px 13px 10px 13px;
+                }
               }
               &:nth-last-child(1) {
                 padding: 0px 13px 5px 13px;
+                @include adaptive(
+                  desktopS,
+                  tabletLandscape,
+                  tabletPortrait,
+                  phoneLandscape,
+                  phonePortrait
+                ) {
+                  padding: 10px 13px 15px 13px;
+                }
               }
               &:hover {
                 background-color: $select-hover;
@@ -166,8 +268,36 @@
         color: $white;
         cursor: pointer;
         @include fontSetings($w: 600);
+        @include adaptive(
+          desktopS,
+          tabletLandscape,
+          tabletPortrait,
+          phoneLandscape,
+          phonePortrait
+        ) {
+          border-radius: 30px;
+        }
         &:disabled {
           color: #c2e6f1;
+        }
+      }
+      .mob-close {
+        position: absolute;
+        left: 30px;
+        bottom: 30px;
+        color: $grey;
+        background-color: transparent;
+        border: none;
+        outline: none;
+        display: none;
+        @include adaptive(
+          desktopS,
+          tabletLandscape,
+          tabletPortrait,
+          phoneLandscape,
+          phonePortrait
+        ) {
+          display: block;
         }
       }
     }
@@ -176,7 +306,15 @@
   &__top {
     padding: 15px 0;
     border: 1px solid #dcdcdc;
-
+    @include adaptive(
+      desktopS,
+      tabletLandscape,
+      tabletPortrait,
+      phoneLandscape,
+      phonePortrait
+    ) {
+      height: 70px;
+    }
     &.blue {
       -webkit-transition: 0.3s;
       -o-transition: 0.3s;
@@ -198,9 +336,29 @@
     }
     .logo {
       width: 220px;
-      img {
+      @include adaptive(phoneLandscape, phonePortrait) {
+        width: 100px;
+      }
+      .big-logo {
         @include adaptive(phoneLandscape, phonePortrait) {
-          width: 200px;
+          display: none;
+        }
+      }
+      .small-logo {
+        display: none;
+        @include adaptive(phoneLandscape, phonePortrait) {
+          display: block;
+        }
+      }
+      &.show {
+        @include adaptive(phoneLandscape, phonePortrait) {
+          width: 220px;
+          .big-logo {
+            display: block;
+          }
+          .small-logo {
+            display: none;
+          }
         }
       }
     }
@@ -246,7 +404,13 @@
           width: 23px;
           height: 23px;
         }
-        @include adaptive(phoneLandscape, phonePortrait) {
+        @include adaptive(
+          desktopS,
+          tabletLandscape,
+          tabletPortrait,
+          phoneLandscape,
+          phonePortrait
+        ) {
           display: none;
         }
       }
@@ -931,7 +1095,11 @@
 
             &__list {
               &__item {
-                @include fontSetings;
+                a {
+                  @include fontSetings;
+                  color: $black;
+                }
+
                 padding: 5px 15px;
                 white-space: nowrap;
                 cursor: pointer;

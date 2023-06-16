@@ -1,0 +1,207 @@
+.contact-form {
+  .container {
+    display: flex;
+
+    overflow: hidden;
+    .content-item {
+      width: 50%;
+
+      position: relative;
+      background-color: $white;
+      padding: 40px;
+      @include adaptive(
+        tabletLandscape,
+        tabletPortrait,
+        phoneLandscape,
+        phonePortrait
+      ) {
+        transform: translateX(0%);
+        overflow: hidden;
+      }
+      @include adaptive(phoneLandscape, phonePortrait) {
+        width: 100%;
+        padding: 20px;
+      }
+      .form-title {
+        @include fontSetings($s: 30px, $w: 600, $lh: 42px);
+      }
+      .deskr {
+        @include fontSetings($s: 12px, $lh: 18px);
+        color: $grey;
+        margin-bottom: 20px;
+      }
+      .manager {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        transform: translateX(-35%);
+        @include adaptive(
+          tabletLandscape,
+          tabletPortrait,
+          phoneLandscape,
+          phonePortrait
+        ) {
+          transform: translateX(-2%);
+        }
+      }
+      &:nth-child(1) {
+        border-radius: 20px 0 0 20px;
+        position: relative;
+        @include adaptive(tabletLandscape, tabletPortrait) {
+          width: 70%;
+        }
+      }
+      &:nth-child(2) {
+        border-radius: 0 20px 20px 0;
+        background-color: $blue-background;
+        background-image: url("../assets/imgs/flip.png");
+        background-size: cover;
+        background-repeat: no-repeat;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: flex-end;
+        @include adaptive(tabletLandscape, tabletPortrait) {
+          width: 30%;
+        }
+        @include adaptive(phoneLandscape, phonePortrait) {
+          display: none;
+        }
+      }
+      .logo {
+        width: 220px;
+        height: 25px;
+        @include adaptive(
+          tabletLandscape,
+          tabletPortrait,
+          phoneLandscape,
+          phonePortrait
+        ) {
+          display: none;
+        }
+      }
+      .manager-contact {
+        display: flex;
+        flex-direction: column;
+        @include adaptive(
+          tabletLandscape,
+          tabletPortrait,
+          phoneLandscape,
+          phonePortrait
+        ) {
+          display: none;
+        }
+        .name {
+          @include fontSetings($s: 25px, $lh: 35px);
+          margin-bottom: 7px;
+          color: $blue;
+          max-width: 216px;
+        }
+        .position {
+          @include fontSetings();
+          margin-bottom: 20px;
+          max-width: 225px;
+          color: $grey;
+        }
+        .link {
+          @include fontSetings();
+          color: $blue;
+          text-decoration: underline;
+        }
+        .phone {
+          display: flex;
+          gap: 15px;
+          .link {
+            @include fontSetings();
+            color: $blue;
+            width: 60px;
+            text-overflow: ellipsis;
+            overflow: hidden;
+            display: block;
+            white-space: nowrap;
+            text-decoration: none;
+          }
+          .show-phone {
+            background: $blue;
+            color: $white;
+            padding: 3px 11px;
+            border-radius: 30px;
+            outline: none;
+            border: none;
+            transition: 0.3s;
+            &:hover {
+              background: $light-blue;
+              transition: 0.3s;
+            }
+          }
+        }
+      }
+      .form {
+        padding: 0;
+        background-color: $white;
+        .input-wrap {
+          display: -webkit-box;
+          display: -ms-flexbox;
+          display: flex;
+          -webkit-box-orient: vertical;
+          -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+          flex-direction: column;
+          margin-bottom: 15px;
+          gap: 5px;
+          label {
+            @include fontSetings($w: 500);
+          }
+          .input {
+            background-color: $white;
+            -webkit-box-shadow: 0px 1px 2px rgba(16, 24, 40, 0.05);
+            box-shadow: 0px 1px 2px rgba(16, 24, 40, 0.05);
+            border: 1px solid #d0d5dd;
+            border-radius: 30px;
+            width: 80%;
+            @include fontSetings();
+            color: $grey;
+            padding: 10px 14px;
+
+            @include adaptive(
+              tabletLandscape,
+              tabletPortrait,
+              phoneLandscape,
+              phonePortrait
+            ) {
+              width: 100%;
+            }
+          }
+        }
+        .check-wrap {
+          display: -webkit-box;
+          display: -ms-flexbox;
+          display: flex;
+          -webkit-box-align: center;
+          -ms-flex-align: center;
+          align-items: center;
+          gap: 10px;
+          input {
+            width: 20px;
+            height: 20px;
+          }
+          .check-label {
+            @include fontSetings($s: 12px, $lh: 22px);
+            color: $grey;
+            a {
+              color: $grey;
+              text-decoration: underline;
+            }
+          }
+        }
+        .submit {
+          cursor: pointer;
+          width: fit-content;
+          gap: 20px;
+          border: none;
+          outline: none;
+        }
+      }
+    }
+  }
+}

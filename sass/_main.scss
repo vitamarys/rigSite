@@ -153,7 +153,24 @@
           -ms-transform: translateX(5%);
           -o-transform: translateX(5%);
           transform: translateX(5%);
-
+          .play {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: transparent;
+            border: none;
+            outline: none;
+            cursor: pointer;
+            transition: 0.3s;
+            &:hover {
+              transition: 0.3s;
+              transform: translate(-50%, -50%) scale(1.1);
+            }
+            @include adaptive(phoneLandscape, phonePortrait) {
+              left: 30%;
+            }
+          }
           @include adaptive(tabletLandscape, tabletPortrait) {
             -webkit-flex-shrink: 0;
             -ms-flex-negative: 0;
@@ -373,6 +390,7 @@
         text-overflow: ellipsis;
         overflow: hidden;
         border: none;
+        cursor: pointer;
         outline: none;
         color: $white;
         padding: 0 35px;
@@ -386,6 +404,11 @@
         -webkit-align-items: center;
         -moz-box-align: center;
         align-items: center;
+        transition: 0.3s;
+        &:hover {
+          background: $light-blue;
+          transition: 0.3s;
+        }
         @include fontSetings($s: 16px, $w: 700);
         @include adaptive(
           tabletLandscape,
@@ -980,6 +1003,7 @@
       -ms-flex-wrap: wrap;
       -webkit-flex-wrap: wrap;
       flex-wrap: wrap;
+      gap: 20px;
     }
     .content-section {
       padding-right: 30px;
@@ -1156,7 +1180,7 @@
     flex-wrap: wrap;
     .title {
       @include adaptive(phoneLandscape, phonePortrait) {
-        width: 50%;
+        width: 55%;
       }
     }
 
@@ -1311,6 +1335,9 @@
           -webkit-flex-shrink: 0;
           -ms-flex-negative: 0;
           flex-shrink: 0;
+          @include adaptive(phoneLandscape, phonePortrait) {
+            width: 340px !important;
+          }
           .slide-img {
             width: 100%;
             height: 190px;
@@ -1481,7 +1508,7 @@
 }
 .popular {
   padding-bottom: 70px;
-  @include adaptive(tabletLandscape, tabletPortrait) {
+  @include adaptive(desktopS, tabletLandscape, tabletPortrait) {
     padding: 0px 70px 70px 70px;
   }
   @include adaptive(phoneLandscape, phonePortrait) {
@@ -1492,7 +1519,7 @@
     background-color: $black;
     padding: 50px;
     max-width: 1260px;
-    @include adaptive(tabletLandscape, tabletPortrait) {
+    @include adaptive(desktopS, tabletLandscape, tabletPortrait) {
       max-width: 100%;
       padding: 35px;
     }
@@ -1514,7 +1541,7 @@
       display: -webkit-flex;
       display: -moz-box;
       display: flex;
-      @include adaptive(tabletLandscape, tabletPortrait) {
+      @include adaptive(desktopS, tabletLandscape, tabletPortrait) {
         -ms-flex-wrap: wrap;
         -webkit-flex-wrap: wrap;
         flex-wrap: wrap;
@@ -1528,7 +1555,7 @@
       }
       .list {
         width: 25%;
-        @include adaptive(tabletLandscape, tabletPortrait) {
+        @include adaptive(desktopS, tabletLandscape, tabletPortrait) {
           width: -webkit-calc(50% - 20px);
           width: calc(50% - 20px);
         }

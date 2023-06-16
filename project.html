@@ -20,9 +20,11 @@
     <header class="header">
       <div class="header__top">
         <div class="container">
-          <a href="#" class="logo"
-            ><img src="./assets/imgs/new_logo.svg" alt="logo"
-          /></a>
+          <a href="#" class="logo logo-head">
+            <img src="./assets/imgs/new_logo.svg" alt="logo" class="big-logo"/>
+            <img src="./assets/imgs/logo-small.svg" alt="logo" class="small-logo"/>
+
+        </a>
           <div class="btns-group">
             <div class="lang-select">
               <p class="lang-select__line">
@@ -35,7 +37,7 @@
                   <div class="custom-select__select" data-lang="en">
                     English / EN
                   </div>
-                  <div class="custom-select__options">
+                  <div class="custom-select__options mob">
                     <ul class="custom-select__options__list">
                       <li
                         data-lang_value="en"
@@ -63,7 +65,7 @@
                   <div class="custom-select__select" data-currency="usd">
                     USD
                   </div>
-                  <div class="custom-select__options">
+                  <div class="custom-select__options mob">
                     <ul class="custom-select__options__list">
                       <li
                         data-currency_value="usd"
@@ -87,6 +89,7 @@
                   </div>
                 </div>
                 <button class="btn-lang" disabled type="button">Save</button>
+                <button type="button" class="mob-close">← back</button>
               </div>
             </div>
 
@@ -231,16 +234,16 @@
               <div class="filter-opions">
                 <ul class="filter-opions__list">
                   <li data-prjval="1" class="filter-opions__list__item">
-                    Developer
+                   <a href="#">Developer</a> 
                   </li>
                   <li data-prjval="2" class="filter-opions__list__item">
-                    Developer 2
+                    <a href="#">Developer 2</a> 
                   </li>
                   <li data-prjval="3" class="filter-opions__list__item">
-                    Commercial Property
+                    <a href="#">Commercial Property</a> 
                   </li>
                   <li data-prjval="4" class="filter-opions__list__item">
-                    Developer 4
+                    <a href="#"> Developer 4</a> 
                   </li>
                 </ul>
               </div>
@@ -274,16 +277,16 @@
               <div class="filter-opions">
                 <ul class="filter-opions__list">
                   <li data-dev_val="1" class="filter-opions__list__item">
-                    Projects
+                    <a href="#">Projects</a> 
                   </li>
                   <li data-dev_val="2" class="filter-opions__list__item">
-                    Projects 2
+                    <a href="#">Projects2</a> 
                   </li>
                   <li data-dev_val="3" class="filter-opions__list__item select">
-                    Commercial Property
+                    <a href="#">Commercial Property</a> 
                   </li>
                   <li data-dev_val="4" class="filter-opions__list__item">
-                    Projects 4
+                    <a href="#">Projects 4</a>
                   </li>
                 </ul>
               </div>
@@ -292,7 +295,7 @@
               <img src="./assets/imgs/filter.svg" alt="filter" />
             </button>
           </div>
-          <div class="lang-select mob-lang">
+          <!-- <div class="lang-select mob-lang">
             <div class="lang-select__line">
               <span data-lang="en" class="language">EN</span> /
               <span data-currency="usd" class="currency">USD</span>
@@ -355,7 +358,7 @@
               </div>
               <button class="btn-lang" disabled type="button">Save</button>
             </div>
-          </div>
+          </div> -->
         </div>
       </div>
     </header>
@@ -627,8 +630,9 @@
         <div class="gradient right"></div>
         <div class="gradient left"></div>
         <div class="container">
+          <h2 class="title">Buying Property in Como Residences</h2>
           <div class="slider-control">
-            <h2 class="title">Buying Property in Como Residences</h2>
+          
             <div class="contols">
               <button
                 class="colapse"
@@ -641,8 +645,8 @@
                 <span class="square"></span>
               </button>
               <div class="slide-control">
-                <button type="button" class="prev-slide prev-region"></button>
-                <button type="button" class="next-slide next-region"></button>
+                <button type="button" class="prev-slide prev-region-pr"></button>
+                <button type="button" class="next-slide next-region-pr"></button>
               </div>
             </div>
           </div>
@@ -1188,6 +1192,96 @@
                 <span class="type">Video about the project</span>
               </div>
             </div>
+            <section class="faq">
+              <div class="container">
+                <h2 class="title" id="faq">FAQ</h2>
+                <div class="faq-list" >
+                  <div class="faq-list__item">
+                    <p class="question">What is the process of purchasing a property in Como Residences?</p>
+                    <button class="more"> <img src="./assets/imgs/plus.svg" alt="plus"></button>
+                   <p class="request">In terms of public transport, Al Ittihad Park Monorail Station will be located within a several-minute walk from Como Residences, enabling occupants to get to Dubai Marina and Palm Jumeirah Tram Stop quickly and efficiently. However, living in Dubai is more convenient if you travel around the emirate via private vehicle. Dubai Marina and the Sheikh Zayed Road are both reachable from the development within just 10 minutes by car. Downtown Dubai and Business Bay will be accessible within 20 minutes, and Dubai International Airport is within a 25-minute drive. </p>
+                  </div>
+                  <div class="faq-list__item">
+                    <p class="question">What is the completion date of Como Residences?</p>
+                    <button class="more"> <img src="./assets/imgs/plus.svg" alt="plus"></button>
+                    <ul class="request">
+                      <li class="request__item">1-bedroom apartment – AED 889K (USD 242K)</li>
+                      <li class="request__item">2-bedroom penthouse – AED 7.3M (USD 2M)</li>
+                      <li class="request__item">3-bedroom villa – AED 9.5M (USD 2.5M)</li>
+                      <li class="request__item">1-bedroom duplex – AED 10.5M (USD 2.8M)</li>
+                      <li class="request__item">2-bedroom townhouse – AED 4.5M (USD 1.2M)</li>
+                    </ul>
+                  </div>
+                  <div class="faq-list__item">
+                    <p class="question">IWhat is the starting price of Como Residences?</p>
+                    <button class="more"> <img src="./assets/imgs/plus.svg" alt="plus"></button>
+                    <ul class="request">
+                      <li class="request__item">1-bedroom apartment – AED 889K (USD 242K)</li>
+                      <li class="request__item">2-bedroom penthouse – AED 7.3M (USD 2M)</li>
+                      <li class="request__item">3-bedroom villa – AED 9.5M (USD 2.5M)</li>
+                      <li class="request__item">1-bedroom duplex – AED 10.5M (USD 2.8M)</li>
+                      <li class="request__item">2-bedroom townhouse – AED 4.5M (USD 1.2M)</li>
+                    </ul>
+                  </div>
+                  <div class="faq-list__item">
+                    <p class="question">What is the Payment Plan for Como Residences?</p>
+                    <button class="more"> <img src="./assets/imgs/plus.svg" alt="plus"></button>
+                    <ul class="request">
+                      <li class="request__item">1-bedroom apartment – AED 889K (USD 242K)</li>
+                      <li class="request__item">2-bedroom penthouse – AED 7.3M (USD 2M)</li>
+                      <li class="request__item">3-bedroom villa – AED 9.5M (USD 2.5M)</li>
+                      <li class="request__item">1-bedroom duplex – AED 10.5M (USD 2.8M)</li>
+                      <li class="request__item">2-bedroom townhouse – AED 4.5M (USD 1.2M)</li>
+                    </ul>
+                  </div>
+                  <div class="faq-list__item">
+                    <p class="question">Can a foreigner buy property in Como Residences?</p>
+                    <button class="more"> <img src="./assets/imgs/plus.svg" alt="plus"></button>
+                    <ul class="request">
+                      <li class="request__item">1-bedroom apartment – AED 889K (USD 242K)</li>
+                      <li class="request__item">2-bedroom penthouse – AED 7.3M (USD 2M)</li>
+                      <li class="request__item">3-bedroom villa – AED 9.5M (USD 2.5M)</li>
+                      <li class="request__item">1-bedroom duplex – AED 10.5M (USD 2.8M)</li>
+                      <li class="request__item">2-bedroom townhouse – AED 4.5M (USD 1.2M)</li>
+                    </ul>
+                  </div>
+                  <div class="faq-list__item">
+                    <p class="question">Is an apartment in Como Residences a good investment?</p>
+                    <button class="more"> <img src="./assets/imgs/plus.svg" alt="plus"></button>
+                    <ul class="request">
+                      <li class="request__item">1-bedroom apartment – AED 889K (USD 242K)</li>
+                      <li class="request__item">2-bedroom penthouse – AED 7.3M (USD 2M)</li>
+                      <li class="request__item">3-bedroom villa – AED 9.5M (USD 2.5M)</li>
+                      <li class="request__item">1-bedroom duplex – AED 10.5M (USD 2.8M)</li>
+                      <li class="request__item">2-bedroom townhouse – AED 4.5M (USD 1.2M)</li>
+                    </ul>
+                  </div>
+                  <div class="faq-list__item">
+                    <p class="question">Is Como Residences a good place for living in Dubai?</p>
+                    <button class="more"> <img src="./assets/imgs/plus.svg" alt="plus"></button>
+                    <ul class="request">
+                      <li class="request__item">1-bedroom apartment – AED 889K (USD 242K)</li>
+                      <li class="request__item">2-bedroom penthouse – AED 7.3M (USD 2M)</li>
+                      <li class="request__item">3-bedroom villa – AED 9.5M (USD 2.5M)</li>
+                      <li class="request__item">1-bedroom duplex – AED 10.5M (USD 2.8M)</li>
+                      <li class="request__item">2-bedroom townhouse – AED 4.5M (USD 1.2M)</li>
+                    </ul>
+                  </div>
+                  <div class="faq-list__item">
+                    <p class="question">What and how far away is the nearest Beach from Como Residences?</p>
+                    <button class="more"> <img src="./assets/imgs/plus.svg" alt="plus"></button>
+                    <ul class="request">
+                      <li class="request__item">1-bedroom apartment – AED 889K (USD 242K)</li>
+                      <li class="request__item">2-bedroom penthouse – AED 7.3M (USD 2M)</li>
+                      <li class="request__item">3-bedroom villa – AED 9.5M (USD 2.5M)</li>
+                      <li class="request__item">1-bedroom duplex – AED 10.5M (USD 2.8M)</li>
+                      <li class="request__item">2-bedroom townhouse – AED 4.5M (USD 1.2M)</li>
+                    </ul>
+                  </div>
+                </div>
+               
+              </div>
+            </section>
           </div>
           <div class="scroll">
             <div class="scroll-block">
@@ -1247,96 +1341,7 @@
           </div>
         </div>
       </section>
-      <section class="faq">
-        <div class="container">
-          <h2 class="title" id="faq">FAQ</h2>
-          <div class="faq-list" >
-            <div class="faq-list__item">
-              <p class="question">What is the process of purchasing a property in Como Residences?</p>
-              <button class="more"> <img src="./assets/imgs/plus.svg" alt="plus"></button>
-             <p class="request">In terms of public transport, Al Ittihad Park Monorail Station will be located within a several-minute walk from Como Residences, enabling occupants to get to Dubai Marina and Palm Jumeirah Tram Stop quickly and efficiently. However, living in Dubai is more convenient if you travel around the emirate via private vehicle. Dubai Marina and the Sheikh Zayed Road are both reachable from the development within just 10 minutes by car. Downtown Dubai and Business Bay will be accessible within 20 minutes, and Dubai International Airport is within a 25-minute drive. </p>
-            </div>
-            <div class="faq-list__item">
-              <p class="question">What is the completion date of Como Residences?</p>
-              <button class="more"> <img src="./assets/imgs/plus.svg" alt="plus"></button>
-              <ul class="request">
-                <li class="request__item">1-bedroom apartment – AED 889K (USD 242K)</li>
-                <li class="request__item">2-bedroom penthouse – AED 7.3M (USD 2M)</li>
-                <li class="request__item">3-bedroom villa – AED 9.5M (USD 2.5M)</li>
-                <li class="request__item">1-bedroom duplex – AED 10.5M (USD 2.8M)</li>
-                <li class="request__item">2-bedroom townhouse – AED 4.5M (USD 1.2M)</li>
-              </ul>
-            </div>
-            <div class="faq-list__item">
-              <p class="question">IWhat is the starting price of Como Residences?</p>
-              <button class="more"> <img src="./assets/imgs/plus.svg" alt="plus"></button>
-              <ul class="request">
-                <li class="request__item">1-bedroom apartment – AED 889K (USD 242K)</li>
-                <li class="request__item">2-bedroom penthouse – AED 7.3M (USD 2M)</li>
-                <li class="request__item">3-bedroom villa – AED 9.5M (USD 2.5M)</li>
-                <li class="request__item">1-bedroom duplex – AED 10.5M (USD 2.8M)</li>
-                <li class="request__item">2-bedroom townhouse – AED 4.5M (USD 1.2M)</li>
-              </ul>
-            </div>
-            <div class="faq-list__item">
-              <p class="question">What is the Payment Plan for Como Residences?</p>
-              <button class="more"> <img src="./assets/imgs/plus.svg" alt="plus"></button>
-              <ul class="request">
-                <li class="request__item">1-bedroom apartment – AED 889K (USD 242K)</li>
-                <li class="request__item">2-bedroom penthouse – AED 7.3M (USD 2M)</li>
-                <li class="request__item">3-bedroom villa – AED 9.5M (USD 2.5M)</li>
-                <li class="request__item">1-bedroom duplex – AED 10.5M (USD 2.8M)</li>
-                <li class="request__item">2-bedroom townhouse – AED 4.5M (USD 1.2M)</li>
-              </ul>
-            </div>
-            <div class="faq-list__item">
-              <p class="question">Can a foreigner buy property in Como Residences?</p>
-              <button class="more"> <img src="./assets/imgs/plus.svg" alt="plus"></button>
-              <ul class="request">
-                <li class="request__item">1-bedroom apartment – AED 889K (USD 242K)</li>
-                <li class="request__item">2-bedroom penthouse – AED 7.3M (USD 2M)</li>
-                <li class="request__item">3-bedroom villa – AED 9.5M (USD 2.5M)</li>
-                <li class="request__item">1-bedroom duplex – AED 10.5M (USD 2.8M)</li>
-                <li class="request__item">2-bedroom townhouse – AED 4.5M (USD 1.2M)</li>
-              </ul>
-            </div>
-            <div class="faq-list__item">
-              <p class="question">Is an apartment in Como Residences a good investment?</p>
-              <button class="more"> <img src="./assets/imgs/plus.svg" alt="plus"></button>
-              <ul class="request">
-                <li class="request__item">1-bedroom apartment – AED 889K (USD 242K)</li>
-                <li class="request__item">2-bedroom penthouse – AED 7.3M (USD 2M)</li>
-                <li class="request__item">3-bedroom villa – AED 9.5M (USD 2.5M)</li>
-                <li class="request__item">1-bedroom duplex – AED 10.5M (USD 2.8M)</li>
-                <li class="request__item">2-bedroom townhouse – AED 4.5M (USD 1.2M)</li>
-              </ul>
-            </div>
-            <div class="faq-list__item">
-              <p class="question">Is Como Residences a good place for living in Dubai?</p>
-              <button class="more"> <img src="./assets/imgs/plus.svg" alt="plus"></button>
-              <ul class="request">
-                <li class="request__item">1-bedroom apartment – AED 889K (USD 242K)</li>
-                <li class="request__item">2-bedroom penthouse – AED 7.3M (USD 2M)</li>
-                <li class="request__item">3-bedroom villa – AED 9.5M (USD 2.5M)</li>
-                <li class="request__item">1-bedroom duplex – AED 10.5M (USD 2.8M)</li>
-                <li class="request__item">2-bedroom townhouse – AED 4.5M (USD 1.2M)</li>
-              </ul>
-            </div>
-            <div class="faq-list__item">
-              <p class="question">What and how far away is the nearest Beach from Como Residences?</p>
-              <button class="more"> <img src="./assets/imgs/plus.svg" alt="plus"></button>
-              <ul class="request">
-                <li class="request__item">1-bedroom apartment – AED 889K (USD 242K)</li>
-                <li class="request__item">2-bedroom penthouse – AED 7.3M (USD 2M)</li>
-                <li class="request__item">3-bedroom villa – AED 9.5M (USD 2.5M)</li>
-                <li class="request__item">1-bedroom duplex – AED 10.5M (USD 2.8M)</li>
-                <li class="request__item">2-bedroom townhouse – AED 4.5M (USD 1.2M)</li>
-              </ul>
-            </div>
-          </div>
-         
-        </div>
-      </section>
+     
       <section class="map-section" style="background-image: url('./assets/imgs/map-pr.jpg');">
         <div class="overflow">
           <div class="view">

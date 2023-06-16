@@ -15,9 +15,11 @@
     <header class="header">
       <div class="header__top">
         <div class="container">
-          <a href="#" class="logo"
-            ><img src="./assets/imgs/new_logo.svg" alt="logo"
-          /></a>
+          <a href="#" class="logo logo-head">
+            <img src="./assets/imgs/new_logo.svg" alt="logo" class="big-logo"/>
+            <img src="./assets/imgs/logo-small.svg" alt="logo" class="small-logo"/>
+
+        </a>
           <div class="btns-group">
             <div class="lang-select">
               <p class="lang-select__line">
@@ -30,7 +32,7 @@
                   <div class="custom-select__select" data-lang="en">
                     English / EN
                   </div>
-                  <div class="custom-select__options">
+                  <div class="custom-select__options mob">
                     <ul class="custom-select__options__list">
                       <li
                         data-lang_value="en"
@@ -58,7 +60,7 @@
                   <div class="custom-select__select" data-currency="usd">
                     USD
                   </div>
-                  <div class="custom-select__options">
+                  <div class="custom-select__options mob">
                     <ul class="custom-select__options__list">
                       <li
                         data-currency_value="usd"
@@ -82,6 +84,7 @@
                   </div>
                 </div>
                 <button class="btn-lang" disabled type="button">Save</button>
+                <button type="button" class="mob-close">← back</button>
               </div>
             </div>
 
@@ -226,16 +229,16 @@
               <div class="filter-opions">
                 <ul class="filter-opions__list">
                   <li data-prjval="1" class="filter-opions__list__item">
-                    Developer
+                   <a href="#">Developer</a> 
                   </li>
                   <li data-prjval="2" class="filter-opions__list__item">
-                    Developer 2
+                    <a href="#">Developer 2</a> 
                   </li>
                   <li data-prjval="3" class="filter-opions__list__item">
-                    Commercial Property
+                    <a href="#">Commercial Property</a> 
                   </li>
                   <li data-prjval="4" class="filter-opions__list__item">
-                    Developer 4
+                    <a href="#"> Developer 4</a> 
                   </li>
                 </ul>
               </div>
@@ -269,16 +272,16 @@
               <div class="filter-opions">
                 <ul class="filter-opions__list">
                   <li data-dev_val="1" class="filter-opions__list__item">
-                    Projects
+                    <a href="#">Projects</a> 
                   </li>
                   <li data-dev_val="2" class="filter-opions__list__item">
-                    Projects 2
+                    <a href="#">Projects2</a> 
                   </li>
                   <li data-dev_val="3" class="filter-opions__list__item select">
-                    Commercial Property
+                    <a href="#">Commercial Property</a> 
                   </li>
                   <li data-dev_val="4" class="filter-opions__list__item">
-                    Projects 4
+                    <a href="#">Projects 4</a>
                   </li>
                 </ul>
               </div>
@@ -287,7 +290,7 @@
               <img src="./assets/imgs/filter.svg" alt="filter" />
             </button>
           </div>
-          <div class="lang-select mob-lang">
+          <!-- <div class="lang-select mob-lang">
             <div class="lang-select__line">
               <span data-lang="en" class="language">EN</span> /
               <span data-currency="usd" class="currency">USD</span>
@@ -350,7 +353,7 @@
               </div>
               <button class="btn-lang" disabled type="button">Save</button>
             </div>
-          </div>
+          </div> -->
         </div>
       </div>
     </header>
@@ -364,20 +367,20 @@
           <div class="content-section">
             <h1 class="title">Property Management</h1>
             <div class="tags">
-              <a href="#" class="tags__item">Property valuation</a>
-              <a href="#" class="tags__item">Setting the rental price</a>
-              <a href="#" class="tags__item">Repairs</a>
-              <a href="#" class="tags__item">Marketing services</a>
-              <a href="#" class="tags__item">Tenant screening</a>
-              <a href="#" class="tags__item">Solving issues</a>
-              <a href="#" class="tags__item all">View all services</a>
+              <span class="tags__item">Property valuation</span>
+              <span class="tags__item">Setting the rental price</span>
+              <span class="tags__item">Repairs</span>
+              <span class="tags__item">Marketing services</span>
+              <span class="tags__item">Tenant screening</span>
+              <span class="tags__item">Solving issues</span>
+              <a href="#services" class="tags__item all">View all services</a>
             </div>
           </div>
           <div class="content-section">
             <div class="content-section__item">
               <img src="./assets/imgs/prop-dek.svg" class="dekor" alt="dekor">
               <p class="deskr">Package for the real estate management service</p>
-              <a href="#" class="link">Management of property for rent</a>
+              <a href="#rent" class="link">Management of property for rent</a>
             </div>
             <div class="content-section__item">
               <h2 class="title">Professional help in property management</h2>
@@ -417,10 +420,10 @@
             
         </div>
       </section>
-      <section class="prp-magment-service">
+      <section class="prp-magment-service" id="rent">
         <div class="container">
           <span class="line"></span>
-          <h2 class="title">Our Property Management Services</h2>
+          <h2  class="title">Our Property Management Services</h2>
           <h5 class="sub-title">
             The company of Metropolitan Premium Properties offers two packages for the real estate management service:
           </h5>
@@ -447,7 +450,7 @@
       </section>
       <section class="prp-structure">
         <div class="container">
-          <h4 class="title">
+          <h4 class="title" id="services">
             Our service of property management includes the following stages:
           </h4>
           <div class="stages-wrap">
@@ -587,7 +590,7 @@
           <a href="#" class="app-link">
             <img src="./assets/imgs/app-st.png" class="app-img" alt="app-store">
           </a>
-            <img src="./assets/imgs/Phone_1.png" class="phone" alt="phone">
+            <img src="./assets/imgs/Phone.png" class="phone" alt="phone">
         </div>
       </section>
       <section class="prp-services">

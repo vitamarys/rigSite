@@ -112,7 +112,7 @@
         @include fontSetings($s: 20px, $lh: 28px);
         color: $blue;
         padding-bottom: 15px;
-        border-bottom: 1px solid $blue;
+        border-bottom: 1px solid #dadada;
         margin-bottom: 20px;
         .sqft {
           color: $grey;
@@ -434,7 +434,15 @@
     }
   }
 }
-
+.contact-form {
+  margin-bottom: 120px;
+  @include adaptive(tabletLandscape, tabletPortrait) {
+    margin-bottom: 100px;
+  }
+  @include adaptive(phoneLandscape, phonePortrait) {
+    margin-bottom: 90px;
+  }
+}
 .listing-about {
   @include adaptive(
     tabletLandscape,
@@ -472,6 +480,12 @@
         margin-bottom: 20px;
         @include adaptive(phoneLandscape, phonePortrait) {
           @include fontSetings($s: 30px, $lh: 42px);
+        }
+        &.big-mr {
+          margin-top: 70px;
+          @include adaptive(phoneLandscape, phonePortrait) {
+            margin-top: 55px;
+          }
         }
       }
       .pagaraf {
@@ -562,6 +576,9 @@
           @include adaptive(phoneLandscape, phonePortrait) {
             width: 50%;
             margin-bottom: 5px;
+            a {
+              color: $blue;
+            }
           }
           &:nth-child(2n + 2) {
             width: 30%;
@@ -599,6 +616,7 @@
             phonePortrait
           ) {
             border: none;
+            color: $grey;
           }
           @include adaptive(phoneLandscape, phonePortrait) {
             width: calc(50% - 10px);
@@ -615,6 +633,7 @@
             ) {
               background-color: transparent;
               color: $light-blue;
+              color: $grey;
             }
             .type {
               border: 1px solid $white;
@@ -625,6 +644,14 @@
                 phonePortrait
               ) {
                 border: 1px solid $light-blue;
+                @include adaptive(
+                  tabletLandscape,
+                  tabletPortrait,
+                  phoneLandscape,
+                  phonePortrait
+                ) {
+                  border: 1px solid$grey;
+                }
               }
             }
           }
@@ -639,6 +666,7 @@
             ) {
               background-color: transparent;
               color: $light-blue;
+              color: $grey;
             }
             .type {
               border: 1px solid $white;
@@ -648,7 +676,7 @@
                 phoneLandscape,
                 phonePortrait
               ) {
-                border: 1px solid $light-blue;
+                border: 1px solid $grey;
               }
             }
           }
@@ -663,6 +691,14 @@
             border-radius: 30px;
             text-align: center;
             margin-bottom: 20px;
+            @include adaptive(
+              tabletLandscape,
+              tabletPortrait,
+              phoneLandscape,
+              phonePortrait
+            ) {
+              border: 1px solid$grey;
+            }
           }
           &__list {
             @include fontSetings();
@@ -759,6 +795,8 @@
       ) {
         width: 100%;
         padding-left: 0px;
+        padding-top: 20px;
+        border-top: 1px solid #dadada;
       }
       @include adaptive(phoneLandscape, phonePortrait) {
         border-top: 1px solid $light-grey;
@@ -927,7 +965,7 @@
           width: 100%;
           height: 200px;
           @include adaptive(tabletLandscape, tabletPortrait) {
-            height: 100px;
+            height: 112px;
           }
         }
         img {
@@ -989,12 +1027,18 @@
       @include fontSetings($s: 12px);
     }
   }
+  .title {
+    width: fit-content;
+  }
   .container {
-    .slider-control {
+    .contols {
       @include adaptive(phoneLandscape, phonePortrait) {
         display: none;
       }
     }
+  }
+
+  .slider-section {
     // .big-type-banner {
 
     //   width: calc(50% - 10px);
@@ -1187,183 +1231,5 @@
     //     }
     //   }
     // }
-  }
-}
-.contact-form {
-  .container {
-    display: flex;
-
-    overflow: hidden;
-    .content-item {
-      width: 50%;
-
-      position: relative;
-      background-color: $white;
-      padding: 40px;
-      @include adaptive(
-        tabletLandscape,
-        tabletPortrait,
-        phoneLandscape,
-        phonePortrait
-      ) {
-        transform: translateX(0%);
-        overflow: hidden;
-      }
-      @include adaptive(phoneLandscape, phonePortrait) {
-        width: 100%;
-      }
-      .form-title {
-        @include fontSetings($s: 30px, $w: 600, $lh: 42px);
-      }
-      .deskr {
-        @include fontSetings($s: 12px, $lh: 18px);
-        color: $grey;
-        margin-bottom: 20px;
-      }
-      .manager {
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        transform: translateX(-35%);
-        @include adaptive(
-          tabletLandscape,
-          tabletPortrait,
-          phoneLandscape,
-          phonePortrait
-        ) {
-          transform: translateX(0%);
-        }
-      }
-      &:nth-child(1) {
-        border-radius: 20px 0 0 20px;
-        position: relative;
-        @include adaptive(tabletLandscape, tabletPortrait) {
-          width: 70%;
-        }
-      }
-      &:nth-child(2) {
-        border-radius: 0 20px 20px 0;
-        background-color: $blue-background;
-        background-image: url("../assets/imgs/flip.png");
-        background-size: cover;
-        background-repeat: no-repeat;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        align-items: flex-end;
-        @include adaptive(tabletLandscape, tabletPortrait) {
-          width: 30%;
-        }
-        @include adaptive(phoneLandscape, phonePortrait) {
-          display: none;
-        }
-      }
-      .logo {
-        width: 220px;
-        height: 25px;
-        @include adaptive(
-          tabletLandscape,
-          tabletPortrait,
-          phoneLandscape,
-          phonePortrait
-        ) {
-          display: none;
-        }
-      }
-      .manager-contact {
-        display: flex;
-        flex-direction: column;
-        @include adaptive(
-          tabletLandscape,
-          tabletPortrait,
-          phoneLandscape,
-          phonePortrait
-        ) {
-          display: none;
-        }
-        .name {
-          @include fontSetings($s: 25px, $lh: 35px);
-          margin-bottom: 7px;
-          color: $blue;
-          max-width: 216px;
-        }
-        .position {
-          @include fontSetings();
-          margin-bottom: 20px;
-          max-width: 225px;
-          color: $grey;
-        }
-        .link {
-          @include fontSetings();
-          color: $blue;
-          text-decoration: underline;
-        }
-      }
-      .form {
-        padding: 0;
-        background-color: $white;
-        .input-wrap {
-          display: -webkit-box;
-          display: -ms-flexbox;
-          display: flex;
-          -webkit-box-orient: vertical;
-          -webkit-box-direction: normal;
-          -ms-flex-direction: column;
-          flex-direction: column;
-          margin-bottom: 15px;
-          gap: 5px;
-          label {
-            @include fontSetings($w: 500);
-          }
-          .input {
-            background-color: $white;
-            -webkit-box-shadow: 0px 1px 2px rgba(16, 24, 40, 0.05);
-            box-shadow: 0px 1px 2px rgba(16, 24, 40, 0.05);
-            border: 1px solid #d0d5dd;
-            border-radius: 30px;
-            width: 80%;
-            @include fontSetings();
-            color: $grey;
-            padding: 10px 14px;
-
-            @include adaptive(
-              tabletLandscape,
-              tabletPortrait,
-              phoneLandscape,
-              phonePortrait
-            ) {
-              width: 100%;
-            }
-          }
-        }
-        .check-wrap {
-          display: -webkit-box;
-          display: -ms-flexbox;
-          display: flex;
-          -webkit-box-align: center;
-          -ms-flex-align: center;
-          align-items: center;
-          gap: 10px;
-          input {
-            width: 20px;
-            height: 20px;
-          }
-          .check-label {
-            @include fontSetings($s: 12px, $lh: 22px);
-            color: $grey;
-            a {
-              color: $grey;
-            }
-          }
-        }
-        .submit {
-          cursor: pointer;
-          width: fit-content;
-          gap: 20px;
-          border: none;
-          outline: none;
-        }
-      }
-    }
   }
 }

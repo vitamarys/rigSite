@@ -1,5 +1,10 @@
 .developer {
   .container {
+    .link-to {
+      @include adaptive(phoneLandscape, phonePortrait) {
+        justify-content: space-around;
+      }
+    }
     .content-item {
       &:nth-child(2) {
       }
@@ -7,6 +12,15 @@
       .characteristic {
         .btns {
           .btn {
+            height: 55px;
+            @include adaptive(
+              tabletLandscape,
+              tabletPortrait,
+              phoneLandscape,
+              phonePortrait
+            ) {
+              height: 45px;
+            }
             &.link-to {
               @include adaptive(
                 tabletLandscape,
@@ -30,6 +44,449 @@
                 text-align: center;
               }
             }
+          }
+        }
+      }
+    }
+  }
+}
+.dev-projects {
+  padding-bottom: 90px;
+
+  @include adaptive(tabletLandscape, tabletPortrait) {
+    padding-bottom: 70px;
+  }
+  @include adaptive(phoneLandscape, phonePortrait) {
+    padding-bottom: 50px;
+    padding-top: 50px;
+  }
+}
+.dev-about {
+  padding-bottom: 90px;
+  @include adaptive(tabletLandscape, tabletPortrait) {
+    padding-bottom: 70px;
+  }
+  @include adaptive(phoneLandscape, phonePortrait) {
+    padding-bottom: 50px;
+  }
+
+  .container {
+    display: flex;
+    .wrapper {
+      width: 65%;
+      padding-right: 20px;
+      @include adaptive(
+        tabletLandscape,
+        tabletPortrait,
+        phoneLandscape,
+        phonePortrait
+      ) {
+        width: 100%;
+        padding-right: 0;
+      }
+      .paragraf {
+        color: $grey;
+        @include fontSetings();
+        margin-bottom: 20px;
+      }
+      .title {
+        @include fontSetings($s: 40px, $lh: 56px);
+        margin-bottom: 20px;
+        @include adaptive(phoneLandscape, phonePortrait) {
+          @include fontSetings($s: 30px, $lh: 42px);
+          margin-bottom: 10px;
+        }
+        &.second {
+          margin-bottom: 10px;
+          @include adaptive(phoneLandscape, phonePortrait) {
+            @include fontSetings($s: 30px, $lh: 42px);
+            margin-bottom: 10px;
+          }
+        }
+      }
+      .imgs-tile {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+        margin-bottom: 90px;
+        margin-top: 30px;
+        @include adaptive(phoneLandscape, phonePortrait) {
+          gap: 10px;
+          margin-bottom: 50px;
+        }
+        .img-wrap {
+          width: calc(50% - 10px);
+          @include adaptive(phoneLandscape, phonePortrait) {
+            height: 180px;
+          }
+
+          &.big {
+            width: 100%;
+          }
+          img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 20px;
+          }
+        }
+      }
+      .card {
+        display: flex;
+        border-radius: 20px;
+        margin-bottom: 20px;
+        cursor: pointer;
+        max-height: 300px;
+        @include adaptive(tabletLandscape, tabletPortrait) {
+          max-height: 100%;
+        }
+        @include adaptive(phoneLandscape, phonePortrait) {
+          max-height: 100%;
+          flex-direction: column;
+        }
+
+        &.last {
+          margin-bottom: 50px;
+          @include adaptive(tabletLandscape, tabletPortrait) {
+            margin-bottom: 40px;
+          }
+        }
+        &__imgs {
+          width: 46%;
+          position: relative;
+          display: flex;
+          flex-wrap: wrap;
+          gap: 5px;
+          @include adaptive(tabletLandscape, tabletPortrait) {
+            width: 50%;
+          }
+          @include adaptive(phoneLandscape, phonePortrait) {
+            width: 100%;
+            background-color: $white;
+            border-radius: 20px 20px 0px 0px;
+          }
+
+          .img-wrap {
+            width: calc(50% - 2.5px);
+            height: calc(33.333% - 2.5px);
+            transition: 0.3s;
+
+            img {
+              width: 100%;
+              height: 100%;
+              object-fit: cover;
+            }
+            &.big {
+              width: 100%;
+              height: calc(66.666% - 2.5px);
+              img {
+                border-radius: 20px 0px 0px 0px;
+                @include adaptive(phoneLandscape, phonePortrait) {
+                  border-radius: 20px 20px 0px 0px;
+                }
+              }
+            }
+            &.left {
+              img {
+                border-radius: 0px 20px;
+                @include adaptive(phoneLandscape, phonePortrait) {
+                  border-radius: 0px 10px 10px 0px;
+                }
+              }
+            }
+            &.right {
+              position: relative;
+
+              img {
+                border-radius: 20px 0px 0px 0px;
+                @include adaptive(phoneLandscape, phonePortrait) {
+                  border-radius: 20px 0px 0px 0px;
+                }
+              }
+            }
+          }
+
+          .price {
+            position: absolute;
+            top: 15px;
+            left: 15px;
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            gap: 6px;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            align-items: center;
+            padding: 3px 5px;
+            background: $white;
+            border-radius: 15px;
+            color: $blue;
+            font-family: "Manrope", sans-serif;
+            @include fontSetings($s: 12px, $lh: 18px);
+            width: fit-content;
+            &::before {
+              content: url(../assets/imgs/cur.svg);
+              width: 18px;
+              height: 18px;
+            }
+          }
+          .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            background: rgba(0, 173, 229, 0.8);
+            border-radius: 20px 0px 0px 0px;
+            width: 100%;
+            height: 100%;
+            padding: 10px;
+            display: flex;
+
+            align-content: flex-end;
+            flex-wrap: wrap;
+            @include adaptive(tabletLandscape, tabletPortrait) {
+              padding: 5px 10px 5px 10px;
+            }
+
+            &__title {
+              @include fontSetings($s: 16px, $lh: 22px, $w: 600);
+              position: relative;
+              border-bottom: 1px solid rgba(255, 255, 255, 0.8);
+              width: fit-content;
+              color: $white;
+              padding-bottom: 3px;
+              .sub-title {
+                @include fontSetings($s: 10px, $lh: 14px, $w: 400);
+              }
+            }
+            &__deskr {
+              @include fontSetings($s: 10px, $lh: 14px, $w: 400);
+              color: $white;
+              display: flex;
+              margin-top: 5px;
+              &::before {
+                content: url("../assets/imgs/precent.svg");
+                display: block;
+                margin-right: 5px;
+                width: 12px;
+                height: 11px;
+                position: relative;
+                top: 2px;
+              }
+            }
+          }
+        }
+        &__info {
+          width: 54%;
+          background-color: $white;
+          padding: 25px 25px 20px 30px;
+          border-radius: 0 20px 20px 0;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+
+          @include adaptive(tabletLandscape, tabletPortrait) {
+            padding: 25px 15px 20px 20px;
+            width: 50%;
+          }
+          @include adaptive(phoneLandscape, phonePortrait) {
+            width: 100%;
+            padding: 20px;
+            border-radius: 0 0 20px 20px;
+          }
+          .title {
+            @include fontSetings($s: 20px, $lh: 28px, $w: 700);
+            padding-bottom: 5px;
+            margin-bottom: 5px;
+            position: relative;
+            @include adaptive(phoneLandscape, phonePortrait) {
+              width: 80%;
+              @include fontSetings($s: 22px, $lh: 31px, $w: 700);
+            }
+            &::before {
+              content: "";
+              position: absolute;
+              left: 0;
+              bottom: 0;
+              display: block;
+              width: 110px;
+              height: 1px;
+              background-color: $light-blue;
+            }
+          }
+          .sub-title {
+            @include fontSetings($s: 12px, $lh: 18px, $w: 400);
+            color: $grey;
+            margin-bottom: 20px;
+          }
+          .paragraf {
+            @include fontSetings($s: 12px, $lh: 18px, $w: 400);
+            color: $grey;
+            margin-bottom: 40px;
+            @include adaptive(phoneLandscape, phonePortrait) {
+              margin-bottom: 20px;
+            }
+          }
+          .learn-more {
+            color: $white;
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            @include fontSetings($s: 14px, $w: 700, $lh: 19px);
+
+            -webkit-box-align: center;
+
+            -ms-flex-align: center;
+
+            align-items: center;
+            background: $light-blue;
+            border-radius: 60px;
+            height: 45px;
+            width: -webkit-fit-content;
+            width: -moz-fit-content;
+            width: fit-content;
+            padding: 0 10px 0 20px;
+            gap: 20px;
+            &::after {
+              content: url(../assets/imgs/circle-sl.svg);
+              width: 25px;
+              height: 25px;
+            }
+          }
+        }
+        &:hover {
+          // .big {
+          //   height: 150px;
+          // }
+          .img-wrap {
+            transition: 0.3s;
+            height: calc(50% - 2.5px);
+          }
+        }
+      }
+    }
+    .scroll {
+      width: 35%;
+      padding-left: 20px;
+      @include adaptive(
+        tabletLandscape,
+        tabletPortrait,
+        phoneLandscape,
+        phonePortrait
+      ) {
+        display: none;
+      }
+      .scroll-block {
+        position: sticky;
+        top: 50px;
+        .anchor-list {
+          display: flex;
+          gap: 5px;
+          flex-wrap: wrap;
+          margin-bottom: 10px;
+          @include adaptive(
+            tabletLandscape,
+            tabletPortrait,
+            phoneLandscape,
+            phonePortrait
+          ) {
+            display: none;
+          }
+          &__item {
+            padding: 5px 10px;
+            background-color: $white;
+            border-radius: 30px;
+            display: flex;
+            justify-content: center;
+
+            a {
+              color: $grey;
+              @include fontSetings($s: 12px, $lh: 18px);
+            }
+          }
+        }
+
+        .content-block {
+          width: 100%;
+          background: $white;
+          padding: 25px 20px;
+
+          border-radius: 20px;
+        }
+        .title {
+          @include fontSetings($w: 400, $s: 25px, $lh: 35px);
+          max-width: 240px;
+          margin-bottom: 15px;
+        }
+        .content-item {
+          display: -webkit-box;
+          display: -ms-flexbox;
+          display: flex;
+          -webkit-box-align: center;
+          -ms-flex-align: center;
+          align-items: center;
+          margin-bottom: 10px;
+          span {
+            display: block;
+            width: 50%;
+            @include fontSetings();
+          }
+          .name {
+            color: $grey;
+          }
+          .desc {
+            @include fontSetings($w: 600);
+            color: $blue;
+          }
+          .map {
+            width: 50%;
+          }
+        }
+        .scroll-links {
+          .trans-link {
+            width: 100%;
+            justify-content: center;
+          }
+        }
+        .card {
+          width: 100%;
+          margin-top: 10px;
+          @include adaptive(tabletLandscape, tabletPortrait) {
+            width: 50%;
+            margin-top: 0px;
+          }
+          @include adaptive(phoneLandscape, phonePortrait) {
+            display: none;
+          }
+          .img-wrap {
+            width: 100%;
+            height: 200px;
+            @include adaptive(tabletLandscape, tabletPortrait) {
+              height: 100px;
+            }
+          }
+          img {
+            width: 100%;
+            height: 100%;
+            border-radius: 15px;
+            object-fit: cover;
+          }
+        }
+        .link-to {
+          @include fontSetings();
+          color: $white;
+          background-color: $blue;
+          padding: 10px 10px 10px 20px;
+          width: 100%;
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          border-radius: 30px;
+          margin-top: 10px;
+          &::after {
+            content: url(../assets/imgs/circle-small.svg);
+            width: 25px;
+            height: 25px;
           }
         }
       }
