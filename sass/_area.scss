@@ -1,14 +1,43 @@
 .area-hero {
   padding-top: 60px;
   padding-bottom: 60px;
+  @include adaptive(
+    tabletLandscape,
+    tabletPortrait,
+    phoneLandscape,
+    phonePortrait
+  ) {
+    background-image: none !important;
+  }
+  @include adaptive(phoneLandscape, phonePortrait) {
+    padding-top: 40px;
+    padding-bottom: 35px;
+  }
+
   .container {
     display: flex;
-
+    @include adaptive(
+      tabletLandscape,
+      tabletPortrait,
+      phoneLandscape,
+      phonePortrait
+    ) {
+      flex-direction: column;
+      gap: 50px;
+    }
     .bread-crums {
       margin-bottom: 40px;
     }
     .content-section {
       width: 50%;
+      @include adaptive(
+        tabletLandscape,
+        tabletPortrait,
+        phoneLandscape,
+        phonePortrait
+      ) {
+        width: 100%;
+      }
       &:nth-child(2) {
         display: flex;
         align-items: flex-end;
@@ -16,12 +45,28 @@
       .title {
         max-width: 70%;
         margin-bottom: 15px;
+        @include adaptive(
+          tabletLandscape,
+          tabletPortrait,
+          phoneLandscape,
+          phonePortrait
+        ) {
+          max-width: 100%;
+        }
       }
       .paragraf {
         @include fontSetings();
         color: $grey;
         max-width: 70%;
         margin-bottom: 35px;
+        @include adaptive(
+          tabletLandscape,
+          tabletPortrait,
+          phoneLandscape,
+          phonePortrait
+        ) {
+          max-width: 100%;
+        }
       }
       .hero-links {
         display: flex;
@@ -35,7 +80,7 @@
         }
         .deskr {
           @include fontSetings($s: 12px, $lh: 18px);
-          color: $grey;
+          color: #a5a5a5;
           max-width: 240px;
         }
       }
@@ -49,6 +94,32 @@
           position: absolute;
           right: 0;
           bottom: 0;
+          @include adaptive(
+            tabletLandscape,
+            tabletPortrait,
+            phoneLandscape,
+            phonePortrait
+          ) {
+            display: none;
+          }
+        }
+        .mob-decor {
+          display: none;
+          @include adaptive(
+            tabletLandscape,
+            tabletPortrait,
+            phoneLandscape,
+            phonePortrait
+          ) {
+            display: block;
+            position: absolute;
+            z-index: 1;
+            top: 0;
+            right: 0;
+          }
+          @include adaptive(phoneLandscape, phonePortrait) {
+            opacity: 0.8;
+          }
         }
         &__logo {
           margin-bottom: 40px;
@@ -59,17 +130,30 @@
           @include fontSetings($s: 30px, $lh: 39px);
           color: $light-blue;
           margin-bottom: 20px;
+          position: relative;
+          z-index: 2;
+          @include adaptive(phoneLandscape, phonePortrait) {
+            @include fontSetings($s: 20px, $lh: 26px);
+          }
         }
         &__list {
           display: flex;
           flex-direction: column;
           gap: 10px;
+          position: relative;
+          z-index: 2;
           &__item {
             @include fontSetings($s: 12px, $lh: 18px);
             color: $grey;
             position: relative;
             padding-left: 35px;
             max-width: 370px;
+            @include adaptive(tabletLandscape, tabletPortrait) {
+              max-width: 80%;
+            }
+            @include adaptive(phoneLandscape, phonePortrait) {
+              max-width: 95%;
+            }
             &::before {
               content: url(../assets/imgs/tick.svg);
               position: absolute;
@@ -87,17 +171,31 @@
 }
 .video {
   padding-bottom: 120px;
+  @include adaptive(tabletLandscape, tabletPortrait) {
+    padding-bottom: 100px;
+  }
+  @include adaptive(phoneLandscape, phonePortrait) {
+    padding-bottom: 90px;
+  }
+
   .container {
     .video-wrap {
       width: 100%;
       border-radius: 40px;
       border: 1px solid $white;
       max-height: 510px;
+      @include adaptive(phoneLandscape, phonePortrait) {
+        max-height: 400px;
+        height: 100%;
+      }
       .baner {
         width: 100%;
         max-height: 510px;
         object-fit: cover;
         border-radius: 40px;
+        @include adaptive(phoneLandscape, phonePortrait) {
+          height: 400px;
+        }
       }
     }
   }
@@ -108,8 +206,28 @@
       .content-wrap {
         .row {
           &.grid {
-            grid-template-columns: 41% 13% 33% 11%;
+            .item-title {
+              @include adaptive(phoneLandscape, phonePortrait) {
+                @include fontSetings($s: 30px, $lh: 39px);
+              }
+            }
           }
+          .list {
+            &__item {
+              @include adaptive(phoneLandscape, phonePortrait) {
+                padding: 10px 10px 10px 35px;
+              }
+              &::before {
+                @include adaptive(phoneLandscape, phonePortrait) {
+                  left: 8px;
+                  top: 13px;
+                }
+              }
+            }
+          }
+        }
+        &.grid {
+          grid-template-columns: 41% 13% 33% 11%;
         }
       }
     }
@@ -117,12 +235,34 @@
 }
 .why-area {
   padding-bottom: 140px;
+  @include adaptive(tabletLandscape, tabletPortrait) {
+    padding-bottom: 100px;
+  }
+  @include adaptive(phoneLandscape, phonePortrait) {
+    padding-bottom: 90px;
+  }
   .container {
     display: flex;
-
+    @include adaptive(
+      tabletLandscape,
+      tabletPortrait,
+      phoneLandscape,
+      phonePortrait
+    ) {
+      flex-direction: column;
+      gap: 45px;
+    }
     .content-section {
       width: 50%;
       position: relative;
+      @include adaptive(
+        tabletLandscape,
+        tabletPortrait,
+        phoneLandscape,
+        phonePortrait
+      ) {
+        width: 100%;
+      }
       .title {
         max-width: 400px;
         margin-bottom: 25px;
@@ -143,6 +283,14 @@
           position: absolute;
           left: 0;
           bottom: 0;
+          @include adaptive(
+            tabletLandscape,
+            tabletPortrait,
+            phoneLandscape,
+            phonePortrait
+          ) {
+            width: 100%;
+          }
         }
       }
       .paragraf {
@@ -156,6 +304,9 @@
         object-fit: cover;
         object-position: center;
         border-radius: 30px;
+        @include adaptive(phoneLandscape, phonePortrait) {
+          height: 400px;
+        }
       }
       .area-info {
         position: absolute;
@@ -169,6 +320,9 @@
         &__title {
           @include fontSetings($s: 30px, $lh: 42px);
           text-align: center;
+          @include adaptive(phoneLandscape, phonePortrait) {
+            @include fontSetings($s: 22px, $lh: 31px);
+          }
         }
         .description {
           @include fontSetings($s: 12px, $lh: 18px);
@@ -176,13 +330,30 @@
           text-align: center;
           max-width: 390px;
           margin: 0 auto;
+          @include adaptive(phoneLandscape, phonePortrait) {
+            max-width: 95%;
+          }
         }
       }
     }
   }
 }
+
 .tile {
+  @include adaptive(phoneLandscape, phonePortrait) {
+    padding-bottom: 90px;
+  }
   &.area {
+    .container {
+      @include adaptive(phoneLandscape, phonePortrait) {
+        padding: 0 25px;
+      }
+
+      .title {
+        padding: 0;
+      }
+    }
+
     .deskr {
       @include fontSetings();
       color: $grey;
@@ -191,15 +362,89 @@
     }
     .content-body {
       .row {
+        @include adaptive(
+          tabletLandscape,
+          tabletPortrait,
+          phoneLandscape,
+          phonePortrait
+        ) {
+          padding: 20px;
+        }
         .content-item {
           min-height: 305px;
 
           background-size: cover;
           background-repeat: no-repeat;
           background-position: center;
+
+          &.text {
+            @include adaptive(
+              tabletLandscape,
+              tabletPortrait,
+              phoneLandscape,
+              phonePortrait
+            ) {
+              padding: 0px;
+              min-height: auto;
+            }
+          }
+
+          img {
+            width: 100%;
+            height: 100%;
+          }
           .last {
             margin-top: 10px;
           }
+          .img-deskr {
+            @include fontSetings($s: 12px, $lh: 18px);
+            width: 95%;
+            bottom: 3%;
+          }
+        }
+      }
+    }
+  }
+}
+.why-buy {
+  @include adaptive(phoneLandscape, phonePortrait) {
+    padding-bottom: 90px;
+  }
+  &.area {
+    .container {
+      .content-item {
+        .block-mob {
+          display: none;
+          @include adaptive(
+            tabletLandscape,
+            tabletPortrait,
+            phoneLandscape,
+            phonePortrait
+          ) {
+            display: block;
+          }
+          .title {
+            margin-top: 55px;
+            @include fontSetings($s: 35px, $lh: 42px);
+            @include adaptive(phoneLandscape, phonePortrait) {
+              @include fontSetings($s: 30px, $lh: 36px);
+            }
+            .link {
+              @include adaptive(phoneLandscape, phonePortrait) {
+                margin-top: 25px;
+              }
+            }
+          }
+        }
+      }
+      .link-mob {
+        @include adaptive(
+          tabletLandscape,
+          tabletPortrait,
+          phoneLandscape,
+          phonePortrait
+        ) {
+          display: none;
         }
       }
     }
