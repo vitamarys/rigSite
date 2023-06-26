@@ -26,6 +26,16 @@ document.addEventListener("DOMContentLoaded", () => {
       prevEl: ".prev",
     },
   });
+  const aboutTeam = new Swiper(".team-slider", {
+    slideClass: "team-slide",
+    slidesPerView: 1,
+    slidesPerGroup: 1,
+    spaceBetween: 0,
+    navigation: {
+      nextEl: ".next-photo",
+      prevEl: ".prev-photo",
+    },
+  });
   const devHero = new Swiper(".developer-slider", {
     slideClass: "one-slide",
     slidesPerView: 1,
@@ -86,6 +96,34 @@ document.addEventListener("DOMContentLoaded", () => {
         spaceBetween: 10,
       },
       1024: {
+        slidesPerView: 3,
+        slidesPerGroup: 3,
+      },
+    },
+    
+  });
+  const awards = new Swiper(".award-slider", {
+    slideClass: "award-slide",
+    slidesPerView: 4,
+    slidesPerGroup: 1,
+    spaceBetween: 40,
+    navigation: {
+      nextEl: ".next-award",
+      prevEl: ".prev-award",
+    },
+    breakpoints: {
+      320: {
+        slidesPerView: "auto",
+        slidesPerGroup: 1,
+        spaceBetween: 10,
+      },
+      600: {
+        slidesPerView: "auto",
+        slidesPerGroup: 1,
+        spaceBetween: 10,
+      },
+      1024: {
+        spaceBetween: 20,
         slidesPerView: 3,
         slidesPerGroup: 3,
       },

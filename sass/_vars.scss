@@ -1,38 +1,38 @@
-$blue: #00ADE5;
-$light-blue:#61C7E8;
-$blue-background:#CEEBF4;
-$black:#1C1C1C;
-$grey:#6D6D6D;
-$light-grey:#DCDCDC;
-$med-grey:#B7B7B7;
-$border-grey:#BFBFBF;
-$slide-grey:#9A9A9A;
-$main-bg:#F4F4F6;
-$white:#FFFFFF;
-$select-hover:#DAF3FC;
-$baseFont:'Manrope', sans-serif;
-@mixin fontSetings($s:14px, $w:400, $lh:22px){
-    font-family: $baseFont;
-    font-size: $s;
-    font-weight: $w;
-    line-height: $lh;
+$blue: #00ade5;
+$light-blue: #61c7e8;
+$blue-background: #ceebf4;
+$black: #1c1c1c;
+$grey: #6d6d6d;
+$light-grey: #dcdcdc;
+$med-grey: #b7b7b7;
+$border-grey: #bfbfbf;
+$slide-grey: #9a9a9a;
+$main-bg: #f4f4f6;
+$white: #ffffff;
+$select-hover: #daf3fc;
+$baseFont: "Manrope", sans-serif;
+@mixin fontSetings($s: 14px, $w: 400, $lh: 22px) {
+  font-family: $baseFont;
+  font-size: $s;
+  font-weight: $w;
+  line-height: $lh;
 }
 .contact-btn {
-    height: 35px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: #00ade5;
-    border-radius: 30px;
-    padding: 0 7px 0 15px;
-    gap: 15px;
-    color: $white;
-    @include fontSetings($w: 600);
-    width: fit-content;
+  height: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: $blue;
+  border-radius: 30px;
+  padding: 0 7px 0 15px;
+  gap: 15px;
+  color: $white;
+  @include fontSetings($w: 600);
+  width: fit-content;
 
-    &::after {
-      content: url("../assets/imgs/phone.svg");
-      width: 23px;
-      height: 23px;
-    }
+  &::after {
+    content: url("../assets/imgs/phone.svg");
+    width: 23px;
+    height: 23px;
   }
+}
