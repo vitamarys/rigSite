@@ -68,6 +68,9 @@
               flex-grow: 4;
               text-align: center;
             }
+            @include adaptive(phoneLandscape, phonePortrait) {
+              min-width: calc(50% - 3px);
+            }
             &.all {
               padding: 6px 35px;
               color: $white;
@@ -260,7 +263,12 @@
       }
       .content-body {
         .row {
-          @include adaptive(tabletLandscape, tabletPortrait) {
+          @include adaptive(
+            tabletLandscape,
+            tabletPortrait,
+            phoneLandscape,
+            phonePortrait
+          ) {
             gap: 20px;
           }
           .content-item {

@@ -1,0 +1,173 @@
+.blog-hero {
+  padding-top: 60px;
+  .container {
+    .info-hero {
+      margin-bottom: 80px;
+      &__item {
+        &:nth-child(1) {
+          width: 45%;
+        }
+        &:nth-child(2) {
+          width: 55%;
+        }
+        .sub-titile {
+          max-width: 370px;
+        }
+        .descr {
+          max-width: 435px;
+        }
+      }
+    }
+    .news-section {
+      display: flex;
+      width: 100%;
+      .news {
+        width: 65%;
+        .news-navigate {
+          display: flex;
+          margin-bottom: 40px;
+
+          gap: 5px;
+          .link {
+            border: 1px solid $light-blue;
+            border-radius: 30px;
+            padding: 6px 15px;
+            color: $light-blue;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            @include fontSetings($s: 12px, $lh: 18px, $w: 600);
+            .stiker {
+              padding: 0px 9px;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              color: $white;
+              background: $light-blue;
+              border-radius: 20px;
+
+              @include fontSetings($s: 12px, $lh: 18px, $w: 600);
+            }
+          }
+        }
+        .news-list {
+          .item {
+            display: flex;
+            padding: 15px;
+            background-color: $white;
+            gap: 15px;
+            border-radius: 20px;
+            .img-wrap {
+              width: 40%;
+              position: relative;
+              img {
+                width: 100%;
+                height: 100%;
+                border-radius: 20px;
+                object-fit: cover;
+              }
+              .link {
+                position: absolute;
+                bottom: 10px;
+                left: 10px;
+                @include fontSetings($s: 12px, $w: 700);
+                color: $blue;
+                background-color: white;
+                padding: 0px 10px 0px 15px;
+                height: 40px;
+                border-radius: 60px;
+                display: flex;
+                align-items: center;
+                gap: 15px;
+                &::after {
+                  content: url("../assets/imgs/blue-white.svg");
+                  width: 20px;
+                  height: 20px;
+                  display: block;
+                }
+              }
+            }
+            .content {
+              width: 60%;
+              .info {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                margin-bottom: 20px;
+                .authtor {
+                  display: flex;
+                  align-items: center;
+                  gap: 10px;
+                  .face-wrap {
+                    width: 35px;
+                    height: 35px;
+                    background-color: #ceebf4;
+                    border-radius: 50%;
+                    overflow: hidden;
+                    .face {
+                      width: 100%;
+                      height: 100%;
+                      object-fit: cover;
+                      object-position: top center;
+                    }
+                  }
+                  .name {
+                    @include fontSetings($w: 600);
+                  }
+                }
+                .date {
+                  @include fontSetings($s: 12px);
+                  color: $grey;
+                }
+              }
+              .news-name {
+                @include fontSetings($w: 600, $s: 20px, $lh: 28px);
+                color: $light-blue;
+                padding-bottom: 10px;
+                position: relative;
+                margin-bottom: 10px;
+                &::after {
+                  content: "";
+                  height: 1px;
+                  width: 260px;
+                  background-color: $light-blue;
+                  display: block;
+                  position: absolute;
+                  left: 0;
+                  bottom: 0;
+                }
+              }
+              .paragraf {
+                @include fontSetings();
+                color: $grey;
+                margin-bottom: 25px;
+              }
+              .rating {
+                display: flex;
+                align-items: center;
+                gap: 10px;
+                .stars {
+                  display: flex;
+                  gap: 4px;
+                  img {
+                    width: 15px;
+                    height: 15px;
+                  }
+                }
+                .count {
+                  @include fontSetings($s: 12px, $lh: 16px);
+                  color: #a5a5a5;
+                  position: relative;
+                  top: 2px;
+                }
+              }
+            }
+          }
+        }
+      }
+      .scroll {
+        width: 35%;
+      }
+    }
+  }
+}

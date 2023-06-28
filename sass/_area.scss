@@ -82,6 +82,9 @@
           @include fontSetings($s: 12px, $lh: 18px);
           color: #a5a5a5;
           max-width: 240px;
+          @include adaptive(phoneLandscape, phonePortrait) {
+            display: none;
+          }
         }
       }
       .info {
@@ -234,7 +237,7 @@
   }
 }
 .why-area {
-  padding-bottom: 140px;
+  padding-bottom: 120px;
   @include adaptive(tabletLandscape, tabletPortrait) {
     padding-bottom: 100px;
   }
@@ -344,6 +347,7 @@
     padding-bottom: 90px;
   }
   &.area {
+    padding-top: 0;
     .container {
       @include adaptive(phoneLandscape, phonePortrait) {
         padding: 0 25px;
@@ -351,6 +355,54 @@
 
       .title {
         padding: 0;
+        margin-bottom: 10px;
+      }
+      .content-body {
+        .row {
+          @include adaptive(
+            tabletLandscape,
+            tabletPortrait,
+            phoneLandscape,
+            phonePortrait
+          ) {
+            padding: 20px;
+          }
+          @include adaptive(phoneLandscape, phonePortrait) {
+            gap: 20px;
+          }
+          .content-item {
+            min-height: 305px;
+
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+
+            &.text {
+              @include adaptive(
+                tabletLandscape,
+                tabletPortrait,
+                phoneLandscape,
+                phonePortrait
+              ) {
+                padding: 0px;
+                min-height: auto;
+              }
+            }
+
+            img {
+              width: 100%;
+              height: 100%;
+            }
+            .last {
+              margin-top: 10px;
+            }
+            .img-deskr {
+              @include fontSetings($s: 12px, $lh: 18px);
+              width: 95%;
+              bottom: 3%;
+            }
+          }
+        }
       }
     }
 
@@ -359,50 +411,6 @@
       color: $grey;
       max-width: 665px;
       margin-bottom: 40px;
-    }
-    .content-body {
-      .row {
-        @include adaptive(
-          tabletLandscape,
-          tabletPortrait,
-          phoneLandscape,
-          phonePortrait
-        ) {
-          padding: 20px;
-        }
-        .content-item {
-          min-height: 305px;
-
-          background-size: cover;
-          background-repeat: no-repeat;
-          background-position: center;
-
-          &.text {
-            @include adaptive(
-              tabletLandscape,
-              tabletPortrait,
-              phoneLandscape,
-              phonePortrait
-            ) {
-              padding: 0px;
-              min-height: auto;
-            }
-          }
-
-          img {
-            width: 100%;
-            height: 100%;
-          }
-          .last {
-            margin-top: 10px;
-          }
-          .img-deskr {
-            @include fontSetings($s: 12px, $lh: 18px);
-            width: 95%;
-            bottom: 3%;
-          }
-        }
-      }
     }
   }
 }
