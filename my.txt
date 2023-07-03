@@ -1,4 +1,4 @@
-@include adaptive(tabletLandscape, tabletPortrait,   phoneLandscape, phonePortrait) {
+@include adaptive(tabletLandscape, tabletPortrait,  phoneLandscape, phonePortrait) {
 
 }
 @include adaptive(tabletLandscape, tabletPortrait) {

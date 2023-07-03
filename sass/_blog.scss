@@ -1,14 +1,52 @@
 .blog-hero {
   padding-top: 60px;
+  padding-bottom: 120px;
+  background-size: 100% 600px;
+  background-repeat: no-repeat;
+  @include adaptive(
+    tabletLandscape,
+    tabletPortrait,
+    phoneLandscape,
+    phonePortrait
+  ) {
+    padding-bottom: 90px;
+    padding-top: 40px;
+  }
+
   .container {
     .info-hero {
       margin-bottom: 80px;
+      @include adaptive(
+        tabletLandscape,
+        tabletPortrait,
+        phoneLandscape,
+        phonePortrait
+      ) {
+        display: flex;
+        flex-direction: column;
+      }
       &__item {
         &:nth-child(1) {
           width: 45%;
+          @include adaptive(
+            tabletLandscape,
+            tabletPortrait,
+            phoneLandscape,
+            phonePortrait
+          ) {
+            width: 100%;
+          }
         }
         &:nth-child(2) {
           width: 55%;
+          @include adaptive(
+            tabletLandscape,
+            tabletPortrait,
+            phoneLandscape,
+            phonePortrait
+          ) {
+            width: 100%;
+          }
         }
         .sub-titile {
           max-width: 370px;
@@ -20,14 +58,44 @@
     }
     .news-section {
       display: flex;
+
       width: 100%;
-      .news {
+      @include adaptive(
+        tabletLandscape,
+        tabletPortrait,
+        phoneLandscape,
+        phonePortrait
+      ) {
+        flex-direction: column;
+      }
+      .blog-news {
         width: 65%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        @include adaptive(
+          tabletLandscape,
+          tabletPortrait,
+          phoneLandscape,
+          phonePortrait
+        ) {
+          width: 100%;
+          align-items: center;
+        }
+        .pagination-section {
+          margin: 50px 0 0 0;
+          @include adaptive(phoneLandscape, phonePortrait) {
+            margin: 0;
+          }
+        }
         .news-navigate {
           display: flex;
           margin-bottom: 40px;
-
+          width: 100%;
           gap: 5px;
+          @include adaptive(phoneLandscape, phonePortrait) {
+            flex-wrap: wrap;
+          }
           .link {
             border: 1px solid $light-blue;
             border-radius: 30px;
@@ -37,6 +105,10 @@
             align-items: center;
             gap: 5px;
             @include fontSetings($s: 12px, $lh: 18px, $w: 600);
+            @include adaptive(phoneLandscape, phonePortrait) {
+              flex-grow: 2;
+              justify-content: center;
+            }
             .stiker {
               padding: 0px 9px;
               display: flex;
@@ -51,15 +123,27 @@
           }
         }
         .news-list {
+          display: flex;
+          flex-wrap: wrap;
+          gap: 25px;
           .item {
             display: flex;
             padding: 15px;
             background-color: $white;
             gap: 15px;
             border-radius: 20px;
+            @include adaptive(phoneLandscape, phonePortrait) {
+              flex-direction: column;
+              position: relative;
+              padding: 15px 15px 35px 15px;
+            }
             .img-wrap {
               width: 40%;
               position: relative;
+              @include adaptive(phoneLandscape, phonePortrait) {
+                width: 100%;
+                position: static;
+              }
               img {
                 width: 100%;
                 height: 100%;
@@ -85,25 +169,55 @@
                   height: 20px;
                   display: block;
                 }
+                @include adaptive(phoneLandscape, phonePortrait) {
+                  bottom: 20px;
+                  left: 20px;
+                  color: $white;
+                  background-color: $blue;
+                  &::after {
+                    content: url("../assets/imgs/white-blue.svg");
+                  }
+                }
               }
             }
             .content {
               width: 60%;
+              @include adaptive(phoneLandscape, phonePortrait) {
+                width: 100%;
+              }
               .info {
                 display: flex;
-                justify-content: space-between;
                 align-items: center;
                 margin-bottom: 20px;
+                @include adaptive(phoneLandscape, phonePortrait) {
+                  flex-direction: column;
+                  position: absolute;
+                  top: 30px;
+                  left: 30px;
+                }
                 .authtor {
                   display: flex;
                   align-items: center;
+                  justify-content: space-between;
+                  width: 100%;
                   gap: 10px;
+                  @include adaptive(phoneLandscape, phonePortrait) {
+                    background-color: $white;
+                    border-radius: 40px;
+                    width: fit-content;
+                    padding-right: 15px;
+                    height: 40px;
+                  }
                   .face-wrap {
                     width: 35px;
                     height: 35px;
                     background-color: #ceebf4;
                     border-radius: 50%;
                     overflow: hidden;
+                    @include adaptive(phoneLandscape, phonePortrait) {
+                      height: 40px;
+                      width: 40px;
+                    }
                     .face {
                       width: 100%;
                       height: 100%;
@@ -111,13 +225,27 @@
                       object-position: top center;
                     }
                   }
-                  .name {
-                    @include fontSetings($w: 600);
+                  .text {
+                    width: calc(100% - 45px);
+                    display: flex;
+                    justify-content: space-between;
+                    @include adaptive(phoneLandscape, phonePortrait) {
+                      flex-direction: column;
+                    }
+                    .name {
+                      @include fontSetings($w: 600);
+                      @include adaptive(phoneLandscape, phonePortrait) {
+                        @include fontSetings($s: 12px, $w: 600, $lh: 18px);
+                      }
+                    }
+                    .date {
+                      @include fontSetings($s: 12px);
+                      color: $grey;
+                      @include adaptive(phoneLandscape, phonePortrait) {
+                        @include fontSetings($s: 10px, $w: 400, $lh: 15px);
+                      }
+                    }
                   }
-                }
-                .date {
-                  @include fontSetings($s: 12px);
-                  color: $grey;
                 }
               }
               .news-name {
@@ -146,6 +274,10 @@
                 display: flex;
                 align-items: center;
                 gap: 10px;
+                @include adaptive(phoneLandscape, phonePortrait) {
+                  width: 100%;
+                  justify-content: flex-end;
+                }
                 .stars {
                   display: flex;
                   gap: 4px;
@@ -167,6 +299,257 @@
       }
       .scroll {
         width: 35%;
+        padding-left: 40px;
+        position: relative;
+        @include adaptive(tabletLandscape, tabletPortrait) {
+          margin-top: 90px;
+        }
+        @include adaptive(
+          tabletLandscape,
+          tabletPortrait,
+          phoneLandscape,
+          phonePortrait
+        ) {
+          width: 100%;
+          padding-left: 0px;
+        }
+        @include adaptive(phoneLandscape, phonePortrait) {
+          margin-top: 90px;
+        }
+        .content {
+          position: sticky;
+          top: 20px;
+          left: 0;
+          @include adaptive(
+            tabletLandscape,
+            tabletPortrait,
+            phoneLandscape,
+            phonePortrait
+          ) {
+            display: flex;
+            gap: 20px;
+            width: 100%;
+          }
+          @include adaptive(phoneLandscape, phonePortrait) {
+            flex-direction: column;
+          }
+          .social-block {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 40px;
+            @include adaptive(
+              tabletLandscape,
+              tabletPortrait,
+              phoneLandscape,
+              phonePortrait
+            ) {
+              display: none;
+            }
+            .descr {
+              @include fontSetings();
+              color: $grey;
+              text-transform: uppercase;
+            }
+            .imgs {
+              display: flex;
+              gap: 10px;
+              align-items: center;
+              img {
+                &:hover {
+                  filter: brightness(0.6);
+                  transition: 0.3s;
+                }
+              }
+            }
+          }
+          .baner-wrap {
+            @include adaptive(tabletLandscape, tabletPortrait) {
+              display: flex;
+              flex-direction: column;
+              justify-content: space-between;
+              width: 50%;
+            }
+            .baner {
+              width: 100%;
+              height: 200px;
+              margin-bottom: 10px;
+              img {
+                width: 100%;
+                height: 100%;
+                border-radius: 15px;
+                object-fit: cover;
+              }
+            }
+            .link {
+              @include fontSetings();
+              margin-bottom: 20px;
+              color: $white;
+              background-color: $blue;
+              padding: 10px 10px 10px 20px;
+              width: 100%;
+              display: flex;
+              align-items: center;
+              justify-content: space-between;
+              border-radius: 30px;
+              &::after {
+                content: url(../assets/imgs/circle-small.svg);
+                width: 25px;
+                height: 25px;
+              }
+              @include adaptive(
+                tabletLandscape,
+                tabletPortrait,
+                phoneLandscape,
+                phonePortrait
+              ) {
+                margin-bottom: 0;
+              }
+            }
+          }
+
+          .news-wrap {
+            padding: 25px 20px 20px 20px;
+            border-radius: 15px;
+            background-color: $white;
+            @include adaptive(tabletLandscape, tabletPortrait) {
+              width: 50%;
+            }
+            .title {
+              @include fontSetings($s: 25px, $lh: 25px);
+            }
+            .item {
+              display: flex;
+              gap: 10px;
+              margin-top: 15px;
+              align-items: center;
+              .img-wrap {
+                width: 70px;
+                height: 50px;
+                img {
+                  width: 100%;
+                  height: 100%;
+                  border-radius: 5px;
+                  object-fit: cover;
+                }
+              }
+              .descr {
+                max-width: 210px;
+                @include fontSetings($lh: 20px);
+                color: $grey;
+                @include adaptive(tabletLandscape, tabletPortrait) {
+                  max-width: 100%;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    .sub-news {
+      padding: 90px 40px 40px 40px;
+      background: #dff6fd;
+      border-radius: 40px;
+      background-image: url(../assets/imgs/blog-bg.png);
+      object-fit: cover;
+      background-repeat: no-repeat;
+      position: relative;
+      width: 100%;
+      margin-top: 150px;
+      @include adaptive(
+        tabletLandscape,
+        tabletPortrait,
+        phoneLandscape,
+        phonePortrait
+      ) {
+        width: 100%;
+      }
+      @include adaptive(phoneLandscape, phonePortrait) {
+        margin-top: 130px;
+        padding: 60px 20px 20px 20px;
+      }
+      .title {
+        @include fontSetings($s: 40px, $lh: 56px);
+        max-width: 510px;
+        margin-bottom: 25px;
+        @include adaptive(phoneLandscape, phonePortrait) {
+          @include fontSetings($s: 20px, $lh: 28px);
+          text-align: center;
+        }
+      }
+      .decor {
+        position: absolute;
+        top: -44px;
+        left: 40px;
+        @include adaptive(phoneLandscape, phonePortrait) {
+          left: 50%;
+          transform: translateX(-50%);
+        }
+      }
+      .news-form {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px 10px;
+      }
+      .input,
+      .sub-btn {
+        width: calc(33.333% - 10px);
+
+        height: 55px;
+        @include fontSetings();
+
+        @include adaptive(phoneLandscape, phonePortrait) {
+          width: 100%;
+        }
+      }
+      .input {
+        @include fontSetings();
+        padding: 0 20px;
+        border: 1px solid #d0d5dd;
+        box-shadow: 0px 1px 2px rgba(16, 24, 40, 0.05);
+        border-radius: 30px;
+        @include adaptive(tabletLandscape, tabletPortrait) {
+          width: calc(50% - 5px);
+        }
+        &::placeholder {
+          color: $grey;
+        }
+      }
+      .sub-btn {
+        margin: 0;
+        border: none;
+        outline: none;
+        cursor: pointer;
+        &:hover {
+          background-color: $light-blue;
+          transition: 0.3s;
+        }
+        @include adaptive(tabletLandscape, tabletPortrait) {
+          width: 100%;
+        }
+      }
+      .check-wrap {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        gap: 10px;
+        cursor: auto;
+        input {
+          width: 20px;
+          height: 20px;
+        }
+        .check-label {
+          @include fontSetings($s: 12px, $lh: 22px);
+          cursor: auto;
+          color: $grey;
+          a {
+            color: $grey;
+            text-decoration: underline;
+          }
+        }
       }
     }
   }
