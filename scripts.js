@@ -32,6 +32,8 @@ document.addEventListener("DOMContentLoaded", () => {
      devCards = document.querySelectorAll('.developers-list__item'),
      logo = document.querySelector('.logo-head'),
      closeSelectBtn = document.querySelector('.mob-close'),
+     showAllBtn = document.querySelector('.show-all');
+     tableList = document.querySelector('.table-list');
     headerBot = document.querySelector(".header__bot");
   
   window.addEventListener("click", (e) => {
@@ -250,7 +252,6 @@ document.addEventListener("DOMContentLoaded", () => {
        
           stars.forEach((el , indx)=>{
             el.addEventListener('click',()=>{
-             console.log('asdasdasdsad');
               stars.forEach((star , i)=>{
                 
                 rating.textContent = `${indx + 1 }/5`
@@ -272,7 +273,7 @@ document.addEventListener("DOMContentLoaded", () => {
           })
         })
       }else{
-      
+    
         projectsRating.forEach(el =>{
           const stars = el.querySelectorAll('.star');
           const rating = el.querySelector('.rating')
@@ -299,16 +300,11 @@ document.addEventListener("DOMContentLoaded", () => {
      
     })
 
-    
-
-   
-
   }else if (bodyPid){
-   
     projectsRating.forEach(el =>{
       const stars = el.querySelectorAll('.star');
       const rating = el.querySelector('.rating')
-     
+
       stars.forEach((el , indx)=>{
         el.addEventListener('click',(e)=>{
           stars.forEach((star , i)=>{
@@ -361,6 +357,7 @@ document.addEventListener("DOMContentLoaded", () => {
       })
     })
   }
+
  dropdownItem.addEventListener('click',()=>{
   dropdownItem.classList.toggle('open')
   dropdownList.classList.toggle('show')
@@ -376,5 +373,20 @@ document.addEventListener("DOMContentLoaded", () => {
     }
    })
  }
-
+ if(tableList){
+    const blockHeight = tableList.offsetHeight;
+    console.log(blockHeight);
+    if(blockHeight > 400){
+      tableList.classList.add('hide')
+    }
+    else{
+      showAllBtn.classList.add('hide');
+    }
+    showAllBtn.addEventListener('click',()=>{
+      tableList.classList.remove('hide')
+      showAllBtn.classList.add('hide');
+    })
+ }
 });
+
+

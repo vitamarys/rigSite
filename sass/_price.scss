@@ -140,7 +140,7 @@
             color: $grey;
             position: relative;
             &:nth-child(odd) {
-              background-color: #dff6fd;
+              background-color: $light-blue-bg;
             }
             &::before {
               content: url("../assets/imgs/tick.svg");

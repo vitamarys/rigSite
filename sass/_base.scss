@@ -15,7 +15,7 @@ footer {
     overflow: hidden;
   }
 }
-section:not(.lift, .listing-about, .dev-about, .blog-hero) {
+section:not(.lift, .listing-about, .dev-about, .blog-hero, .news-hero) {
   width: 100%;
   overflow-x: hidden;
 }

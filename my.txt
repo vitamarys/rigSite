@@ -7,4 +7,6 @@
  @include adaptive(phoneLandscape, phonePortrait) {
 
 }
+The Labour Law provides female workers with the same wages as men if they perform the same work. Men and women have the same opportunities and The Law on Equal Wages and Salaries for Men and Women protects the rights of female workers. Moreover, the Gender Balance Council offers gender balance in leadership positions.
 
+According to the World Economic Forum’s 2022 Global Gender Gap report, the country is one of the leaders in gender equality in the region, which can be seen by the role of women in business and government. Moreover, in accordance with the Georgetown Institute for Women, Peace and Security’s 2021 WPS Index, the UAE gained 1st place in the MENA region and 24th place among 170 countries in terms of progress in women’s inclusion.
