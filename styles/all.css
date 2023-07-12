@@ -23363,6 +23363,16 @@ input[type=checkbox]:checked::after {
     padding-bottom: 80px;
   }
 }
+@media (min-width:415px) and (max-width: 667px) {
+  .sell-benefits {
+    padding-bottom: 80px;
+  }
+}
+@media (max-width:414px) {
+  .sell-benefits {
+    padding-bottom: 80px;
+  }
+}
 .sell-benefits .container {
   display: flex;
   gap: 80px;
@@ -23374,6 +23384,18 @@ input[type=checkbox]:checked::after {
   }
 }
 @media (min-width:668px) and (max-width: 768px) {
+  .sell-benefits .container {
+    gap: 50px;
+    flex-direction: column;
+  }
+}
+@media (min-width:415px) and (max-width: 667px) {
+  .sell-benefits .container {
+    gap: 50px;
+    flex-direction: column;
+  }
+}
+@media (max-width:414px) {
   .sell-benefits .container {
     gap: 50px;
     flex-direction: column;
@@ -23402,8 +23424,28 @@ input[type=checkbox]:checked::after {
     width: 100%;
   }
 }
+@media (min-width:415px) and (max-width: 667px) {
+  .sell-benefits .container .content-item:nth-child(2) {
+    height: 500px;
+  }
+}
+@media (max-width:414px) {
+  .sell-benefits .container .content-item:nth-child(2) {
+    height: 500px;
+  }
+}
 .sell-benefits .container .content-item .title {
   margin-bottom: 25px;
+}
+@media (min-width:415px) and (max-width: 667px) {
+  .sell-benefits .container .content-item .title {
+    margin-bottom: 20px;
+  }
+}
+@media (max-width:414px) {
+  .sell-benefits .container .content-item .title {
+    margin-bottom: 20px;
+  }
 }
 .sell-benefits .container .content-item .sub-title {
   padding-bottom: 20px;

@@ -81,9 +81,15 @@
 }
 .sell-benefits {
   padding-bottom: 120px;
-  @include adaptive(tabletLandscape, tabletPortrait) {
+  @include adaptive(
+    tabletLandscape,
+    tabletPortrait,
+    phoneLandscape,
+    phonePortrait
+  ) {
     padding-bottom: 80px;
   }
+
   .container {
     display: flex;
     gap: 80px;
