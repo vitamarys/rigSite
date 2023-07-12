@@ -1585,6 +1585,12 @@
             a {
               @include fontSetings($lh: 20px);
               color: $grey;
+              transition: 0.3s;
+
+              &:hover {
+                color: $white;
+                transition: 0.3s;
+              }
             }
           }
         }

@@ -1,0 +1,376 @@
+.sell-hero {
+  padding-top: 60px;
+  padding-bottom: 120px;
+  @include adaptive(tabletLandscape, tabletPortrait) {
+    padding-top: 40px;
+    padding-bottom: 100px;
+  }
+  .container {
+    .info-hero {
+      margin-bottom: 60px;
+      @include adaptive(
+        tabletLandscape,
+        tabletPortrait,
+        phoneLandscape,
+        phonePortrait
+      ) {
+        margin-bottom: 20px;
+      }
+      &__item {
+        .title {
+          max-width: 400px;
+          @include adaptive(
+            tabletLandscape,
+            tabletPortrait,
+            phoneLandscape,
+            phonePortrait
+          ) {
+            max-width: 100%;
+          }
+        }
+        .link {
+          width: fit-content;
+          display: flex;
+          gap: 30px;
+          align-items: center;
+          position: relative;
+          z-index: 2;
+          &:hover {
+            transition: 0.3s;
+            background-color: $light-blue;
+          }
+        }
+      }
+    }
+    .video-wrap {
+      width: 100%;
+      height: 510px;
+      border-radius: 40px;
+      border: 1px solid $white;
+      background-color: $white;
+      overflow: hidden;
+      position: relative;
+      background-size: cover;
+      background-repeat: no-repeat;
+      @include adaptive(
+        tabletLandscape,
+        tabletPortrait,
+        phoneLandscape,
+        phonePortrait
+      ) {
+        height: 400px;
+      }
+      .play-video {
+        width: 100px;
+        height: 100px;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        cursor: pointer;
+        &.hide {
+          display: none;
+        }
+        img {
+          width: 100%;
+          height: 100%;
+        }
+      }
+    }
+  }
+}
+.sell-benefits {
+  padding-bottom: 120px;
+  @include adaptive(tabletLandscape, tabletPortrait) {
+    padding-bottom: 80px;
+  }
+  .container {
+    display: flex;
+    gap: 80px;
+    @include adaptive(tabletLandscape, tabletPortrait) {
+      gap: 50px;
+      flex-direction: column;
+    }
+    .content-item {
+      width: calc(50% - 40px);
+      @include adaptive(
+        tabletLandscape,
+        tabletPortrait,
+        phoneLandscape,
+        phonePortrait
+      ) {
+        width: 100%;
+      }
+      .title {
+        margin-bottom: 25px;
+      }
+      .sub-title {
+        padding-bottom: 20px;
+        @include fontSetings($s: 20px, $lh: 27px);
+        position: relative;
+        color: $grey;
+        &::after {
+          content: "";
+          height: 1px;
+          width: 50%;
+          background-color: $light-blue;
+          display: block;
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          @include adaptive(
+            tabletLandscape,
+            tabletPortrait,
+            phoneLandscape,
+            phonePortrait
+          ) {
+            width: 100%;
+          }
+        }
+      }
+      .pragraf {
+        margin-top: 25px;
+        color: $grey;
+        @include fontSetings();
+      }
+      &:nth-child(2) {
+        border-radius: 30px;
+        overflow: hidden;
+        position: relative;
+        img {
+          object-fit: cover;
+          width: 100%;
+          height: 100%;
+        }
+      }
+      .baner {
+        position: absolute;
+        padding: 20px 15px;
+        bottom: 20px;
+        right: 20px;
+        background-color: $white;
+        border-radius: 15px;
+        z-index: 2;
+        display: flex;
+        align-items: center;
+        gap: 15px;
+        .img-wrap {
+          width: 70px;
+          height: 80px;
+          img {
+            width: 100%;
+            height: 100%;
+          }
+        }
+        .baner-title {
+          @include fontSetings($s: 30px, $lh: 41px);
+        }
+        .desck {
+          max-width: 180px;
+          @include fontSetings();
+          color: $grey;
+        }
+      }
+    }
+  }
+}
+.about-awards {
+  &.sell {
+    .container {
+      .content-block {
+        .text-block {
+          .descr {
+            max-width: 560px;
+          }
+        }
+        .slide-control {
+          @include adaptive(phoneLandscape, phonePortrait) {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+}
+.tools {
+  padding-bottom: 60px;
+  @include adaptive(tabletLandscape, tabletPortrait) {
+    padding-bottom: 50px;
+  }
+  @include adaptive(phoneLandscape, phonePortrait) {
+    padding-bottom: 45px;
+  }
+  .container {
+    .content-wrap {
+      background-color: $white;
+      border-radius: 30px;
+      padding: 40px 35px;
+      display: flex;
+      @include adaptive(
+        tabletLandscape,
+        tabletPortrait,
+        phoneLandscape,
+        phonePortrait
+      ) {
+        flex-direction: column;
+        padding: 35px;
+      }
+      @include adaptive(phoneLandscape, phonePortrait) {
+        padding: 20px;
+      }
+
+      .content-item {
+        width: 50%;
+        @include adaptive(
+          tabletLandscape,
+          tabletPortrait,
+          phoneLandscape,
+          phonePortrait
+        ) {
+          width: 100%;
+        }
+        .title {
+          margin-bottom: 45px;
+          @include fontSetings($s: 40px, $lh: 55px);
+          @include adaptive(tabletLandscape, tabletPortrait) {
+            margin-bottom: 20px;
+          }
+          @include adaptive(phoneLandscape, phonePortrait) {
+            @include fontSetings($s: 30px, $lh: 41px);
+            margin-bottom: 10px;
+          }
+        }
+        .tools-img {
+          width: 235px;
+          height: 70px;
+          @include adaptive(
+            tabletLandscape,
+            tabletPortrait,
+            phoneLandscape,
+            phonePortrait
+          ) {
+            display: none;
+          }
+        }
+        .paragraf {
+          @include fontSetings();
+          color: $grey;
+        }
+        .link {
+          margin-top: 30px;
+          width: fit-content;
+          display: flex;
+          gap: 20px;
+          &:hover {
+            background-color: $light-blue;
+            transition: 0.3s;
+          }
+        }
+      }
+    }
+  }
+}
+.tile {
+  padding-top: 0;
+  &.sell {
+    .container {
+      @include adaptive(phoneLandscape, phonePortrait) {
+        padding: 0 30px;
+      }
+      .title {
+        @include adaptive(
+          tabletLandscape,
+          tabletPortrait,
+          phoneLandscape,
+          phonePortrait
+        ) {
+          padding-left: 0;
+        }
+      }
+      .desck {
+        @include adaptive(
+          tabletLandscape,
+          tabletPortrait,
+          phoneLandscape,
+          phonePortrait
+        ) {
+          max-width: 100%;
+        }
+      }
+      .content-body {
+        .row {
+          .content-item {
+            .link {
+              width: fit-content;
+              display: flex;
+              gap: 25px;
+              &:hover {
+                background-color: $light-blue;
+                transition: 0.3s;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+.structure {
+  &.sell {
+    @include adaptive(tabletLandscape, tabletPortrait) {
+      padding-bottom: 100px;
+    }
+    @include adaptive(phoneLandscape, phonePortrait) {
+      padding-bottom: 90px;
+    }
+  }
+}
+.slider-sold {
+  .right {
+    position: relative;
+
+    .overflow {
+      position: absolute;
+      background: rgba(0, 173, 229, 0.8);
+      display: flex;
+      align-content: flex-end;
+      flex-wrap: wrap;
+      width: 100%;
+      height: 100%;
+      padding: 10px;
+      border-radius: 10px 0px 0px 10px;
+      &__title {
+        color: $white;
+        @include fontSetings(20px, $w: 600, $lh: 27px);
+        width: 100%;
+        position: relative;
+        padding-bottom: 2px;
+
+        &::after {
+          content: "";
+          height: 1px;
+          width: 80%;
+          position: absolute;
+          bottom: 0;
+          display: block;
+          left: 0;
+          background-color: $white;
+        }
+      }
+      .deskr {
+        color: $white;
+        @include fontSetings(10px, $lh: 14px);
+        display: flex;
+        align-items: center;
+        gap: 5px;
+        margin-top: 5px;
+        &::before {
+          content: url("../assets/imgs/precent.svg");
+          width: 13px;
+          height: 13px;
+          display: block;
+        }
+      }
+    }
+  }
+}

@@ -75,6 +75,7 @@ document.addEventListener("DOMContentLoaded", () => {
       prevEl: ".prev-region",
     },
   });
+
   const news = new Swiper(".slider-news", {
     slideClass: "slide",
     slidesPerView: 3,
@@ -131,7 +132,30 @@ document.addEventListener("DOMContentLoaded", () => {
     
   });
   if (window.innerWidth >= 700) {
-
+    const sold =  new Swiper(".slider-sold", {
+      slideClass: "slide-similar",
+      slidesPerView: 3,
+      slidesPerGroup: 1,
+      spaceBetween: 40,
+      navigation: {
+        nextEl: ".next-poplisting",
+        prevEl: ".prev-poplisting",
+      },
+      breakpoints: {
+        320: {
+          slidesPerView: "auto",
+          spaceBetween: 10,
+        },
+        600: {
+          spaceBetween: 20,
+          slidesPerView: "auto",
+        },
+        1024: {
+          slidesPerView: 4,
+          slidesPerView: "auto",
+        },
+      },
+    });
     region =  new Swiper(".slider-region", {
         slideClass: "slide-region",
         slidesPerView: 3,

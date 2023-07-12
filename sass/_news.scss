@@ -227,6 +227,7 @@
             }
           }
           .title {
+            margin-top: 60px;
             @include fontSetings($s: 35px, $lh: 48px);
             margin-bottom: 20px;
             @include adaptive(tabletLandscape, tabletPortrait) {
@@ -894,6 +895,7 @@
             .star {
               width: 31px;
               height: 31px;
+              cursor: pointer;
               @include adaptive(phoneLandscape, phonePortrait) {
                 width: 49px;
                 height: 51px;
@@ -903,9 +905,15 @@
               &.check {
                 background-image: url("../assets/imgs/big-blue-check-star.svg") !important;
                 cursor: not-allowed;
+                pointer-events: none;
               }
               &.def {
                 cursor: not-allowed;
+                pointer-events: none;
+              }
+              &:hover {
+                transition: 0.3s;
+                background-image: url("../assets/imgs/blue-star-hover.svg") !important;
               }
             }
           }
@@ -1027,6 +1035,12 @@
               max-width: 210px;
               @include fontSetings($lh: 20px);
               color: $grey;
+              transition: 0.3s;
+
+              &:hover {
+                transition: 0.3s;
+                color: $black;
+              }
               @include adaptive(tabletLandscape, tabletPortrait) {
                 max-width: 100%;
               }
@@ -1315,6 +1329,12 @@
               border-radius: 60px;
               color: $blue;
               @include fontSetings($w: 700);
+              transition: 0.3s;
+
+              &:hover {
+                gap: 40px;
+                transition: 0.3s;
+              }
               &::after {
                 content: url("../assets/imgs/arr-blue.svg");
                 width: 25px;
@@ -1381,6 +1401,12 @@
             .link {
               @include fontSetings();
               color: $grey;
+              transition: 0.3s;
+
+              &:hover {
+                color: $light-blue;
+                transition: 0.3s;
+              }
             }
           }
           .text-content {
@@ -1437,6 +1463,13 @@
               border: 1px solid $light-blue;
               border-radius: 60px;
               padding: 0 50px;
+              transition: 0.3s;
+
+              &:hover {
+                background-color: $light-blue;
+                color: $white;
+                transition: 0.3s;
+              }
             }
           }
         }

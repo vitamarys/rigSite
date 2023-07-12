@@ -1,0 +1,187 @@
+.structure {
+  padding-bottom: 120px;
+  @include adaptive(phoneLandscape, phonePortrait) {
+    padding-bottom: 90px;
+  }
+  .container {
+    .title {
+      text-transform: uppercase;
+      @include fontSetings($s: 20px, $lh: 28px);
+      max-width: 440px;
+      margin-bottom: 50px;
+    }
+    .stages-wrap {
+      @include adaptive(
+        tabletLandscape,
+        tabletPortrait,
+        phoneLandscape,
+        phonePortrait
+      ) {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        overflow: auto;
+        gap: 20px;
+      }
+    }
+    .stages {
+      margin-bottom: 40px;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      gap: 40px;
+      @include adaptive(
+        tabletLandscape,
+        tabletPortrait,
+        phoneLandscape,
+        phonePortrait
+      ) {
+        margin-bottom: 0px;
+        gap: 20px;
+      }
+      //   &:nth-last-child(2n) {
+      //     -webkit-box-pack: end;
+      //     -ms-flex-pack: end;
+      //     justify-content: flex-end;
+      //   }
+      &:nth-child(even) {
+        -webkit-box-pack: end;
+        -ms-flex-pack: end;
+        justify-content: flex-end;
+      }
+      &:nth-last-child(1) {
+        margin-bottom: 0px;
+      }
+      &__item {
+        width: calc(25% - 30px);
+        padding: 20px;
+        border-radius: 20px;
+        background-color: $white;
+        @include adaptive(tabletLandscape, tabletPortrait) {
+          width: 260px;
+          -ms-flex-negative: 0;
+          flex-shrink: 0;
+          cursor: pointer;
+        }
+        @include adaptive(phoneLandscape, phonePortrait) {
+          width: 235px;
+          -ms-flex-negative: 0;
+          flex-shrink: 0;
+          cursor: pointer;
+        }
+
+        &.light-blue {
+          background-color: $light-blue-bg;
+        }
+        &.blue {
+          background-color: #dff0fd;
+        }
+        .stage {
+          @include fontSetings();
+          color: $blue;
+          margin-bottom: 50px;
+          display: block;
+        }
+        .name {
+          @include fontSetings($s: 25px, $lh: 35px);
+          margin-bottom: 10px;
+          @include adaptive(phoneLandscape, phonePortrait) {
+            @include fontSetings($s: 20px, $lh: 28px);
+          }
+        }
+        .paragraf {
+          color: $grey;
+          @include fontSetings();
+          @include adaptive(phoneLandscape, phonePortrait) {
+            @include fontSetings($s: 12px, $lh: 18px);
+          }
+        }
+      }
+    }
+  }
+}
+.tile {
+  &.sell {
+    .container {
+      .title {
+        margin-bottom: 10px;
+      }
+      .desck {
+        max-width: 50%;
+        @include fontSetings();
+        color: $grey;
+        margin-bottom: 40px;
+      }
+      .content-body {
+        .row {
+          @include adaptive(
+            tabletLandscape,
+            tabletPortrait,
+            phoneLandscape,
+            phonePortrait
+          ) {
+            gap: 20px;
+          }
+          .content-item {
+            padding: 25px 35px 25px 25px;
+            position: relative;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            &:not(.text) {
+              @include adaptive(
+                tabletLandscape,
+                tabletPortrait,
+                phoneLandscape,
+                phonePortrait
+              ) {
+                height: 305px;
+                width: calc(100% - 40px);
+                margin: auto;
+              }
+            }
+            .logo-wrap {
+              width: 225px;
+              height: 70px;
+              background-color: $white;
+              border-radius: 10px;
+              padding: 0 15px;
+              position: absolute;
+              right: 15px;
+              bottom: 15px;
+              @include adaptive(
+                tabletLandscape,
+                tabletPortrait,
+                phoneLandscape,
+                phonePortrait
+              ) {
+                right: auto;
+                left: 15px;
+              }
+              img {
+                object-fit: contain;
+                width: 100%;
+                height: 100%;
+                min-height: auto;
+              }
+            }
+          }
+          &.rev {
+            .logo-wrap {
+              right: auto;
+              left: 15px;
+            }
+          }
+          @include adaptive(
+            tabletLandscape,
+            tabletPortrait,
+            phoneLandscape,
+            phonePortrait
+          ) {
+            padding-bottom: 20px;
+          }
+        }
+      }
+    }
+  }
+}

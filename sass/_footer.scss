@@ -209,8 +209,12 @@
             a {
               @include fontSetings($lh: 20px);
               width: 105px;
-
               color: $grey;
+              transition: 0.3s;
+              &:hover {
+                color: $white;
+                transition: 0.3s;
+              }
               @include adaptive(phoneLandscape, phonePortrait) {
                 display: block;
                 width: 100%;

@@ -1,0 +1,61 @@
+.about-awards {
+  position: relative;
+  overflow: visible;
+  padding-bottom: 130px;
+  @include adaptive(tabletLandscape, tabletPortrait) {
+    padding-bottom: 100px;
+  }
+  @include adaptive(phoneLandscape, phonePortrait) {
+    padding-bottom: 90px;
+  }
+  .content-block {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+
+    .text-block {
+      margin-bottom: 40px;
+      .title {
+        @include fontSetings($s: 40px, $lh: 56px);
+        margin-bottom: 10px;
+      }
+      .descr {
+        max-width: 360px;
+        @include fontSetings();
+        color: $grey;
+      }
+    }
+    .slide-control {
+      display: flex;
+    }
+  }
+  .award-slider {
+    .award-slide {
+      border-radius: 20px;
+      padding: 0 15px 15px 15px;
+      background-color: $light-blue-bg;
+      width: 260px !important;
+      height: 260px;
+      flex-shrink: 0;
+      .img-wrap {
+        background-image: url(../assets/imgs/olive.png);
+        height: 200px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .text-wrap {
+        height: 45px;
+        display: flex;
+        align-items: center;
+      }
+      .award-name {
+        text-align: center;
+        color: $grey;
+        @include fontSetings();
+        max-width: 170px;
+        margin: auto;
+      }
+    }
+  }
+}
