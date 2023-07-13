@@ -222,14 +222,13 @@
     .slides-wrap {
       width: 100%;
       display: flex;
-      gap: 10px;
+      // gap: 10px;
       flex-wrap: wrap;
       @include adaptive(phoneLandscape, phonePortrait) {
         gap: 20px;
       }
       .slide-region {
         background-color: $white;
-        width: calc(50% - 10px) !important;
         -ms-flex-negative: 0;
         flex-shrink: 0;
         border-radius: 20px;
@@ -459,19 +458,13 @@
                 display: -ms-flexbox;
                 display: flex;
                 -webkit-box-align: center;
+
                 -ms-flex-align: center;
                 align-items: center;
-                @include adaptive(phoneLandscape, phonePortrait) {
-                  flex-direction: row-reverse;
-                  justify-content: center;
-                  gap: 5px;
-                }
+                justify-content: center;
               }
               &.trans-link {
-                padding-left: 25px;
-                @include adaptive(phoneLandscape, phonePortrait) {
-                  justify-content: center;
-                }
+                justify-content: center;
               }
             }
           }

@@ -4919,7 +4919,6 @@ input[type=checkbox]:checked::after {
 .region .container .slides-wrap {
   width: 100%;
   display: flex;
-  gap: 10px;
   flex-wrap: wrap;
 }
 @media (min-width:415px) and (max-width: 667px) {
@@ -4934,7 +4933,6 @@ input[type=checkbox]:checked::after {
 }
 .region .container .slides-wrap .slide-region {
   background-color: #ffffff;
-  width: calc(50% - 10px) !important;
   -ms-flex-negative: 0;
   flex-shrink: 0;
   border-radius: 20px;
@@ -5304,33 +5302,10 @@ input[type=checkbox]:checked::after {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-}
-@media (min-width:415px) and (max-width: 667px) {
-  .lift .container .wrapper .slider-pag .plans-slider .plans-slider__links .link.blue-link {
-    flex-direction: row-reverse;
-    justify-content: center;
-    gap: 5px;
-  }
-}
-@media (max-width:414px) {
-  .lift .container .wrapper .slider-pag .plans-slider .plans-slider__links .link.blue-link {
-    flex-direction: row-reverse;
-    justify-content: center;
-    gap: 5px;
-  }
+  justify-content: center;
 }
 .lift .container .wrapper .slider-pag .plans-slider .plans-slider__links .link.trans-link {
-  padding-left: 25px;
-}
-@media (min-width:415px) and (max-width: 667px) {
-  .lift .container .wrapper .slider-pag .plans-slider .plans-slider__links .link.trans-link {
-    justify-content: center;
-  }
-}
-@media (max-width:414px) {
-  .lift .container .wrapper .slider-pag .plans-slider .plans-slider__links .link.trans-link {
-    justify-content: center;
-  }
+  justify-content: center;
 }
 .lift .container .wrapper .payment__list {
   display: -webkit-box;
@@ -13586,7 +13561,7 @@ input[type=checkbox]:checked::after {
   background-color: #ffffff;
   border-radius: 20px;
   cursor: pointer;
-  width: calc(50% - 20px);
+  width: 355px;
 }
 @media (min-width:769px) and (max-width: 1024px) {
   .big-type-banner {
@@ -13801,6 +13776,12 @@ input[type=checkbox]:checked::after {
   height: 60%;
 }
 
+.slides-wrap {
+  display: flex;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
 .swiper-initialized .slides-wrap {
   display: flex;
   flex-wrap: nowrap;
@@ -13998,11 +13979,10 @@ input[type=checkbox]:checked::after {
 .small-card {
   cursor: pointer;
   background-color: #ffffff;
-  width: 260px;
+  width: 260px !important;
   border-radius: 20px;
-  -ms-flex-negative: 0;
   flex-shrink: 0;
-  transition: 0.3s;
+  overflow: hidden;
 }
 .small-card:hover {
   box-shadow: 0px 10px 30px rgba(64, 69, 70, 0.1);
@@ -14012,13 +13992,13 @@ input[type=checkbox]:checked::after {
   height: 220px;
   width: 100%;
   position: relative;
+  overflow: hidden;
 }
 .small-card__img img {
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
   object-fit: cover;
-  border-radius: 20px 20px 0px 0px;
 }
 .small-card__img .price {
   position: absolute;
@@ -14166,11 +14146,8 @@ input[type=checkbox]:checked::after {
   background: none;
 }
 
-.swiper-initialized .small-card {
-  width: 260px;
-}
 .swiper-initialized .slides-wrap {
-  gap: 0;
+  gap: 0px;
 }
 
 .slides-wrap {
@@ -15879,11 +15856,13 @@ input[type=checkbox]:checked::after {
   height: 100%;
 }
 .one-slider .swiper-wrapper .one-slide {
-  border-radius: 30px;
   -ms-flex-negative: 0;
   flex-shrink: 0;
   position: relative;
   z-index: 2;
+  max-height: 550px;
+  border-radius: 30px;
+  overflow: hidden;
 }
 @media (min-width:415px) and (max-width: 667px) {
   .one-slider .swiper-wrapper .one-slide {
@@ -19414,7 +19393,7 @@ input[type=checkbox]:checked::after {
   font-family: "Manrope", sans-serif;
   font-size: 40px;
   font-weight: 400;
-  line-height: 22px;
+  line-height: 63px;
 }
 @media (min-width:769px) and (max-width: 1024px) {
   .tile.about .container .content-body .row {

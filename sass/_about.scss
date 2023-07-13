@@ -259,7 +259,7 @@
       }
 
       .title {
-        @include fontSetings($s: 40px);
+        @include fontSetings($s: 40px, $lh: 63px);
       }
       .content-body {
         .row {

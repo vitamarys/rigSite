@@ -3,7 +3,7 @@
 
   border-radius: 20px;
   cursor: pointer;
-  width: calc(50% - 20px);
+  width: 355px;
   @include adaptive(tabletLandscape, tabletPortrait) {
     width: 300px !important;
 
@@ -200,7 +200,11 @@
     }
   }
 }
-
+.slides-wrap {
+  display: flex;
+  gap: 40px;
+  flex-wrap: wrap;
+}
 .swiper-initialized {
   .slides-wrap {
     display: flex;

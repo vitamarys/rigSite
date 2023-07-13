@@ -1,12 +1,11 @@
 .small-card {
   cursor: pointer;
   background-color: $white;
-  width: 260px;
+  width: 260px !important;
   border-radius: 20px;
-  -ms-flex-negative: 0;
+  // transition: 0.3s;
   flex-shrink: 0;
-  transition: 0.3s;
-
+  overflow: hidden;
   &:hover {
     box-shadow: 0px 10px 30px rgba(64, 69, 70, 0.1);
     transition: 0.3s;
@@ -15,12 +14,13 @@
     height: 220px;
     width: 100%;
     position: relative;
+    overflow: hidden;
+
     img {
       width: 100%;
       height: 100%;
       -o-object-fit: cover;
       object-fit: cover;
-      border-radius: 20px 20px 0px 0px;
     }
     .price {
       position: absolute;
@@ -168,13 +168,22 @@
     }
   }
 }
+// .small-card {
+//   width: 260px;
+//   background-color: red;
+//   flex-shrink: 0;
+//   overflow: hidden;
+//   &__img {
+//     height: 220px;
+//   }
+//   img {
+//     width: 100%;
+//     height: 100%;
+//   }
+// }
 .swiper-initialized {
-  .small-card {
-    width: 260px;
-  }
-
   .slides-wrap {
-    gap: 0;
+    gap: 0px;
   }
 }
 

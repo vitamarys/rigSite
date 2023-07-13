@@ -281,6 +281,7 @@ document.addEventListener("DOMContentLoaded", () => {
         slidesPerView: 3,
         slidesPerGroup: 1,
         spaceBetween: 40,
+
         navigation: {
           nextEl: ".next-poplisting",
           prevEl: ".prev-poplisting",
@@ -327,10 +328,11 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   let pop_project = new Swiper(".slider-pop_project", {
-    slideClass: "slide",
-    slidesPerView: 4,
+    slideClass: "small-card",
+    slidesPerView: 'auto',
     slidesPerGroup: 1,
     spaceBetween: 40,
+    CSSWidthAndHeight: true,
     navigation: {
       nextEl: ".next-pop-project",
       prevEl: ".prev-pop-project",
@@ -350,6 +352,7 @@ document.addEventListener("DOMContentLoaded", () => {
       },
     },
   });
+
   let apartments = new Swiper(".slider-apartments", {
     slideClass: "slide",
     slidesPerView: 4,
@@ -567,8 +570,8 @@ document.addEventListener("DOMContentLoaded", () => {
                 slidesPerGroup: 1,
                 spaceBetween: 40,
                 navigation: {
-                  nextEl: ".next-region",
-                  prevEl: ".prev-region",
+                  nextEl: ".next-region-pr",
+                  prevEl: ".prev-region-pr",
                 },
                 breakpoints: {
                   320: {
